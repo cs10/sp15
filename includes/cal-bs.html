@@ -1,0 +1,29 @@
+<h2>
+    Semester Schedule (subject to change)
+</h2>
+<div class="key">
+    Reading Assignments Key: <br />
+    <ul>
+        <li>
+            <span class="bold required">Blue</span> readings are required,
+        </li>
+        <li>
+            <span class="bold hard">Green</span> readings are required-but-challenging (understand the "big idea" concepts, rather than the technical details),
+        </li>
+        <li>
+            <span class="bold optional">Red</span> readings are optional but recommended. Note that these readings are <em>NOT</em> tested.
+        </li>
+    </ul>
+</div>
+
+<div id='main-cal'>
+    <!-- Nav tabs Left hand side, 1 per week -->
+    <ul class="nav nav-pills nav-stacked" role="tablist" style="width: 15%; float: left" id='cal-sidebar'></ul>
+    <!-- Tab panes Will be 1 div per week.-->
+    <div class="tab-content" id='cal-content' style="width: 85%; float: right">
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(cs10.buildCal);
+</script>

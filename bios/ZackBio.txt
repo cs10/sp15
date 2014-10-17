@@ -1,0 +1,24 @@
+WHERE DID YOU GROW UP? WHAT WAS YOUR PATH TO CAL?
+ 
+I grew up in suburbs of Durham, NC, a town about half an hour from the capital, Raleigh, and known mostly for its major exports of tobacco, minor league baseball, and gang violence.  We have a Burt’s Bees factory now, as well!  I graduated from CE Jordan high in 2008 and went undeclared to NC State University in nearby Raleigh.  The indecision lasted until I took my first computer science course, after which I jumped ship to nearby UNC-Chapel Hill and graduated with a BS in Computer Science in December of 2012.  After that, I was offered and accepted admission into UC Berkeley’s CS MS program, beginning this year.       
+ 
+HOW MUCH PROGRAMMING HAVE YOU DONE (& WHAT LANGUAGES)?
+ 
+I guess technically I got my start programming on a TI-85 in middle school, but it was years later in about 2010 that I picked up Java as my first real language in college, followed shortly after by C, C#, C++, perl, html, unix scripting stuff, javascript, and SQL.  I dream one day of being fluent in Whitespace and INTERCAL.
+ 
+WHAT ARE YOUR HOBBIES?
+ 
+I enjoy reading, biking, jogging, and playing games, as well as dabbling in continued study of Japanese, a thing which I have been pursuing for the last three years and am still working at.  One day I will be able to read a newspaper!  That day is not today.
+ 
+WHAT ARE SOME OF YOUR TALENTS & SKILLS?
+ 
+I can juggle a single ball, ride a bicycle (like a unicycle but with two tires), and speak intermediate level Japanese.  I can also do a variety of other things too varied, obscure, and impressive to list here.
+ 
+HAVE YOU DONE ANYTHING REMARKABLE? HAS ANYTHING MEMORABLE HAPPENED TO YOU?
+ 
+When I studied abroad in Japan in 2011, I climbed Mount Fuji with a friend overnight, and watched the sun rise from the top.  I also, during the same trip, discovered that the top of Fuji is very cold when you are wearing a windbreaker, that a bathroom full of foreigners huddling for warmth at the top of the mountain can be a sight for sore eyes, and that there was a reason that the Japanese people my friend and I passed were taking their time climbing the mountain. 
+ 
+WHAT COMMITMENTS WILL BE CONSUMING YOUR CYCLES THIS SEMESTER?
+ 
+
+I’ll be attending to TAing CS10, in addition to covering all of my own course work and acclimating myself to the Berkeley area.

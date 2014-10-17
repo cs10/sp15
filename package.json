@@ -1,0 +1,23 @@
+{
+  "name": "fa14",
+  "version": "0.0.0",
+  "description": "The CS10 Fall 2014 Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cs10/fa14.git"
+  },
+  "keywords": [
+    "cs10",
+    "cs"
+  ],
+  "author": "Michael Ball",
+  "license": "CC-NC-BY-SA",
+  "bugs": {
+    "url": "https://github.com/cs10/fa14/issues"
+  },
+  "homepage": "https://github.com/cs10/fa14"
+}

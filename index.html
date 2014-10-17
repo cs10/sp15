@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CS10 | Fall 2014</title>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name="description" content="CS10, The Beauty and Joy of Computing is an introductory computer science class designed for anyone and everyone." />
+        <meta name="keywords" content="CS10, UC, Berkeley, CS, computer science, BJC, computing, education, Michael Ball" />
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+        <style type="text/css">
+        body {
+            background-image: url(resources/images/gobo_watermark.gif); /* watermark */
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            background-attachment: fixed;
+            font-family: 'Helvetica';
+            width: 90%;
+            margin: 2% 5%;
+            padding: 0 .3em .3em .3em;
+        }
+        .logo {
+            font-size: 2.25em;
+            margin: .1em;
+            text-align: center;
+        }
+
+        .header {
+            display: inline-block;
+            width: 100%;
+        }
+        .header, .header > div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .left {
+            width: 250px;
+        }
+        .header > .center {
+            min-width: 50px;
+            width: 60%;
+            max-width: 100%;
+        }
+        .right {
+            text-align: right;
+            min-width: 100px;
+            width: 17%;
+            max-width: 250px;
+        }
+        /*
+        display table-cell auto width
+        Specifiy:
+        min-width -- presentation / readbility
+        width -- size, set smaller than 1/(num items)
+        max-width -- set >= 1/(num items) */
+        .ql {
+            font-size: 1.1em;
+            text-align: center;
+            display: table-cell;
+        }
+        h1 {
+            display: block;
+            background: #003A70;
+            background: -moz-linear-gradient(top,  #003A70 0%, #3f7dc2 50%, #003A70 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#003A70), color-stop(50%,#3f7dc2), color-stop(100%,#003A70)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #003A70 0%,#3f7dc2 50%,#003A70 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #003A70 q%,#3f7dc2 50%,#003A70 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #003A70 0%,#3f7dc2 50%,#003A70 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #003A70 0%,#3f7dc2 50%,#003A70 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003A70', endColorstr='#003A70',GradientType=0 ); /* IE6-9 */
+            border-radius: 2em;
+            box-shadow: 2px 3px 6px #606060;
+            padding: .3em 1em;
+            color: #FFF;
+            font-family: 'VAG Rounded Light';
+            font-size: 1.6em;
+            text-shadow: 1px 1px 2px #555;
+            vertical-align: middle;
+        }
+        .vcenter {
+            display: table-cell;
+            vertical-align: middle;
+        }
+            /* centered columns styles */
+            .row-centered {
+                text-align:center;
+            }
+            .col-centered {
+                display:inline-block;
+                float:none;
+                /* reset the text-align */
+                text-align:center;
+                /* inline-block space fix */
+                margin-right:-4px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="header center coontainer-fluid">
+            <div class="row row-centered" style="width:100%">
+                <div class="col-md-3">
+                    <div class="vcenter">
+                        <img width="250" border="0" align="bottom" height="244" src="resources/images/snap_nav.gif" class="navbar" alt="Your Navigation Bar didn't load." title="Click me to navigate." usemap="#gobo">
+                        <div style="position:absolute;top:60px;left:220px;z-index:40;">
+                            <img src="resources/images/blank.gif" name="speech" />
+                        </div>
+                        <map name="gobo">
+                            <area shape="rect" coords="0,70,110,97" alt="Overview" href="#overview" onmouseover="displaySpeech('speech', 'resources/images/overview_jump.gif')" onmouseout="displaySpeech('speech', 'resources/images/blank.gif')">
+                            <area shape="rect" coords="0,97,76,124" alt="News" href="#news" onmouseover="displaySpeech('speech', 'resources/images/news_jump.gif')" onmouseout="displaySpeech('speech', 'resources/images/blank.gif')">
+                            <area shape="rect" coords="0,124,105,151" alt="Calendar" href="#calendar" onmouseover="displaySpeech('speech', 'resources/images/calendar_jump.gif')" onmouseout="displaySpeech('speech', 'resources/images/blank.gif')">
+                            <area shape="rect" coords="0,151,72,178" alt="Staff" href="#staff" onmouseover="displaySpeech('speech', 'resources/images/staff_jump.gif')" onmouseout="displaySpeech('speech', 'resources/images/blank.gif')">
+                            <area shape="rect" coords="0,178,97,205" alt="Grades" href="#grading" onmouseover="displaySpeech('speech', 'resources/images/grading_jump.gif')" onmouseout="displaySpeech('speech', 'resources/images/blank.gif')">
+                            <area shape="rect" coords="0,205,117,232" alt="Resources" href="#resources" onmouseover="displaySpeech('speech', 'resources/images/resources_jump.gif')" onmouseout="displaySpeech('speech', 'resources/images/blank.gif')">
+                        </map>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="col-centered vagrounded-light vcenter">
+                        <br /><br /><br />
+                        <h2 class="logo">CS10 | Fall 2014</h2>
+                        <h2 class="logo">The Beauty &amp; Joy of Computing</h2>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="vcenter right">
+                        <br /><br />
+                        <a href="http://bjc.berkeley.edu/">
+                            <img border="0" src="resources/images/bjc186.png" alt="BJC logo">
+                        </a>
+                    </div>
+                </div>
+          </div>
+        </div>
+
+        <h1 class="center" id="quicklinks">Quick Links</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="ql col-md-2">
+                    <a class="snap" style="font:120%" href="http://snap.berkeley.edu/run/">Snap</a>
+                </div>
+                <div class="ql col-md-2">
+                    <!-- UPDATE EACH SEMESTER -->
+                    <a href="https://piazza.com/class/hwnwszyjn9f5eg">Piazza</a>
+                    <br />(Q&amp;A)
+                </div>
+                <div class="ql col-md-2">
+                    <!-- UPDATE EACH SEMESTER -->
+                    <a href="../labs/course/cs10_fa14.html">Labs</a>
+                </div>
+                <div class="ql col-md-2">
+                    <!-- UPDATE EACH SEMESTER -->
+                    <a href="https://bcourses.berkeley.edu/courses/1246916">bCourses</a>
+                    <br />(assignments)
+                </div>
+                <div class="ql col-md-2">
+                  <a href="http://webcast.berkeley.edu/playlist#c,s,Fall_2014,-XXv-cvA_iCajFbSJ4q3ApmKtT7RL3wQ">Webcasts</a>
+                </div>
+                <div class="ql col-md-2">
+                  <a href="assign.html?https://docs.google.com/document/d/1qb86D3sLcusFrx4Feu86Yhu9whw-M28feeUo3Zfaapc/pub">Course Policies</a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <h1>News</h1>
+        <div class="page-section" id="news">
+            <h2>Please check this section for important updates!</h2>
+            <ul class='lambda'>
+                <li>August 18, 2014: Welcome to CS10!</li>
+                <li>August 29, 2014: Course Syllabus added to the quick links section (right above).</li>
+            </ul>
+        </div>
+
+        <h1>Overview</h1>
+        <div class="page-section" id="overview"></div>
+
+        <!--
+        <h1>Assignment Calendar</h1>
+        <div class="page-secton" id="cal-bs"></div>
+        <div class="clearfix"></div> -->
+
+        <h1>Assignment Calendar</h1>
+        <div class="page-section" id="calendar"></div>
+        <div class="clearfix"></div>
+
+        <h1>Weekly Schedule</h1>
+        <div class="page-section" id="weekly">
+            <h4>This calendar displays the class schedule for the <em>current</em> week.
+              Click on any event to see the building location on a map.</h4>
+            <div style="overflow-y: scroll">
+                <div id="oh-cal" style="min-width:800px;"></div>
+            </div>
+        </div>
+
+        <h1>Staff</h1>
+        <div class="page-section" id="staff">
+            <h2>Instructor</h2>
+            <div class="container-fluid" id="instructors"></div>
+            <div class='clearfix'></div>
+
+            <h2>Teaching Assistants</h2>
+            <div class="container-fluid" id="tas"></div>
+            <div class='clearfix'></div>
+
+            <h2>Readers</h2>
+            <div id="readers"></div>
+            <div class='clearfix'></div>
+
+          <!--
+          <h2>TAs-in-Training</h2>
+          <div id="tait"></div>
+          <div class='clearfix'></div>
+
+          <h2>Lab Assistants</h2>
+          <div id="las"></div>
+          <div class='clearfix'></div>
+
+          <h2>edX Course Development</h2>
+          <div id="edx"></div>
+          <div class='clearfix'></div>
+
+          <h2>BJC Lab Development</h2>
+          <div id="labdev"></div>
+          <div class='clearfix'></div>
+
+          <h2><span class='snap'>snap</span> Development</h2>
+          <div id="snap"></div>
+          <div class='clearfix'></div>
+
+          <h2>BJC Project Leads</h2>
+          <div id="bjc"></div>
+          <div class='clearfix'></div> -->
+      </div>
+      <div class="clearfix"></div>
+
+      <h1>Grading</h1>
+      <div class="page-section" id="grading"></div>
+
+      <h1>Resources</h1>
+      <div class="page-section" id="resources">
+          <ul class="lambda">
+              <li><a href="http://www.bitsbook.com/">Blown to Bits</a></li>
+              <li><a href="http://www.debuggingrules.com/">Debugging Rules!</a></li>
+              <li><a href="http://www.berkeley.edu">UC Berkeley</a></li>
+              <li><a href="http://coe.berkeley.edu/">College of Engineering</a> </li>
+              <li><a href="http://www.eecs.berkeley.edu/">EECS Department Page</a></li>
+              <li><a href="../fa13/lab/solutions.html">(OLD) Solutions to Lab Exercises</a></li>
+          </ul>
+      </div>
+
+      <hr />
+      <div class="center">
+          This work is licensed under a
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+              Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License
+          </a>.
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+              <img align="right" alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
+          </a>
+      </div>
+
+      <!--END PAGE CONTENT -->
+      <link href="assets/fullcalendar.css" rel="stylesheet" type="text/css" />
+      <link href="assets/cs10style.css" rel="stylesheet" type="text/css" />
+
+      <script type='text/javascript' src='assets/lib/jquery.min.js'></script>
+      <script type="text/javascript" src="assets/cs10.js"></script>
+      <!-- TODO: Add this back when the new calendar is ready
+      <script type="text/javascript" src="assets/calendar.js"></script>
+      -->
+      <script type="text/javascript">
+          // cs10 = window.cs10 || {};
+          function addContent(item, fn) {
+              $.ajax({
+                  async: true,
+                  cache: true,
+                  dataType: 'html',
+                  url: './includes/' + item + '.html',
+                  success: function(content, unused, notused) {
+                      $('#' + item).append(content);
+                  },
+                  complete: (fn ? fn : [])
+              });
+          }
+          addContent('overview');
+          // TODO: Update calendars when the new one looks right.
+          // Swap the two files
+          addContent('calendar');
+          // addContent('cal-bs');
+          addContent('grading');
+      </script>
+      <!-- Latest compiled and minified JavaScript -->
+      <!-- <script type='text/javascript' src='assets/lib/bootstrap.min.js'></script> -->
+      <script type='text/javascript' src='assets/lib/fullcalendar.js'></script>
+      <script type='text/javascript' src='assets/lib/gcal.js'></script>
+      <script>
+      // Review session dates
+      var quest   = daysUntil(new Date(2014, 10, 1)),
+          midterm = daysUntil(new Date(2014, 10, 29)),
+          final   = daysUntil(new Date(2014, 12, 16));
+
+      function daysUntil(day) {
+        var MS_DAY = 1000*60*60*24;
+        return Math.floor((new Date() - day) / MS_DAY);
+      }
+
+      function inRange(num) { return num >= -7 && num < 1 }
+      $(document).ready(function() {
+          // Show weeks when we are close to at least one session.
+          var wkends = (inRange(quest) || inRange(midterm) || inRange(final));
+          $('#oh-cal').fullCalendar({
+            allDaySlot: false,
+            slotEventOverlap: false,
+            slotMinutes: 60,
+            weekends: wkends,
+            defaultView: 'agendaWeek',
+            minTime: 9,
+            maxTime: 20,
+            contentHeight: 700,
+            eventSources: [
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_7qpoo4ph13p55e4ukmnpvqusdk%40group.calendar.google.com/public/basic',
+                  className: 'lecture' },
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_d358eocqj23pak3atie23vk35o%40group.calendar.google.com/public/basic',
+                  className: 'lab' },
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_k2g60q1sehd2u0ujd257jqm7h0%40group.calendar.google.com/public/basic',
+                  className: 'oh' },
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_1g3duo9lb53vu09orjictriud4%40group.calendar.google.com/public/basic',
+                  className: 'disc' },
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_21jprgg43p44oq62g94agbumv8%40group.calendar.google.com/public/basic',
+                  className: 'disc', // FIX FOR BUG WITH LAST 2 DISCUSSIONS
+                  currentTimezone: 'America/Chicago' },
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_kte6c7s6dbmqjhaan64rn2mnng%40group.calendar.google.com/public/basic',
+                  className: 'lab', // FIX FOR BUG WITH LAST LAB
+                  currentTimezone: 'America/Chicago' },
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_vtlj909a885kh20chsvjfkddb0%40group.calendar.google.com/public/basic',
+                  className: 'oh', // FIX FOR BUG WITH LATE OH
+                  currentTimezone: 'America/Chicago' }
+            ]
+          })
+      });
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-47210910-1', 'berkeley.edu');
+        ga('send', 'pageview');
+      </script>
+      <script type='text/javascript' src='assets/staff.js'></script>
+    </body>
+</html>

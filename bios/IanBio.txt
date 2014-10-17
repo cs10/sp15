@@ -1,0 +1,44 @@
+WHERE DID YOU GROW UP?  WHAT WAS YOUR ACADEMIC PATH?
+I grew up in El Cerrito, which is literally a 10-minute BART ride away from
+campus (long trek from home, I know). I went to El Cerrito High, and from there
+went to Berkeley in Fall of 2010, which is also when I took the first offering of CS10!
+I came in undeclared in L&S (heading towards an English route oddly enough), but after I took CS10,
+I got hooked into programming, and am now in my final semester at Cal
+as a Computer Science major! It's scary how time really does fly by.
+
+
+HOW MUCH PROGRAMMING HAVE YOU DONE?  WHAT LANGUAGES?
+My first language was Scratch/BYOB (which has now evolved into Snap!) when I took CS10.
+After that I learned Scheme, Java, and C which I learned in CS61a, CS61b, and CS61c respectively.
+I learned a lot of web development languages over the past few years,
+so I've gotten fairly good at JavaScript, jQuery, WinJS, HTML5, CSS3, and Node.js.
+
+I also know a decent amount of UNIX, Python (my faveorite!), and a little bit of Ruby.
+
+
+WHAT ARE YOUR HOBBIES?
+I love to swim (did it competitively for 10 years!), discover new bands to
+listen to (I'm a big music junkie), play guitar, and trying new restaurants!
+
+
+WHAT ARE SOME OF YOUR TALENTS AND SKILLS?
+Again, swimming is a big one. I made it to NCS and Far Westerns senior year of
+high school, and had previously competed in the Junior Olympics. Guitar has been
+something I picked up more recently, but it's my favorite way to relax.
+
+
+HAVE YOU EVER DONE ANYTHING REMARKABLE?
+At my last internship, I helped build a media app for a major TV network for the Xbox One!
+
+Last semester, my group in Tangible UI built our own instrument, which was incredibly fun!
+It was my first time working with Arduino microcontrollers, and I learned a lot about circuit building.
+We named our instrument the PulsR, and you can check it out here (shameless plug): http://youtu.be/16Fs1-47Bxo
+
+Also, I survived (and did pretty well in) CS61b with Professor Hilfinger.
+
+
+WHAT COMMITMENTS WILL BE CONSUMING YOUR CYCLES THIS TERM?
+In addition to being a TA for CS10, my (gasp!) final classes at Cal wil be CS 160 (User Interfaces),
+CS 294 (Critical Making), UGBA 196 (Personal Finances) and L&S C180U (Wealth and Poverty).
+I'll also keep Berkeley up to date with music as the Lead Music Critic for the Daily Californian,
+and design creative projects with the human-centered design club Berkeley Innovations!

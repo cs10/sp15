@@ -1,0 +1,17 @@
+WHERE DID YOU GROW UP? WHAT WAS YOUR PATH TO CAL?
+   I was born in San Leandro, CA (two cities south of Berkeley), and grew up in Tracy, CA. I attended a charter high school, and meanwhile attended community college, too. I was accepted to UC Berkeley as a freshman spring admit and am now a junior. 
+
+HOW MUCH PROGRAMMING HAVE YOU DONE (& WHAT LANGUAGES)?
+   I've had a about a year of programming experience starting with Scratch/BYOB in CS10 and Python/Scheme in CS61A. 
+
+WHAT ARE YOUR HOBBIES?
+   I'm a huge fan of professional wrestling (yeah, the 'fake' stuff) and am even co-teaching a DeCal on it this semester! I like to read for fun when I have the time, and go to movies and hang out with friends. I also like sudoku puzzles!
+
+WHAT ARE SOME OF YOUR TALENTS & SKILLS?
+   I've been a student intern at Sandia National Laboratories for the past four years. I'm working on algal and bacterial biofeuls research and development (R&D) in applied biology laboratories doing a bunch of wet lab work and data analysis having worked with cell cultures, spectroscopy, genetics, and molecular cloning. 
+
+HAVE YOU DONE ANYTHING REMARKABLE? HAS ANYTHING MEMORABLE HAPPENED TO YOU?
+   From my work at my internship, I've co-authored an article in the Journal of Biotechnology and Bioengineering, titled "Multiplex fluorometric assessment of nutrient limitation as a strategy for enhanced lipid enrichment and harvesting in Neochloris Oleoabundans", which I think is pretty cool!
+
+WHAT COMMITMENTS WILL BE CONSUMING YOUR CYCLES THIS SEMESTER?
+   This semester, I will be taking CS70, CS195, Psych110, and Philos132. I am also teaching a DeCal on professional wrestling, involved with the Cognitive Science Student Association, and of course, lab assisting & helping you in CS10! (all while commuting from San Leandro)
