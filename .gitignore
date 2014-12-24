@@ -1,4 +1,4 @@
+_site
+.sass-cache
 .DS_Store
-*~
-images
-assets/images
+.DS_store
