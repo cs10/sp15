@@ -26,7 +26,9 @@ BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 # Proxies should not deliver wrong content
 Header append Vary User-Agent env=!dont-vary
 
-ExpiresDefault "access plus 4 weeks"
-ExpiresByType text/html "access plus 2 days"
-ExpiresByType text/css "access plus 10 days"
-ExpiresByType application/javascript "access plus 2 days"
+ExpiresActive On
+ExpiresDefault "access plus 15 weeks"
+ExpiresByType text/html "access plus 5 days"
+ExpiresByType text/css "access plus 2 weeks"
+ExpiresByType application/javascript "access plus 2 weeks"
+
