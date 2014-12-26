@@ -16,21 +16,17 @@
             background-repeat: no-repeat;
             background-position: bottom right;
             background-attachment: fixed;
-            font-family: 'Helvetica', sans-serif;
+            font-family: 'Helvetica';
             width: 90%;
-            margin: .5% 5%;
+            margin: 2% 5%;
             padding: 0 .3em .3em .3em;
         }
         .logo {
-            font-family: 'VAG Rounded Light';
             font-size: 2.25em;
             margin: .1em;
             text-align: center;
         }
-        img {
-          max-width: 100%;
-          height: auto;
-        }
+
         .header {
             display: inline-block;
             width: 100%;
@@ -74,7 +70,7 @@
             background: -o-linear-gradient(top,  #003A70 q%,#3f7dc2 50%,#003A70 100%); /* Opera 11.10+ */
             background: -ms-linear-gradient(top,  #003A70 0%,#3f7dc2 50%,#003A70 100%); /* IE10+ */
             background: linear-gradient(to bottom,  #003A70 0%,#3f7dc2 50%,#003A70 100%); /* W3C */
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003A70', endColorstr='#003A70', GradientType=0); /* IE6-9 */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003A70', endColorstr='#003A70',GradientType=0 ); /* IE6-9 */
             border-radius: 2em;
             box-shadow: 2px 3px 6px #606060;
             padding: .3em 1em;
@@ -88,29 +84,20 @@
             display: table-cell;
             vertical-align: middle;
         }
-        /* centered columns styles */
-        .row-centered {
-            text-align:center;
-        }
-        .col-centered {
-            display:inline-block;
-            float:none;
-            /* reset the text-align */
-            text-align:center;
-            /* inline-block space fix */
-            margin-right:-4px;
-        }
+            /* centered columns styles */
+            .row-centered {
+                text-align:center;
+            }
+            .col-centered {
+                display:inline-block;
+                float:none;
+                /* reset the text-align */
+                text-align:center;
+                /* inline-block space fix */
+                margin-right:-4px;
+            }
+
         </style>
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-47210910-1', 'auto');
-          ga('send', 'pageview');
-
-        </script>
     </head>
 
     <body>
@@ -133,9 +120,9 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="col-centered vcenter">
+                    <div class="col-centered vagrounded-light vcenter">
                         <br /><br /><br />
-                        <h2 class="logo">CS10: BJC | Fall 2014</h2>
+                        <h2 class="logo">CS10 | Fall 2014</h2>
                         <h2 class="logo">The Beauty &amp; Joy of Computing</h2>
                     </div>
                 </div>
@@ -163,7 +150,7 @@
                 </div>
                 <div class="ql col-md-2">
                     <!-- UPDATE EACH SEMESTER -->
-                    <a class="lablink" href="../labs/course/cs10_fa14.html?">Labs</a>
+                    <a href="../labs/course/cs10_fa14.html">Labs</a>
                 </div>
                 <div class="ql col-md-2">
                     <!-- UPDATE EACH SEMESTER -->
@@ -180,14 +167,14 @@
         </div>
         <div class="clearfix"></div>
 
-        <!-- <h1>News</h1>
+        <h1>News</h1>
         <div class="page-section" id="news">
             <h2>Please check this section for important updates!</h2>
             <ul class='lambda'>
                 <li>August 18, 2014: Welcome to CS10!</li>
                 <li>August 29, 2014: Course Syllabus added to the quick links section (right above).</li>
             </ul>
-        </div> -->
+        </div>
 
         <h1>Overview</h1>
         <div class="page-section" id="overview"></div>
@@ -205,30 +192,57 @@
         <div class="page-section" id="weekly">
             <h4>This calendar displays the class schedule for the <em>current</em> week.
               Click on any event to see the building location on a map.</h4>
-            <div id="oh-cal" style="min-width:800px;"></div>
+            <div style="overflow-y: scroll">
+                <div id="oh-cal" style="min-width:800px;"></div>
+            </div>
         </div>
 
         <h1>Staff</h1>
         <div class="page-section" id="staff">
-          <h2>Instructor</h2>
-          <div class="container-fluid" id="instructors"><div class="row staffimgrow"><div class="col-md-12"><a href="resources/images/Fa13/Gerald.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="Dr. Gerald Friedland" title="Dr. Gerald Friedland" src="resources/images/small/Gerald.jpg"></a><br><strong><a href="http://www.cs.berkeley.edu/%7Eddgarcia/">Dr. Gerald Friedland</a></strong> <br><a href="mailto:fractor@icsi.berkeley.edu?subject=[CS10] SUBJECT"><code>fractor@icsi.berkeley.edu</code></a><br>329 Soda</div></div><div class="clearfix"></div></div>
-          <div class="clearfix"></div>
+            <h2>Instructor</h2>
+            <div class="container-fluid" id="instructors"></div>
+            <div class='clearfix'></div>
 
-          <h2>Teaching Assistants</h2>
-          <div class="container-fluid" id="tas"><div class="row staffimgrow"><div class="col-md-20"><a href="resources/images/Sp14/MichaelBallTake3.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="Head TA Michael Ball" title="Head TA Michael Ball" src="resources/images/small/MichaelBall.jpg"></a><br><strong><a href="http://michaelballphoto.com">Head TA Michael Ball</a></strong> (<a href="bios/MichaelBall.txt">bio</a>)<br><a href="mailto:ball@berkeley.edu?subject=[CS10] SUBJECT"><code>ball@berkeley.edu</code></a></div><div class="col-md-20"><a href="resources/images/Sp14/LaurenMock.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="Head TA Lauren Mock" title="Head TA Lauren Mock" src="resources/images/small/LaurenMock.jpg"></a><br><strong><a href="http://linkedin.com/in/laurenmock">Head TA Lauren Mock</a></strong> <br><a href="mailto:lmock@berkeley.edu?subject=[CS10] SUBJECT"><code>lmock@berkeley.edu</code></a></div><div class="col-md-20"><a href="resources/images/Sp14/AdamKuphaldt.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="TA Adam Kuphaldt" title="TA Adam Kuphaldt" src="resources/images/small/AdamKuphaldt.jpg"></a><br><strong>TA Adam Kuphaldt</strong> <br><a href="mailto:akuphaldt@berkeley.edu?subject=[CS10] SUBJECT"><code>akuphaldt@berkeley.edu</code></a></div><div class="col-md-20"><a href="resources/images/Sp14/AndrewSchmitt.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="TA Andrew Schmitt" title="TA Andrew Schmitt" src="resources/images/small/AndrewSchmitt.jpg"></a><br><strong>TA Andrew Schmitt</strong> <br><a href="mailto:aschmitt@berkeley.edu?subject=[CS10] SUBJECT"><code>aschmitt@berkeley.edu</code></a></div><div class="col-md-20"><a href="resources/images/Sp14/AranyUthayakumar.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="TA Arany Uthayakumar" title="TA Arany Uthayakumar" src="resources/images/small/AranyUthayakumar.jpg"></a><br><strong>TA Arany Uthayakumar</strong> (<a href="bios/AranyBio.txt">bio</a>)<br><a href="mailto:arany@berkeley.edu?subject=[CS10] SUBJECT"><code>arany@berkeley.edu</code></a></div></div><div class="clearfix"></div><div class="row staffimgrow"><div class="col-md-20"><a href="resources/images/Fa13/JaclynBurge.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="TA Jaclyn Burge" title="TA Jaclyn Burge" src="resources/images/small/JaclynBurge.jpg"></a><br><strong><a href="www.jacburge.me">TA Jaclyn Burge</a></strong> <br><a href="mailto:jacburge.cs10@gmail.com?subject=[CS10] SUBJECT"><code>jacburge.cs10@gmail.com</code></a></div><div class="col-md-20"><a href="resources/images/Sp14/JannaGolden.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="TA Janna Golden" title="TA Janna Golden" src="resources/images/small/JannaGolden.jpg"></a><br><strong>TA Janna Golden</strong> <br><a href="mailto:jannagolden@berkeley.edu?subject=[CS10] SUBJECT"><code>jannagolden@berkeley.edu</code></a></div><div class="col-md-20"><a href="resources/images/Fa13/JosephCawthorne.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="TA Joseph Cawthorne" title="TA Joseph Cawthorne" src="resources/images/small/JosephCawthorne.jpg"></a><br><strong>TA Joseph Cawthorne</strong> <br><a href="mailto:cs10tajcawth@gmail.com?subject=[CS10] SUBJECT"><code>cs10tajcawth@gmail.com</code></a></div><div class="col-md-20"><a href="resources/images/Fa12/JeffreySnowiss.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="TA Jeffrey Snowiss" title="TA Jeffrey Snowiss" src="resources/images/small/JeffreySnowiss.jpg"></a><br><strong>TA Jeffrey Snowiss</strong> <br><a href="mailto:jasnowiss10@gmail.com?subject=[CS10] SUBJECT"><code>jasnowiss10@gmail.com</code></a></div><div class="col-md-20"><a href="resources/images/Sp14/MaxDougherty.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="TA Max Dougherty" title="TA Max Dougherty" src="resources/images/small/MaxDougherty.jpg"></a><br><strong>TA Max Dougherty</strong> <br><a href="mailto:mdougherty@berkeley.edu?subject=[CS10] SUBJECT"><code>mdougherty@berkeley.edu</code></a></div></div><div class="clearfix"></div><div class="row staffimgrow"><div class="col-md-3"><a href="resources/images/Fa13/RachelHuang.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="TA Rachel Huang" title="TA Rachel Huang" src="resources/images/small/RachelHuang.jpg"></a><br><strong>TA Rachel Huang</strong> <br><a href="mailto:rachelhuang072@berkeley.edu?subject=[CS10] SUBJECT"><code>rachelhuang072@berkeley.edu</code></a></div><div class="col-md-3"><a href="resources/images/Fa12/SumerMohammed.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="TA Sumer Mohammed" title="TA Sumer Mohammed" src="resources/images/small/SumerMohammed.jpg"></a><br><strong>TA Sumer Mohammed</strong> <br><a href="mailto:sumermohammed@berkeley.edu?subject=[CS10] SUBJECT"><code>sumermohammed@berkeley.edu</code></a></div><div class="col-md-3"><a href="resources/images/Sp14/StevenTraversi.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="TA Steven Traversi" title="TA Steven Traversi" src="resources/images/small/StevenTraversi.jpg"></a><br><strong>TA Steven Traversi</strong> <br><a href="mailto:straversi@berkeley.edu?subject=[CS10] SUBJECT"><code>straversi@berkeley.edu</code></a></div><div class="col-md-3"><a href="resources/images/Fa13/VictoriaShi.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="TA Victoria Shi" title="TA Victoria Shi" src="resources/images/small/VictoriaShi.jpg"></a><br><strong>TA Victoria Shi</strong> (<a href="bios/VictoriaBio.txt">bio</a>)<br><a href="mailto:victoria.shi@berkeley.edu?subject=[CS10] SUBJECT"><code>victoria.shi@berkeley.edu</code></a></div></div><div class="clearfix"></div></div>
-          <div class="clearfix"></div>
+            <h2>Teaching Assistants</h2>
+            <div class="container-fluid" id="tas"></div>
+            <div class='clearfix'></div>
 
-          <h2>Readers</h2>
-          <div id="readers"><div class="row staffimgrow"><div class="col-md-20"><a href="resources/images/Sp14/AlexMcKinney.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="Reader Alex McKinney" title="Reader Alex McKinney" src="resources/images/small/AlexMcKinney.jpg"></a><br><strong>Reader Alex McKinney</strong> </div><div class="col-md-20"><a href="resources/images/Sp14/BrandonChen.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="Reader Brandon Chen" title="Reader Brandon Chen" src="resources/images/small/BrandonChen.jpg"></a><br><strong>Reader Brandon Chen</strong> </div><div class="col-md-20"><a href="resources/images/Fa13/CarlosFlores.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="Reader Carlos Flores" title="Reader Carlos Flores" src="resources/images/small/CarlosFlores.jpg"></a><br><strong>Reader Carlos Flores</strong> </div><div class="col-md-20"><a href="resources/images/Fa13/ClaireWatanabe.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="Reader Claire Watanabe" title="Reader Claire Watanabe" src="resources/images/small/ClaireWatanabe.jpg"></a><br><strong>Reader Claire Watanabe</strong> </div><div class="col-md-20"><a href="resources/images/Fa13/JobelVecino.jpg"><img onerror="imgError(this)" class="staff" align="center" alt="Reader Jobel Vecino" title="Reader Jobel Vecino" src="resources/images/small/JobelVecino.jpg"></a><br><strong>Reader Jobel Vecino</strong> </div></div><div class="clearfix"></div></div>
-          <div class="clearfix"></div>
-        </div>
-        <div class="clearfix"></div>
+            <h2>Readers</h2>
+            <div id="readers"></div>
+            <div class='clearfix'></div>
 
-        <h1>Grading</h1>
-        <div class="page-section" id="grading"></div>
+          <!--
+          <h2>TAs-in-Training</h2>
+          <div id="tait"></div>
+          <div class='clearfix'></div>
 
-        <h1>Resources</h1>
-        <div class="page-section" id="resources">
+          <h2>Lab Assistants</h2>
+          <div id="las"></div>
+          <div class='clearfix'></div>
+
+          <h2>edX Course Development</h2>
+          <div id="edx"></div>
+          <div class='clearfix'></div>
+
+          <h2>BJC Lab Development</h2>
+          <div id="labdev"></div>
+          <div class='clearfix'></div>
+
+          <h2><span class='snap'>snap</span> Development</h2>
+          <div id="snap"></div>
+          <div class='clearfix'></div>
+
+          <h2>BJC Project Leads</h2>
+          <div id="bjc"></div>
+          <div class='clearfix'></div> -->
+      </div>
+      <div class="clearfix"></div>
+
+      <h1>Grading</h1>
+      <div class="page-section" id="grading"></div>
+
+      <h1>Resources</h1>
+      <div class="page-section" id="resources">
           <ul class="lambda">
               <li><a href="http://www.bitsbook.com/">Blown to Bits</a></li>
               <li><a href="http://www.debuggingrules.com/">Debugging Rules!</a></li>
@@ -236,28 +250,32 @@
               <li><a href="http://coe.berkeley.edu/">College of Engineering</a> </li>
               <li><a href="http://www.eecs.berkeley.edu/">EECS Department Page</a></li>
               <li><a href="../fa13/lab/solutions.html">(OLD) Solutions to Lab Exercises</a></li>
-            </ul>
-          </div>
+          </ul>
+      </div>
 
-          <hr />
-          <div class="center">
-            This work is licensed under a
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-              Creative Commons Attribution-Noncommercial-Share Alike 4.0 Unported License
-            </a>.
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+      <hr />
+      <div class="center">
+          This work is licensed under a
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+              Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License
+          </a>.
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
               <img align="right" alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
-            </a>
-          </div>
+          </a>
+      </div>
 
       <!--END PAGE CONTENT -->
-      <link href="assets/lib/fullcalendar/fullcalendar.min.css" rel="stylesheet"/>
-      <link href="assets/cs10style.css" rel="stylesheet"/>
+      <link href="assets/fullcalendar.css" rel="stylesheet" type="text/css" />
+      <link href="assets/cs10style.css" rel="stylesheet" type="text/css" />
 
-      <script src='assets/lib/jquery.min.js'></script>
-      <script src="assets/cs10.js"></script>
-      <script>
-          function addContent(item) {
+      <script type='text/javascript' src='assets/lib/jquery.min.js'></script>
+      <script type="text/javascript" src="assets/cs10.js"></script>
+      <!-- TODO: Add this back when the new calendar is ready
+      <script type="text/javascript" src="assets/calendar.js"></script>
+      -->
+      <script type="text/javascript">
+          // cs10 = window.cs10 || {};
+          function addContent(item, fn) {
               $.ajax({
                   async: true,
                   cache: true,
@@ -265,66 +283,75 @@
                   url: './includes/' + item + '.html',
                   success: function(content, unused, notused) {
                       $('#' + item).append(content);
-                  }
+                  },
+                  complete: (fn ? fn : [])
               });
           }
           addContent('overview');
+          // TODO: Update calendars when the new one looks right.
+          // Swap the two files
           addContent('calendar');
+          // addContent('cal-bs');
           addContent('grading');
       </script>
-      <!-- JS For the Weekly Schedule uses fullcalendar.io -->
-      <script src='assets/lib/moment.min.js'></script>=
-      <script src='assets/lib/fullcalendar/fullcalendar.min.js'></script>
-      <script src='assets/lib/fullcalendar/gcal.js'></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <!-- <script type='text/javascript' src='assets/lib/bootstrap.min.js'></script> -->
+      <script type='text/javascript' src='assets/lib/fullcalendar.js'></script>
+      <script type='text/javascript' src='assets/lib/gcal.js'></script>
       <script>
-      // Review session dates, JS Dates: 0 == Jan!!
-      var quest   = daysUntil(new Date(2014, 9, 1)),
-          midterm = daysUntil(new Date(2014, 9, 29)),
-          final   = daysUntil(new Date(2014, 11, 16));
+      // Review session dates
+      var quest   = daysUntil(new Date(2014, 10, 1)),
+          midterm = daysUntil(new Date(2014, 10, 29)),
+          final   = daysUntil(new Date(2014, 12, 16));
 
-      function daysUntil(from, to) {
+      function daysUntil(day) {
         var MS_DAY = 1000*60*60*24;
-        return Math.floor((from - (to || new Date())) / MS_DAY);
+        return Math.floor((new Date() - day) / MS_DAY);
       }
 
-      function inRange(num) { return num >= -7 && num < 1; }
-
+      function inRange(num) { return num >= -7 && num < 1 }
       $(document).ready(function() {
-          // Show weekends when we are close to at least one review session.
-          var wkends = inRange(quest) || inRange(midterm) || inRange(final);
-
-          // Google API KEY:
-          var gcalkey = 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs';
+          // Show weeks when we are close to at least one session.
+          var wkends = (inRange(quest) || inRange(midterm) || inRange(final));
           $('#oh-cal').fullCalendar({
             allDaySlot: false,
-            slotDuration: "1:00:00",
             slotEventOverlap: false,
+            slotMinutes: 60,
             weekends: wkends,
             defaultView: 'agendaWeek',
-            minTime: "09:00:00",
-            maxTime: "20:00:00",
-            contentHeight: "auto",
+            minTime: 9,
+            maxTime: 20,
+            contentHeight: 700,
             eventSources: [
-              {   googleCalendarId: 'berkeley.edu_7qpoo4ph13p55e4ukmnpvqusdk@group.calendar.google.com',
-                  cache: true,
-                  googleCalendarApiKey: gcalkey,
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_7qpoo4ph13p55e4ukmnpvqusdk%40group.calendar.google.com/public/basic',
                   className: 'lecture' },
-              {   googleCalendarId: 'berkeley.edu_d358eocqj23pak3atie23vk35o@group.calendar.google.com',
-                  cache: true,
-                  googleCalendarApiKey: gcalkey,
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_d358eocqj23pak3atie23vk35o%40group.calendar.google.com/public/basic',
                   className: 'lab' },
-              {   googleCalendarId: 'berkeley.edu_k2g60q1sehd2u0ujd257jqm7h0@group.calendar.google.com',
-                  cache: true,
-                  googleCalendarApiKey: gcalkey,
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_k2g60q1sehd2u0ujd257jqm7h0%40group.calendar.google.com/public/basic',
                   className: 'oh' },
-              {   googleCalendarId: 'berkeley.edu_1g3duo9lb53vu09orjictriud4@group.calendar.google.com',
-                  cache: true,
-                  googleCalendarApiKey: gcalkey,
-                  className: 'disc' }
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_1g3duo9lb53vu09orjictriud4%40group.calendar.google.com/public/basic',
+                  className: 'disc' },
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_21jprgg43p44oq62g94agbumv8%40group.calendar.google.com/public/basic',
+                  className: 'disc', // FIX FOR BUG WITH LAST 2 DISCUSSIONS
+                  currentTimezone: 'America/Chicago' },
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_kte6c7s6dbmqjhaan64rn2mnng%40group.calendar.google.com/public/basic',
+                  className: 'lab', // FIX FOR BUG WITH LAST LAB
+                  currentTimezone: 'America/Chicago' },
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_vtlj909a885kh20chsvjfkddb0%40group.calendar.google.com/public/basic',
+                  className: 'oh', // FIX FOR BUG WITH LATE OH
+                  currentTimezone: 'America/Chicago' }
             ]
-          });
+          })
       });
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-47210910-1', 'berkeley.edu');
+        ga('send', 'pageview');
       </script>
-      <!-- <script src='assets/staff.js'></script> -->
+      <script type='text/javascript' src='assets/staff.js'></script>
     </body>
 </html>
