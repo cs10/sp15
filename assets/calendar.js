@@ -35,11 +35,19 @@ cs10.newLabObject = function(title, url, rq, video) {
     var labObj = { type: 'Lab' };
     labObj.title = title;
     
+    // Global Counter for lecture
+    cs10.rqCounter = cs10.rqCounter || 0;
+    
     if (!title) {
         labObj.title = 'No Lab';
     }
     if (url) {
         labObj.url = baseURL + url;
+    }
+    
+    if (rq) {
+        cs10.rqCounter += 1;
+        rq = cs10.rqCounter;
     }
     labObj.RQ = rq;
 
@@ -63,7 +71,7 @@ cs10.newReadingsObject = function(title, url, classes) {
     return reading;
 };
 
-cs10.newLectureObject = function(title, guest, videURL) {
+cs10.newLectureObject = function(title, videURL, guest) {
     var obj = { type: 'Lecture' };
 
     if (!title) {
@@ -101,7 +109,7 @@ cs10.newDiscussionObject = function(title, files) {
 
     return obj;
 };
-cs10.newHomeworkObject = function(title, url) {
+cs10.newHomeworkObject = function(title, url, dueDate, notes) {
     var obj = { type: 'Homework' };
 
     if (!title) {
@@ -162,9 +170,9 @@ cs10.renderObject = function(obj) {
 
 cs10.week1 = {
     readings: 'No Readings',
-    lectA: lect(null),
-    labA: lab(null),
-    lectB: lect(null),
+    lectM: 'No Lecture Monday',
+    labA: 'No Labs Monday, Tuesday, or Wednesday morning',
+    lectW: lect('Welcome and Abstraction', 'https://coursesharing.org/courses/6/lectures/7'),
     labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
     disc: disc('Welcome to CS10!'),
     hw: hw('HW0')
@@ -188,11 +196,11 @@ cs10.week2 = {
                 'https://bcourses.berkeley.edu/courses/1246916/files#CS10%3A%20The%20Beauty%20and%20Joy%20of%20Computing%2FReadings',
                 'optional')
     ],
-    lectA: lect(null),
-    labA: lab('Build Your Own Blocks', 'berkeley_bjc/intro_new/2-loops-variables.topic', 1),
-    lectB: lect('Welcome and Abstraction'),
-    labB: lab('Conditionals', 'berkeley_bjc/intro_new/3-conditionals.topic'),
-    disc: disc('Getting Started With <span class=“snap”>snap</span>'),
+    lectM: lect('Functions'),
+    labA: lab('Build Your Own Blocks', 'berkeley_bjc/intro_new/2-loops-variables.topic'),
+    lectW: lect('Creativity and Abstraction'),,
+    labB: lab('Conditionals', 'berkeley_bjc/intro_new/3-conditionals.topic', true),
+    disc: disc('Anatomy of a Computer and the Power of Binary'),
     hw: hw('Start on HW1')
 };
 
@@ -216,9 +224,9 @@ cs10.week3 = {
                 'http://www.msnbc.msn.com/id/40077373/ns/technology_and_science-games/',
                 'optional')
     ],
-    lectA: lect('Functions'),
+    lectM: lect('3D Graphics'),
     labA: lab('Functions', 'berkeley_bjc/intro_new/4-abstraction-testing.topic', 2),
-    lectB: lect('Creativity and Abstraction'),
+    lectW: lect('Programming Paradigms'),
     labB: lab('Lists 1', 'berkeley_bjc/lists/lists-I.topic'),
     disc: disc('All about lists'),
     hw: hw('HW1')
@@ -240,9 +248,9 @@ cs10.week4 = {
                 'http://www.wired.com/magazine/2010/05/process_pixar/',
                 'optional')
     ],
-    lectA: lect('3D Graphics'),
+    lectM: lect('Algorithms'),
     labA: lab('Lists 1 & HW Help', 'berkeley_bjc/lists/lists-I.topic', 3),
-    lectB: lect('Programming Paradigms'),
+    lectW: lect('Algorithmic Complexity'),
     labB: lab('Algorithms', 'berkeley_bjc/areas/algorithms.topic'),
     disc: disc('Lists'),
     hw: hw('Start on HW2')
@@ -253,9 +261,9 @@ cs10.week5 = {
         
     },
     readings: 'No Readings',
-    lectA: lect(null),
-    labA: lab(null),
-    lectB: lect('Welcome and Abstraction'),
+    lectM: 'No Lecture (Holiday)',
+    labA: 'No Labs Monday<br>Quest Help and Review',
+    lectW: lect('No Lecture; Quest In Class'),
     labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
@@ -276,9 +284,9 @@ cs10.week6 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter3.pdf',
                 'optional')
     ],
-    lectA: lect(null),
+    lectM: lect('Recursion I'),
     labA: lab(null),
-    lectB: lect('Welcome and Abstraction'),
+    lectW: lect('Concurrency'),
     labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
@@ -306,9 +314,9 @@ cs10.week7 = {
                 'optional')
         
     ],
-    lectA: lect(null),
+    lectM: lect('Recursion II'),
     labA: lab(null),
-    lectB: lect(null),
+    lectW: lect('Artificial Intelligence', '', 'A Guest'),
     labB: lab(null),
     disc: disc('Welcome to CS10!'),
     hw: hw('HW0')
@@ -325,9 +333,9 @@ cs10.week8 = {
         reading('BtB Chapter 6 (27-37)',
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter6.pdf')
     ],
-    lectA: lect(null),
+    lectM: lect('Social Implications I'),
     labA: lab(null),
-    lectB: lect('Welcome and Abstraction'),
+    lectW: lect('Social Implications II', '', 'Gerald Friedland'),
     labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
@@ -339,9 +347,9 @@ cs10.week9 = {
         
     },
     readings: 'No Readings',
-    lectA: lect(null),
+    lectM: lect('Social Implications III', '', 'Brian Harvey'),
     labA: lab(null),
-    lectB: lect('Welcome and Abstraction'),
+    lectW: lect('The Internet'),
     labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
@@ -362,9 +370,9 @@ cs10.week11 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter8.pdf',
                 'optional')
     ],
-    lectA: lect(null),
+    lectM: lect('HCI', '', 'Eric Paulos'),
     labA: lab(null),
-    lectB: lect('Welcome and Abstraction'),
+    lectW: lect('The Internet II'),
     labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
@@ -388,9 +396,9 @@ cs10.week12 = {
                 'http://www.cimt.plymouth.ac.uk/projects/mepres/stats/handlg_data_ch3.pdf',
                 'optional')
     ],
-    lectA: lect(null),
+    lectM: lect('Data'),
     labA: lab(null),
-    lectB: lect('Welcome and Abstraction'),
+    lectW: lect('Lambdas and HOFs'),
     labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
@@ -404,9 +412,9 @@ cs10.week13 = {
                 'https://medium.com/p/804cdf4b48c1',
                 'hard')
     ],
-    lectA: lect(null),
+    lectM: lect('Limits of Computing'),
     labA: lab(null),
-    lectB: lect(null),
+    lectW: lect('Besides Blocks I'),
     labB: lab(null),
     disc: disc('Welcome to CS10!'),
     hw: hw('HW0')
@@ -420,9 +428,9 @@ cs10.week14 = {
                 'http://introcs.cs.princeton.edu/java/76computability/halting-poem.html',
                 'optional')
     ],
-    lectA: lect(null),
+    lectM: lect('Future of Computing'),
     labA: lab(null),
-    lectB: lect('Welcome and Abstraction'),
+    lectW: lect('Besides Blocks II'),
     labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
@@ -445,9 +453,9 @@ cs10.week15 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter9.pdf',
                 'optional')
     ],
-    lectA: lect(null),
+    lectM: lect('Saving the World with Computing', '', 'Kathy Yelick'),
     labA: lab(null),
-    lectB: lect('Welcome and Abstraction'),
+    lectW: lect('Summary and Farewell'),
     labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
@@ -456,9 +464,9 @@ cs10.week15 = {
 
 // DEAD WEEK
 cs10.week16 = {
-    lectA: lect(null),
+    lectM: lect(null),
     labA: lab(null),
-    lectB: lect(null),
+    lectW: lect(null),
     labB: lab(null),
     disc: disc('Welcome to CS10!'),
     hw: hw('HW0')
@@ -466,9 +474,9 @@ cs10.week16 = {
 
 // Dec 15 - 19
 cs10.week17 = {
-    lectA: lect(null),
+    lectM: lect(null),
     labA: lab(null),
-    lectB: lect('Welcome and Abstraction'),
+    lectW: lect('Welcome and Abstraction'),
     labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
