@@ -1,8 +1,6 @@
-# [CS10 Fall 2014][site]
+# [CS10 Spring 2015][site]
 
-Fall 2014. It's gonna be real.
-
-[site]: http://cs10.berkeley.edu/fa14
+[site]: http://cs10.org/sp15
 
 ## Background
 This repo serves as the source for the Fall 2014 CS10 course website. All changes (`git push`es) to this repo will automatically update the class website.
