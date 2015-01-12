@@ -145,7 +145,7 @@ cs10.week2 = {
     lectW: lect('Creativity and Abstraction'),,
     labB: lab('Conditionals', 'berkeley_bjc/intro_new/3-conditionals.topic', true),
     disc: disc('Anatomy of a Computer and the Power of Binary'),
-    hw: hw('Start on HW1')
+    hw: hw('HW1')
 };
 
 // FEB 2 - 6
@@ -173,7 +173,7 @@ cs10.week3 = {
     lectW: lect('Programming Paradigms'),
     labB: lab('Lists I', 'berkeley_bjc/lists/lists-I.topic'),
     disc: disc('All about lists'),
-    hw: hw('HW1')
+    hw: hw('HW2')
 };
 
 // FEB 9 - 13
@@ -196,8 +196,8 @@ cs10.week4 = {
     labA: lab('Algorithms', 'berkeley_bjc/areas/algorithms.topic', true),
     lectW: lect('Algorithmic Complexity'),
     labB: lab('Algorithmic Complexity', "berkeley_bjc/areas/algorithm-complexity.topic"),
-    disc: disc('Lists'),
-    hw: hw('Start on HW2')
+    disc: disc('Algorithmic Complexity and Quest Review'),
+    hw: hw('HW2')
 };
 
 // FEB 16 - 20
@@ -210,8 +210,8 @@ cs10.week5 = {
     labA: 'No Labs Monday<br>Quest Help and Review',
     lectW: lect('No Lecture; Quest In Class'),
     labB: lab('berkeley_bjc/robots/robots.topic', 'Finch Robots'),
-    disc: disc('Getting Started With <span class=“snap”>snap</span>'),
-    hw: hw('Start on HW1')
+    disc: disc('Quest Debrief and HW3 Help'),
+    hw: 'Start HW 3'
 };
 
 // FEB 23 - 24
@@ -234,8 +234,8 @@ cs10.week6 = {
     labA: lab('berkeley_bjc/recur/recursion-trees-fractals.topic', 'Trees and Fractals using Recursion', true),
     lectW: lect('Concurrency'),
     labB: lab('berkeley_bjc/areas/concurrency.topic', 'Concurrency'),
-    disc: disc('Getting Started With <span class=“snap”>snap</span>'),
-    hw: hw('Start on HW1')
+    disc: disc('<span style="font-size: 150%">R<sup>e<sup>c<sup>u<sup>r<sup>s<sup>i<sup>o<sup>n</sup></sup></sup></sup></sup></sup></sup></sup>'),
+    hw: hw('HW3')
 };
 
 // MARCH 2 - 6 (Lauren, Dan, Michael out -- mostly)
@@ -265,8 +265,8 @@ cs10.week7 = {
     labA: lab('berkeley_bjc/recur/recursive-reporters-part1.topic', 'Recursive Reporters I', true),
     lectW: lect('Artificial Intelligence', '', 'A Guest'),
     labB: lab('Project Work'),
-    disc: disc('Welcome to CS10!'),
-    hw: hw('HW0')
+    disc: disc('Concurrency and Midterm Intro'),
+    hw: hw('Start Midterm Project')
 };
 
 // MARCH 9 - 13 (Lauren, Dan, Michael partially out)
@@ -285,8 +285,8 @@ cs10.week8 = {
     labA: lab('Project Work and Lab Review', '', true),
     lectW: lect('Social Implications II', '', 'Gerald Friedland'),
     labB: lab('Project Work'),
-    disc: disc('Getting Started With <span class=“snap”>snap</span>'),
-    hw: hw('Start on HW1')
+    disc: disc('Midterm Review'),
+    hw: 'Work on midterm Project'
 };
 
 // MIDTERM WEEK
@@ -300,8 +300,8 @@ cs10.week9 = {
     labA: lab('Online <span class="snap">snap</span> Midterm'),
     lectW: lect('The Internet'),
     labB: lab('berkeley_bjc/areas/internet.topic', 'The Internet'),
-    disc: disc('Getting Started With <span class=“snap”>snap</span>'),
-    hw: hw('Start on HW1')
+    disc: disc('Midterm Debrief'),
+    hw: hw('Midterm Project')
 };
 
 // Spring Break
@@ -325,8 +325,8 @@ cs10.week11 = {
     labA: lab('berkeley_bjc/lists/tic-tac-toe.topic', 'Tic Tac Toe', true),
     lectW: lect('The Internet II'),
     labB: lab('Project Work'),
-    disc: disc('Getting Started With <span class=“snap”>snap</span>'),
-    hw: hw('Start on HW1')
+    disc: disc('The Intenet'),
+    hw: hw('Impact Writing Assignment')
 };
 
 // APRIL 6 - 10
@@ -348,12 +348,12 @@ cs10.week12 = {
                 'http://www.cimt.plymouth.ac.uk/projects/mepres/stats/handlg_data_ch3.pdf',
                 'optional')
     ],
-    lectM: lect('Lambdas and HOFs'),
+    lectM: lect('Lambda and HOFs'),
     labA: lab('berkeley_bjc/hofs/hofs-practice.topic', 'Practice with HOFs and Functions as Data', true),
     lectW: lect('Besides Blocks I'), // THOUGHT: Move this up a weekx
     labB: lab('berkeley_bjc/python/besides-blocks-welcome.topic', 'Besides Blocks: Welcome to Python'),
-    disc: disc('Getting Started With <span class=“snap”>snap</span>'),
-    hw: hw('Start on HW1')
+    disc: disc('Data and HOFs'),
+    hw: hw('Impact Post Comments')
 };
 
 // APRIL 13 - 17
@@ -370,7 +370,8 @@ cs10.week13 = {
     lectW: lect('Data'),
     labB: lab('berkeley_bjc/python/besides-blocks-data.topic', 'Besides Blocks: Data in Python'),
     disc: disc('Practical Privacy Implications'),
-    hw: hw('Data Project')
+    hw: [ hw('Data Project'),
+          hw('Final Project Proposal') ]
 };
 
 // APRIL 20 - 24

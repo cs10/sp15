@@ -4,7 +4,7 @@ cs10.endData   = '2015-05-15';
 
 cs10.bCoursesID = '';
 cs10.gradingScheme = {
-    
+    'A+': 480
 };
 
 

@@ -10,3 +10,14 @@ url: "http://cs10.org" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+
+
+# CSS Style
+sass:
+    style: :compressed
+    sass_dir: assets/_sass
+    
+# TODO: TA Collections
+# collections:
+    # - tas:
+        # output: true 
