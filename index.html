@@ -79,7 +79,9 @@ layout: default
   </div> -->
 
   <h1>Overview</h1>
-  <div class="page-section" id="overview"></div>
+  <div class="page-section" id="overview">
+    {% include_relative includes/overview.html %}
+  </div>
 
   <!--
   <h1>Assignment Calendar</h1>
@@ -87,7 +89,9 @@ layout: default
   <div class="clearfix"></div> -->
 
   <h1>Assignment Calendar</h1>
-  <div class="page-section" id="calendar"></div>
+  <div class="page-section" id="calendar">
+    {% include_relative includes/calendar.html %}
+  </div>
   <div class="clearfix"></div>
 
   <h1>Weekly Schedule</h1>
@@ -114,7 +118,9 @@ layout: default
   <div class="clearfix"></div>
 
   <h1>Grading</h1>
-  <div class="page-section" id="grading"></div>
+  <div class="page-section" id="grading">
+      {% include_relative includes/grading.html %}
+  </div>
 
   <h1>Resources</h1>
   <div class="page-section" id="resources">
@@ -144,27 +150,12 @@ layout: default
 <link href="assets/cs10style.css" rel="stylesheet"/>
 
 <script src='assets/lib/jquery.min.js'></script>
-<script src="assets/cs10.js"></script>
-<script>
-    function addContent(item) {
-        $.ajax({
-            async: true,
-            cache: true,
-            dataType: 'html',
-            url: './includes/' + item + '.html',
-            success: function(content, unused, notused) {
-                $('#' + item).append(content);
-            }
-        });
-    }
-    addContent('overview');
-    addContent('calendar');
-    addContent('grading');
-</script>
+<!-- <script src="assets/cs10.js"></script> -->
 <!-- JS For the Weekly Schedule uses fullcalendar.io -->
 <script src='assets/lib/moment.min.js'></script>=
 <script src='assets/lib/fullcalendar/fullcalendar.min.js'></script>
 <script src='assets/lib/fullcalendar/gcal.js'></script>
+
 <script>
 // Review session dates, JS Dates: 0 == Jan!!
 var quest   = daysUntil(new Date(2014, 9, 1)),
@@ -215,3 +206,4 @@ $(document).ready(function() {
 });
 </script>
 <script src='assets/staff.js'></script>
+<script src='assets/calendar.js'></script>

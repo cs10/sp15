@@ -1,17 +1,3 @@
-var cs10 = cs10 || {};
-cs10.startDate = '2015-01-19';
-cs10.endData   = '2015-05-15';
-
-cs10.bCoursesID = '';
-cs10.gradingScheme = {
-    'A+': 480
-};
-
-
-
-
-
-
 // Maps days since **saturday** to the appropriate cell numbers
 // Its value is the cell numbers to deal with.
 // The file dynamically calculates days for the semester and doesn't read
@@ -101,21 +87,10 @@ function updateReadings() {
 function updateLabs() {
     var urlEnd = "&novideo&noreading&noassingment&course=cs10_sp15.html",
         links = document.getElementsByClassName("lablink"), i = 0,
-        // We are not being served from an inst server
-        // (indentified as many domains, cs10.b.e, inst.eecs.b.e, the IP, etc)
-        replace = location.pathname.indexOf('/~cs10/') === -1,
-        // Find the labs/ url to replace
-        // +4 because idexOf returns the position of the l
-        idx = links[0] ? links[0].href.indexOf('labs/') + 4 : 0,
-        backupURL = 'http://beautyjoy.github.io/bjc-r/',
-        url = '';
+        backupURL = 'http://beautyjoy.github.io/bjc-r/llab/html/topic.html?topic=',
 
     for(; i < links.length; i++) {
-        url = links[i].href;
-        if (replace && idx !== 0) {
-            url = backupURL + url.slice(idx);
-        }
-        links[i].href = url + urlEnd;
+        links[i].href = url + links[i].href + urlEnd;
         links[i].style.fontWeight = 700;
         links[i].target = "_blank";
     }

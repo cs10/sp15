@@ -1,4 +1,33 @@
-cs10 = window.cs10 || {};
+var cs10 = cs10 || {};
+
+// Sunday at the start of the semester
+cs10.startDate = '2015-01-18'; // Date strings
+cs10.endDate   = '2015-05-16';
+
+cs10.bCoursesID = '';
+cs10.gradingScheme = {
+    'A+': 480
+};
+
+// Return the week of the course in range [1, 17] else -1
+function getWeekOfDate(date) {
+    var now = new Date();
+    var from = date;
+    if (typeof from === 'string') {
+        from = new Date(date);
+    }
+
+    var dist = from - now;
+
+    if (dist < 0) {
+        return -1;
+    }
+
+    var weeks = Math.floor(dist / (MS_DAY * 7));
+
+    return weeks <= 17 ? weeks : -1;
+}
+
 
 cs10.newLabObject = function(title, url, rq, video) {
     // FIXME -- better handle the URL via config
@@ -43,7 +72,7 @@ cs10.newReadingsObject = function(title, url, classes) {
     return reading;
 };
 
-cs10.newLectureObject = function(title, videURL, guest) {
+cs10.newLectureObject = function(title, videoURL, guest) {
     var obj = { type: 'Lecture' };
 
     if (!title) {
@@ -101,7 +130,7 @@ cs10.newHomeworkObject = function(title, spec, bCoursesID, notes) {
 };
 
 var lab      = cs10.newLabObject,
-    readings = cs10.newReadingsObject,
+    reading = cs10.newReadingsObject,
     lect     = cs10.newLectureObject,
     disc     = cs10.newDiscussionObject,
     hw       = cs10.newHomeworkObject;
@@ -125,11 +154,9 @@ cs10.week1 = {
 cs10.week2 = {
     readings: [
         reading('Prof. Harvey\'s Intro to Abstraction',
-                'http://inst.eecs.berkeley.edu/~cs10/sp11/lec/01/2010-08-30-CS10-L01-BH-Abstraction.txt',
-                'required'),
+                '../sp11/lec/01/2010-08-30-CS10-L01-BH-Abstraction.txt'),
         reading('Why Software is Eating the World',
-                'https://bcourses.berkeley.edu/courses/1246916/files#CS10%3A%20The%20Beauty%20and%20Joy%20of%20Computing%2FReadings%2FMarc_Andreessen_on_Why_Software_Is_Eating_the_World__WSJ.com.pdf',
-                'required'),
+                'https://bcourses.berkeley.edu/courses/1246916/files#CS10%3A%20The%20Beauty%20and%20Joy%20of%20Computing%2FReadings%2FMarc_Andreessen_on_Why_Software_Is_Eating_the_World__WSJ.com.pdf'),
         reading('Learning to Code!',
                 'http://www.youtube.com/watch?v=dU1xS07N-FA',
                 'optional'),
@@ -142,7 +169,7 @@ cs10.week2 = {
     ],
     lectM: lect('Functions'),
     labA: lab('Build Your Own Blocks', 'berkeley_bjc/intro_new/2-loops-variables.topic'),
-    lectW: lect('Creativity and Abstraction'),,
+    lectW: lect('Creativity and Abstraction'),
     labB: lab('Conditionals', 'berkeley_bjc/intro_new/3-conditionals.topic', true),
     disc: disc('Anatomy of a Computer and the Power of Binary'),
     hw: hw('HW1')
@@ -507,4 +534,100 @@ cs10.buildCal = function() {
     calContent.html(calData);
 };
 
-        // $(document).ready(cs10.buildCal);
+
+// REQUIRES MOMENTJS
+cs10.getWeekStartDate = function(week) {
+    var start = moment(cs10.startDate);
+
+    return start.add((week - 1) * 7 + 1, 'd');
+}
+
+/*
+<tr class="cal">
+  <td>5</td>
+  <td>9-22 to 9-26</td>
+  <td>
+      <a class="reading required" href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter2.pdf">BtB Chapter 2</a>
+      <br>
+  </td>
+  <td>
+      <strong>Guest Lecturer: Jon Kotker</strong>
+      <br>
+      <a href="lecture/L06 - Algorithms I/">Algorithms</a>
+      <br>
+      <a target="_blank" href="https://coursesharing.org/courses/6/lectures/14">(Sp12 HD video with Qs)</a>
+  </td>
+  <td>
+      <a class="lablink" href="../labs/topic/topic.html?topic=berkeley_bjc/areas/algorithms.topic">Algorithms</a>
+      &amp;
+      Homework Help
+      <br>
+      <br>
+      <strong>Reading Quiz 4 (in-lab)</strong>
+  </td>
+  <td>
+      [Lecture...]
+  </td>
+  <td>
+      [Lab...]
+  </td>
+  <td>
+      Algorithmic Complexity &amp;
+      <br>
+      Quest Review
+      <br>
+      <strong>(<a href="disc/05/">Resources</a>)</strong>
+  </td>
+  <td class="due">
+      <a href="assign.html?https://docs.google.com/document/d/18RPHqtdohWA6rAEYGkLcthGVS32RK7GB7zL3OP_y--Q/pub">Homework 2</a>
+      <br>
+      <a href="assign.html?https://docs.google.com/document/d/17Bb1Pwp1407bBbqUOJ6VFOUDQSsgSG5lxtRoBUl793E/pub">(Rubric)</a>
+      <br>
+      <em>due 9/26 @ 11:59PM on bCourses</em>
+  </td>
+</tr>
+*/
+
+cs10.renderTableCalendar = function() {
+    var result = $('');
+    var table = $('.calendar.table tbody');
+    for(var i = 1; i < 18; i += 1) {
+        result.apped(cs10.renderTableRow(i, cs10['week' + i]));
+    }
+    table.append(result);
+};
+
+cs10.renderTableRow = function(weekNum, data) {
+    var result = $('<tr>').addClass('cal');
+    var dateStr, start, end, readings, lectM, labA, lectW, labB, disc, hw;
+
+    // Cell 1 Week Number
+    result.append($('<td>').html(weekNum));
+
+    // Cell 2 Dates, uses MomentJS
+    start = cs10.getWeekStartDate(weekNum);
+    end   = moment(start).add(5, 'd');
+    dateStr = (start.month() + 1) + '-' + start.date() + ' to ' + (end.month() +
+        1) + '-' + end.date();
+    result.append($('<td>').html(dateStr));
+
+    // Cell 3 Readings -- Review Sessions
+    readings = $('<td>');
+    if (!data.readings) {
+        readings.append('No Reading');
+    } else if (typeof data.readings === 'string') {
+        readings.append(data.readings);
+    } else {
+        console.log(data.readings);
+        for (var i = 0; i < data.readings.length; i += 1) {
+            var rd = data.readings[i];
+            var a = $('<a>').attr(
+                {'class': rd.classes, 'href': rd.url, 'target': '_blank'} );
+            readings.append(a);
+            readings.append('<br>');
+        }
+    }
+    result.append(readings);
+
+    return result;
+};
