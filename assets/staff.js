@@ -131,10 +131,10 @@ jobelV = {
 /** LIST DEFINITIONS **/
 /*****************************************************************************/
 
-instructors = [ GeraldF ];
+instructors = [ DanGarcia ];
 
 tas = [ michaelB, LaurenMock, adamK, andyS, AranyU, carlosF, jaclynB, josephC,
-    jeffreyS, maxD, peterS, rachelH, StevenT, victoriaS];
+    jeffreyS, maxD, PeterS, rachelH, StevenT, victoriaS];
 
 readers = [ alexM, brandonC, claireW, jobelV ];
 
