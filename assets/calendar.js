@@ -225,9 +225,9 @@ cs10.week3 = {
                 'optional')
     ],
     lectM: lect('3D Graphics'),
-    labA: lab('Functions', 'berkeley_bjc/intro_new/4-abstraction-testing.topic', 2),
+    labA: lab('Functions', 'berkeley_bjc/intro_new/4-abstraction-testing.topic', true),
     lectW: lect('Programming Paradigms'),
-    labB: lab('Lists 1', 'berkeley_bjc/lists/lists-I.topic'),
+    labB: lab('Lists I', 'berkeley_bjc/lists/lists-I.topic'),
     disc: disc('All about lists'),
     hw: hw('HW1')
 };
@@ -249,9 +249,9 @@ cs10.week4 = {
                 'optional')
     ],
     lectM: lect('Algorithms'),
-    labA: lab('Lists 1 & HW Help', 'berkeley_bjc/lists/lists-I.topic', 3),
+    labA: lab('Algorithms', 'berkeley_bjc/areas/algorithms.topic', true),
     lectW: lect('Algorithmic Complexity'),
-    labB: lab('Algorithms', 'berkeley_bjc/areas/algorithms.topic'),
+    labB: lab('Algorithmic Complexity', "berkeley_bjc/areas/algorithm-complexity.topic"),
     disc: disc('Lists'),
     hw: hw('Start on HW2')
 };
@@ -264,7 +264,7 @@ cs10.week5 = {
     lectM: 'No Lecture (Holiday)',
     labA: 'No Labs Monday<br>Quest Help and Review',
     lectW: lect('No Lecture; Quest In Class'),
-    labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    labB: lab('Fractals and Tree Recursion', 'berkeley_bjc/recur/recursion-trees-fractals.topic'),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
 };
@@ -464,22 +464,14 @@ cs10.week15 = {
 
 // DEAD WEEK
 cs10.week16 = {
-    lectM: lect(null),
-    labA: lab(null),
-    lectW: lect(null),
-    labB: lab(null),
-    disc: disc('Welcome to CS10!'),
-    hw: hw('HW0')
+    special: 'RRR Week -- No Class'
 };
 
 // Dec 15 - 19
 cs10.week17 = {
-    lectM: lect(null),
-    labA: lab(null),
-    lectW: lect('Welcome and Abstraction'),
-    labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
-    disc: disc('Getting Started With <span class=“snap”>snap</span>'),
-    hw: hw('Start on HW1')
+    exam: {
+        
+    }
 };
 
 cs10.schedule = [];
