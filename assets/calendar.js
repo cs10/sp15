@@ -34,17 +34,17 @@ cs10.newLabObject = function(title, url, rq, video) {
     var baseURL = '../labs/llab/html/topic.html?topic=';
     var labObj = { type: 'Lab' };
     labObj.title = title;
-    
+
     // Global Counter for lecture
     cs10.rqCounter = cs10.rqCounter || 0;
-    
+
     if (!title) {
         labObj.title = 'No Lab';
     }
     if (url) {
         labObj.url = baseURL + url;
     }
-    
+
     if (rq) {
         cs10.rqCounter += 1;
         rq = cs10.rqCounter;
@@ -61,13 +61,13 @@ cs10.newReadingsObject = function(title, url, classes) {
         title: title,
         url: url
     };
-    
+
     if (!classes) {
         classes = 'required'; // Default option
     }
-    
+
     reading.classes = 'reading ' + classes;
-    
+
     return reading;
 };
 
@@ -82,7 +82,7 @@ cs10.newLectureObject = function(title, videURL, guest) {
     cs10.lectureCounter = cs10.lectureCounter || 0;
     cs10.lectureCounter += 1;
     var count = cs10.lectureCounter;
-    var lectureURL = 'lectures/' + (count < 10 ? '0' : '' ) + count + '/';
+    var lectureURL = 'lectures/' + (count < 10 ? '0' : '' ) + count + ' ' + title + '/';
     obj.title = title;
     obj.url = lectureURL;
     obj.guest = guest;
@@ -168,6 +168,7 @@ cs10.renderObject = function(obj) {
 // ==========     SCHEDULE ITEMS           ==========
 // ==================================================
 
+// JAN 19 - 23
 cs10.week1 = {
     readings: 'No Readings',
     lectM: 'No Lecture Monday',
@@ -178,8 +179,9 @@ cs10.week1 = {
     hw: hw('HW0')
 };
 
+// JAN 26 - 30
 cs10.week2 = {
-    readings: [ 
+    readings: [
         reading('Prof. Harvey\'s Intro to Abstraction',
                 'http://inst.eecs.berkeley.edu/~cs10/sp11/lec/01/2010-08-30-CS10-L01-BH-Abstraction.txt',
                 'required'),
@@ -204,7 +206,7 @@ cs10.week2 = {
     hw: hw('Start on HW1')
 };
 
-// Sept 8 - 12
+// FEB 2 - 6
 cs10.week3 = {
     readings: [
         reading('The Story of Alan Turing &amp; His Machine',
@@ -232,7 +234,7 @@ cs10.week3 = {
     hw: hw('HW1')
 };
 
-// Sept 15 - 19
+// FEB 9 - 13
 cs10.week4 = {
     readings: [
         reading('How Algorithms Shape Our World',
@@ -256,19 +258,21 @@ cs10.week4 = {
     hw: hw('Start on HW2')
 };
 
+// FEB 16 - 20
 cs10.week5 = {
     exam: {
-        
+
     },
     readings: 'No Readings',
     lectM: 'No Lecture (Holiday)',
     labA: 'No Labs Monday<br>Quest Help and Review',
     lectW: lect('No Lecture; Quest In Class'),
-    labB: lab('Fractals and Tree Recursion', 'berkeley_bjc/recur/recursion-trees-fractals.topic'),
+    labB: lab('berkeley_bjc/robots/robots.topic', 'Finch Robots'),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
 };
 
+// FEB 23 - 24
 cs10.week6 = {
     readings: [
         reading('BtB Chapter 2',
@@ -285,13 +289,14 @@ cs10.week6 = {
                 'optional')
     ],
     lectM: lect('Recursion I'),
-    labA: lab(null),
+    labA: lab('berkeley_bjc/recur/recursion-trees-fractals.topic', 'Trees and Fractals using Recursion'),
     lectW: lect('Concurrency'),
-    labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    labB: lab('berkeley_bjc/areas/concurrency.topic', 'Concurrency'),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
 };
 
+// MARCH 2 - 6 (Lauren, Dan, Michael out -- mostly)
 cs10.week7 = {
     readings: [
         reading('How Moore\'s Law Works',
@@ -312,16 +317,17 @@ cs10.week7 = {
         reading('Spending Moore\'s dividend (CACM)',
                 'http://doi.acm.org/10.1145/1506409.1506425',
                 'optional')
-        
+
     ],
     lectM: lect('Recursion II'),
-    labA: lab(null),
+    labA: lab('berkeley_bjc/recur/recursive-reporters-part1.topic', 'Recursive Reporters I', true),
     lectW: lect('Artificial Intelligence', '', 'A Guest'),
-    labB: lab(null),
+    labB: lab('Project Work'),
     disc: disc('Welcome to CS10!'),
     hw: hw('HW0')
 };
 
+// MARCH 9 - 13 (Lauren, Dan, Michael partially out)
 cs10.week8 = {
     readings: [
         reading('BtB Chapter 5 Reading Segment 1',
@@ -334,32 +340,35 @@ cs10.week8 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter6.pdf')
     ],
     lectM: lect('Social Implications I'),
-    labA: lab(null),
+    labA: lab('Project Work and Lab Review', '', true),
     lectW: lect('Social Implications II', '', 'Gerald Friedland'),
-    labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    labB: lab('Project Work'),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
 };
 
 // MIDTERM WEEK
+// MARCH 16 - 20
 cs10.week9 = {
     exam: {
-        
+
     },
     readings: 'No Readings',
     lectM: lect('Social Implications III', '', 'Brian Harvey'),
-    labA: lab(null),
+    labA: lab('Online <span class="snap">snap</span> Midterm'),
     lectW: lect('The Internet'),
-    labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    labB: lab('berkeley_bjc/areas/internet.topic', 'The Internet'),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
 };
 
 // Spring Break
+// MARCH 23 - 27
 cs10.week10 = {
     special: 'Spring Break'
 };
 
+// MARCH 30 - APRIL 3
 cs10.week11 = {
     readings: [
         reading('BtB Chapter 7',
@@ -371,13 +380,14 @@ cs10.week11 = {
                 'optional')
     ],
     lectM: lect('HCI', '', 'Eric Paulos'),
-    labA: lab(null),
+    labA: lab('berkeley_bjc/lists/tic-tac-toe.topic', 'Tic Tac Toe', true),
     lectW: lect('The Internet II'),
-    labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    labB: ,
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
 };
 
+// APRIL 6 - 10
 cs10.week12 = {
     readings: [
         reading('Data explosion creates revolution',
@@ -396,14 +406,15 @@ cs10.week12 = {
                 'http://www.cimt.plymouth.ac.uk/projects/mepres/stats/handlg_data_ch3.pdf',
                 'optional')
     ],
-    lectM: lect('Data'),
-    labA: lab(null),
-    lectW: lect('Lambdas and HOFs'),
-    labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    lectM: lect('Lambdas and HOFs'),
+    labA: lab('berkeley_bjc/hofs/hofs-practice.topic', 'Practice with HOFs and Functions as Data'),
+    lectW: lect('Besides Blocks I'), // THOUGHT: Move this up a weekx
+    labB: lab('berkeley_bjc/python/besides-blocks-welcome.topic', 'Besides Blocks: Welcome to Python'),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
 };
 
+// APRIL 13 - 17
 cs10.week13 = {
     readings: [
         reading('The Heartbleed Bug',
@@ -412,14 +423,15 @@ cs10.week13 = {
                 'https://medium.com/p/804cdf4b48c1',
                 'hard')
     ],
-    lectM: lect('Limits of Computing'),
-    labA: lab(null),
-    lectW: lect('Besides Blocks I'),
-    labB: lab(null),
+    lectM: lect('Data'),
+    labA: ,
+    lectW: lect('Limits of Computing'),
+    labB: ,
     disc: disc('Welcome to CS10!'),
     hw: hw('HW0')
 };
 
+// APRIL 20 - 24
 cs10.week14 = {
     readings: [
         reading('The Great Robot Race (Video)',
@@ -429,14 +441,18 @@ cs10.week14 = {
                 'optional')
     ],
     lectM: lect('Future of Computing'),
-    labA: lab(null),
+    labA: ,
     lectW: lect('Besides Blocks II'),
-    labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    labB: lab('berkeley_bjc/python/besides-blocks-data.topic', 'Besides Blocks: Data in Python'),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
 };
 
+// APRIL 27 - MAY 1
 cs10.week15 = {
+    exam: {
+
+    },
     readings: [
         reading('Why is Quantum Different?',
                 'http://www.scientificamerican.com/article.cfm?id=what-makes-a-quantum-comp'),
@@ -454,23 +470,24 @@ cs10.week15 = {
                 'optional')
     ],
     lectM: lect('Saving the World with Computing', '', 'Kathy Yelick'),
-    labA: lab(null),
+    labA: lab('Project Work Lab', '', true),
     lectW: lect('Summary and Farewell'),
-    labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    labB: 'Online Exam',
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
 };
 
 
 // DEAD WEEK
+// MAY 4 - 7
 cs10.week16 = {
     special: 'RRR Week -- No Class'
 };
 
-// Dec 15 - 19
+// MAY 11 - 15
 cs10.week17 = {
     exam: {
-        
+
     }
 };
 
