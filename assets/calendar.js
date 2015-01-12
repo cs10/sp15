@@ -1,31 +1,3 @@
-// this is an idea for making the site easier to update, maybe..
-// This is major WIP and the API / format for this has yet to be finalized
-/* DATA MODELS -- OPTIONAL DATA NOTED */
-lecture = {
-        title: '',
-        url: 'url',
-        video: 'url',
-        classes: 'optional classes to apply'
-};
-
-reading = {
-    title: 'Name',
-    url: 'duh',
-    classes: 'required hard' // or whatver
-};
-
-lab = {
-    title: '',
-    url: '',
-    RQ: 1, // OPTIONAL -- INT,
-    video: '' // OPTIONAL -- LINK
-};
-
-discussion = {
-    title: '',
-    url: '' // OPTIONAL -- default is none.
-};
-
 cs10 = window.cs10 || {};
 
 cs10.newLabObject = function(title, url, rq, video) {
@@ -109,9 +81,10 @@ cs10.newDiscussionObject = function(title, files) {
 
     return obj;
 };
-cs10.newHomeworkObject = function(title, url, dueDate, notes) {
+cs10.newHomeworkObject = function(title, spec, bCoursesID, notes) {
     var obj = { type: 'Homework' };
 
+    // TODO: Consider refactoring this....
     if (!title) {
         obj.title = 'No Homework!<br />But you might want to check next week\'s';
         return obj;
@@ -119,9 +92,11 @@ cs10.newHomeworkObject = function(title, url, dueDate, notes) {
 
     obj.title = title;
     obj.classes = 'assignmentDue';
-    if (url) {
-        obj.url = url;
+    if (spec) {
+        obj.url = spec;
     }
+    // Set Submission URL
+    // Set the due Date from bCourses
     return obj;
 };
 
@@ -130,39 +105,6 @@ var lab      = cs10.newLabObject,
     lect     = cs10.newLectureObject,
     disc     = cs10.newDiscussionObject,
     hw       = cs10.newHomeworkObject;
-
-cs10.renderObject = function(obj) {
-    obj.classes = obj.classes || ' ';
-    var html = $(document.createElement('div')).attr(
-        { 'class': obj.classes }
-    );
-
-    var heading = $(document.createElement('h3')).html(obj.type);
-    html.append(heading);
-    var content;
-    if (obj.url) {
-        content = $(document.createElement('a')).attr(
-            { 'href': obj.url}).html(obj.title);
-    } else {
-        content = $(document.createElement('span')).html(obj.title);
-    }
-    if (obj.video) {
-        content.append('<br />');
-        var video = $(document.createElement('a')).attr(
-            { 'href': obj.video,
-              'target': '_blank'
-            }).html('Watch a video here.');
-        content.append(video);
-    }
-    if (obj.RQ) {
-        content.append('<br />');
-        content.append($(document.createElement('b')).html('Reading Quiz ' +
-        obj.RQ));
-    }
-
-    html.append(content);
-    return html.html();
-};
 
 // ==================================================
 // ==========     SCHEDULE ITEMS           ==========
@@ -289,7 +231,7 @@ cs10.week6 = {
                 'optional')
     ],
     lectM: lect('Recursion I'),
-    labA: lab('berkeley_bjc/recur/recursion-trees-fractals.topic', 'Trees and Fractals using Recursion'),
+    labA: lab('berkeley_bjc/recur/recursion-trees-fractals.topic', 'Trees and Fractals using Recursion', true),
     lectW: lect('Concurrency'),
     labB: lab('berkeley_bjc/areas/concurrency.topic', 'Concurrency'),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
@@ -382,7 +324,7 @@ cs10.week11 = {
     lectM: lect('HCI', '', 'Eric Paulos'),
     labA: lab('berkeley_bjc/lists/tic-tac-toe.topic', 'Tic Tac Toe', true),
     lectW: lect('The Internet II'),
-    labB: ,
+    labB: lab('Project Work'),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
     hw: hw('Start on HW1')
 };
@@ -407,7 +349,7 @@ cs10.week12 = {
                 'optional')
     ],
     lectM: lect('Lambdas and HOFs'),
-    labA: lab('berkeley_bjc/hofs/hofs-practice.topic', 'Practice with HOFs and Functions as Data'),
+    labA: lab('berkeley_bjc/hofs/hofs-practice.topic', 'Practice with HOFs and Functions as Data', true),
     lectW: lect('Besides Blocks I'), // THOUGHT: Move this up a weekx
     labB: lab('berkeley_bjc/python/besides-blocks-welcome.topic', 'Besides Blocks: Welcome to Python'),
     disc: disc('Getting Started With <span class=“snap”>snap</span>'),
@@ -423,12 +365,12 @@ cs10.week13 = {
                 'https://medium.com/p/804cdf4b48c1',
                 'hard')
     ],
-    lectM: lect('Data'),
-    labA: ,
-    lectW: lect('Limits of Computing'),
-    labB: ,
-    disc: disc('Welcome to CS10!'),
-    hw: hw('HW0')
+    lectM: lect('Besides Blocks II'),
+    labA: lab('berkeley_bjc/python/besides-blocks-data-struct.topic', 'Besides Blocks: Data Structures in Python', true),
+    lectW: lect('Data'),
+    labB: lab('berkeley_bjc/python/besides-blocks-data.topic', 'Besides Blocks: Data in Python'),
+    disc: disc('Practical Privacy Implications'),
+    hw: hw('Data Project')
 };
 
 // APRIL 20 - 24
@@ -441,11 +383,11 @@ cs10.week14 = {
                 'optional')
     ],
     lectM: lect('Future of Computing'),
-    labA: ,
-    lectW: lect('Besides Blocks II'),
-    labB: lab('berkeley_bjc/python/besides-blocks-data.topic', 'Besides Blocks: Data in Python'),
-    disc: disc('Getting Started With <span class=“snap”>snap</span>'),
-    hw: hw('Start on HW1')
+    labA: lab('Project Work', '', true),
+    lectW: lect('Limits of Computing'),
+    labB: lab('Project Work'),
+    disc: disc('CS @ Cal and Beyond'),
+    hw: 'Start on the Final Project'
 };
 
 // APRIL 27 - MAY 1
@@ -473,8 +415,8 @@ cs10.week15 = {
     labA: lab('Project Work Lab', '', true),
     lectW: lect('Summary and Farewell'),
     labB: 'Online Exam',
-    disc: disc('Getting Started With <span class=“snap”>snap</span>'),
-    hw: hw('Start on HW1')
+    disc: disc('Summary and Farewell'),
+    hw: hw('Final Project')
 };
 
 
@@ -489,6 +431,44 @@ cs10.week17 = {
     exam: {
 
     }
+};
+
+
+// ==================================================
+// ==========     RENDERING CODE           ==========
+// ==================================================
+
+cs10.renderObject = function(obj) {
+    obj.classes = obj.classes || ' ';
+    var html = $(document.createElement('div')).attr(
+        { 'class': obj.classes }
+    );
+
+    var heading = $(document.createElement('h3')).html(obj.type);
+    html.append(heading);
+    var content;
+    if (obj.url) {
+        content = $(document.createElement('a')).attr(
+            { 'href': obj.url}).html(obj.title);
+    } else {
+        content = $(document.createElement('span')).html(obj.title);
+    }
+    if (obj.video) {
+        content.append('<br />');
+        var video = $(document.createElement('a')).attr(
+            { 'href': obj.video,
+              'target': '_blank'
+            }).html('Watch a video here.');
+        content.append(video);
+    }
+    if (obj.RQ) {
+        content.append('<br />');
+        content.append($(document.createElement('b')).html('Reading Quiz ' +
+        obj.RQ));
+    }
+
+    html.append(content);
+    return html.html();
 };
 
 cs10.schedule = [];

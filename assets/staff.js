@@ -1,59 +1,13 @@
-/*****************************************************************************/
-/*
-CS10 -- staff.js
-This file builds the staff images section from JSON data and makes working with
-these images much easier.
-Here is a sample object (with all properities):
-DanGarcia = {
-    name: 'Sr. Lecturer SOE Dan Garcia',
-    img: 'http://www.cs.berkeley.edu/~ddgarcia/gifs/DanGarciaUCBFaculty2004.jpg',
-    imgSrc: 'DanGarcia.jpg',
-    web: 'http://www.cs.berkeley.edu/%7Eddgarcia/',
-    bio: 'DanBio.txt',
-    email: 'ddgarcia@cs.berkeley.edu',
-    office: '777 Soda, (510) 517-4041'
-}
-
-OR There is a simplified version for standard names:
-BrandonChen = { name: 'Brandon Chen',
-    img: 'Sp14/BrandonChen.jpg',
-    imgSrc: 'BrandonChen.jpg' }
-can be created with simply 'Brandon Chen' as a string in the appropriate lists.
-NOTE: All images must be in the proper folders and match the name, w/o spaces.
-
-You can create any objects like this. REQUIRED ARE: name, img, imgSrc
-'imgSrc' should be a small image in the directory ~/public_html/resources/images/small/ *
-
-There are a few lists of objects:
-instructors, tas, readers, las -- more can be created if necessary:
-To add a new section:
-1. Add a div with an ID to staff.html
-2. Add the same ID name to the 'all' object.
-3. Add a call to buildGroup(), with the ID name (string) and the number of
-images per row (int)
-*/
-/*****************************************************************************/
-
-// JSON mappings for staff images / info.
 // Instructors
 DanGarcia = {
     name: 'Sr. Lecturer SOE Dan Garcia',
     img: 'DanGarciaUCBFaculty2004.jpg',
     imgSrc: 'DanGarcia.jpg',
-    web: 'http://www.cs.berkeley.edu/%7Eddgarcia/',
+    web: 'http://www.cs.berkeley.edu/~ddgarcia/',
     bio: 'DanBio.txt',
-    email: 'ddgarcia@cs.berkeley.edu',
+    email: 'dan@cs10.org',
     office: '777 Soda, (510) 517-4041'
 };
-
-GeraldF = {
-    name: 'Dr. Gerald Friedland',
-    img: 'Fa13/Gerald.jpg',
-    imgSrc: 'Gerald.jpg',
-    web: 'http://www.cs.berkeley.edu/%7Eddgarcia/',
-    //bio: 'DanBio.txt',
-    email: 'fractor@icsi.berkeley.edu',
-    office: '329 Soda' };
 
 // TAs
 michaelB = {
@@ -62,100 +16,96 @@ michaelB = {
     imgSrc: 'MichaelBall.jpg',
     web: 'http://michaelballphoto.com',
     bio: 'MichaelBall.txt',
-    email: 'ball@berkeley.edu' };
+    email: 'michael@cs10.org' };
 
 maxD = {
     name: 'TA Max Dougherty',
     img: 'Sp14/MaxDougherty.jpg',
     imgSrc: 'MaxDougherty.jpg',
-    email: 'mdougherty@berkeley.edu' };
+    email: 'max@cs10.org' };
 
 jeffreyS = {
     name: 'TA Jeffrey Snowiss',
     img: 'Fa12/JeffreySnowiss.jpg',
     imgSrc: 'JeffreySnowiss.jpg',
-    email: 'jasnowiss10@gmail.com' };
+    email: 'jeff@cs10.org' };
 
 victoriaS = {
     name: 'TA Victoria Shi',
     img: 'Fa13/VictoriaShi.jpg',
     imgSrc: 'VictoriaShi.jpg',
     bio: 'VictoriaBio.txt',
-    email: 'victoria.shi@berkeley.edu' };
+    email: 'victoria@cs10.org' };
 
 rachelH = {
     name: 'TA Rachel Huang',
     img: 'Fa13/RachelHuang.jpg',
     imgSrc: 'RachelHuang.jpg',
-    email: 'rachelhuang072@berkeley.edu'
+    email: 'rachel@cs10.org'
 };
-
-jannaG = {
-    name: 'TA Janna Golden',
-    img: 'Sp14/JannaGolden.jpg',
-    imgSrc: 'JannaGolden.jpg',
-    email: 'jannagolden@berkeley.edu'
-};
-
-sumerM = {
-    name: 'TA Sumer Mohammed',
-    img: 'Fa12/SumerMohammed.jpg',
-    imgSrc: 'SumerMohammed.jpg',
-    email: 'sumermohammed@berkeley.edu' };
 
 josephC = {
     name: 'TA Joseph Cawthorne',
     img: 'Fa13/JosephCawthorne.jpg',
     imgSrc: 'JosephCawthorne.jpg',
-    email: 'cs10tajcawth@gmail.com' };
+    email: 'joseph@cs10.org' };
 
 jaclynB = {
     name: 'TA Jaclyn Burge',
     img: 'Fa13/JaclynBurge.jpg',
     imgSrc: 'JaclynBurge.jpg',
     web: 'www.jacburge.me',
-    email: 'jacburge.cs10@gmail.com' };
+    email: 'jaclyn@cs10.org' };
 
 andyS   = {
     name: 'TA Andrew Schmitt',
     img: 'Sp14/AndrewSchmitt.jpg',
     imgSrc: 'AndrewSchmitt.jpg',
-    email: 'aschmitt@berkeley.edu'};
+    email: 'andy@cs10.org'};
 
 LaurenMock = {
     name: 'Head TA Lauren Mock',
     img: 'Sp14/LaurenMock.jpg',
     imgSrc: 'LaurenMock.jpg',
     web: 'http://linkedin.com/in/laurenmock',
-    email: 'lmock@berkeley.edu' };
+    email: 'lauren@cs10.org' };
 
 adamK = {
     name: 'TA Adam Kuphaldt',
     img: 'Sp14/AdamKuphaldt.jpg',
     imgSrc: 'AdamKuphaldt.jpg',
-    email: 'akuphaldt@berkeley.edu' };
+    email: 'adam@cs10.org' };
 
 AranyU = {
     name: 'TA Arany Uthayakumar',
     img: 'Sp14/AranyUthayakumar.jpg',
     imgSrc: 'AranyUthayakumar.jpg',
     bio: 'AranyBio.txt',
-    email: 'arany@berkeley.edu' };
+    email: 'arany@cs10.org' };
 
 StevenT = {
     name: 'TA Steven Traversi',
     img: 'Sp14/StevenTraversi.jpg',
     imgSrc: 'StevenTraversi.jpg',
-    email: 'straversi@berkeley.edu'
+    email: 'steven@cs10.org'
 };
 
+carlosF = {
+    name: 'TA Carlos Flores',
+    img: 'Fa13/CarlosFlores.jpg',
+    imgSrc: 'CarlosFlores.jpg',
+    email: 'carlos@cs10.org'
+};
+
+PeterS = {
+    name: 'TA Peter Sujan',
+    img: 'Fa12/PeterSujan.jpg',
+    imgSrc: 'PeterSujan.jpg',
+    bio: 'PeterBio.txt',
+    email: 'peter@cs10.org'
+}
 
 // Readers
-songS   = {
-    name: 'Reader Song Sok',
-    img: 'Fa13/SongSok.jpg',
-    imgSrc: 'SongSok.jpg' };
-
 claireW = {
     name: 'Reader Claire Watanabe',
     img: 'Fa13/ClaireWatanabe.jpg',
@@ -165,11 +115,6 @@ brandonC = {
     name: 'Reader Brandon Chen',
     img: 'Sp14/BrandonChen.jpg',
     imgSrc: 'BrandonChen.jpg' };
-
-carlosF = {
-    name: 'Reader Carlos Flores',
-    img: 'Fa13/CarlosFlores.jpg',
-    imgSrc: 'CarlosFlores.jpg' };
 
 alexM = {
     name: 'Reader Alex McKinney',
@@ -188,10 +133,10 @@ jobelV = {
 
 instructors = [ GeraldF ];
 
-tas = [ michaelB, LaurenMock, adamK, andyS, AranyU, jaclynB, jannaG, josephC, jeffreyS, maxD,
-        rachelH, sumerM, StevenT, victoriaS];
+tas = [ michaelB, LaurenMock, adamK, andyS, AranyU, carlosF, jaclynB, josephC,
+    jeffreyS, maxD, peterS, rachelH, StevenT, victoriaS];
 
-readers = [ alexM, brandonC, carlosF, claireW, jobelV ];
+readers = [ alexM, brandonC, claireW, jobelV ];
 
 // If you need to add a new SECTION add it to this object.
 // Follow the same format.
@@ -204,10 +149,6 @@ all = {
 /*****************************************************************************/
 /* DATA POPULATION FUNCTIONS  */
 /*****************************************************************************/
-
-function imgError(image) {
-    image.src = 'resources/images/NPY3D.jpg';
-}
 
 // Build a basic object for a person from the current semester.
 function baseObj(name) {
@@ -233,7 +174,7 @@ function buildPerson(data, width) {
         elm += '<a href="resources/images/' + data.img + '">';
     }
 
-    elm += '<img onerror="imgError(this)" class="staff" align="center" ';
+    elm += '<img class="staff" align="center" ';
     elm += 'alt="' + data.name + '" title="' + data.name + '" src="resources/images/small/';
     elm += data.imgSrc + '" />';
     if (!!data.img) {
