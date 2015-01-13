@@ -77,21 +77,3 @@ function displaySpeech(img_name, img_src) {
     document[img_name].src = img_src;
 }
 
-function updateReadings() {
-    var readings = document.getElementsByClassName("reading"), i = 0;
-    for(; i < readings.length; i++) {
-        readings[i].target = "_blank";
-    }
-}
-
-function updateLabs() {
-    var urlEnd = "&novideo&noreading&noassingment&course=cs10_sp15.html",
-        links = document.getElementsByClassName("lablink"), i = 0,
-        backupURL = 'http://beautyjoy.github.io/bjc-r/llab/html/topic.html?topic=',
-
-    for(; i < links.length; i++) {
-        links[i].href = url + links[i].href + urlEnd;
-        links[i].style.fontWeight = 700;
-        links[i].target = "_blank";
-    }
-}
