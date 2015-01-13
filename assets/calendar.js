@@ -10,6 +10,8 @@ cs10.gradingScheme = {
     'A' : 470
 };
 
+// Wrap Schedule creation in a function.
+defineSchedule = function() {
 /* Shortcuts for creating schedule objects
  * Paramters:
  * Reading: (title, link, 'type [required is default]')
@@ -122,13 +124,14 @@ cs10.week5 = {
 
     },
     readings: 'No Readings',
-    lectM: 'No Lecture (Holiday)',
+    lectM: lect('No Lecture (Holiday)'),
     labA: 'No Labs Monday<br>Quest Help and Review',
-    lectW: lect('No Lecture; Quest In Class'),
-    labB: lab('berkeley_bjc/robots/robots.topic', 'Finch Robots'),
+    lectW: lect('Quest In Class'),
+    labB: lab('Finch Robots', 'berkeley_bjc/robots/robots.topic'),
     disc: disc('Quest Debrief and HW3 Help'),
     hw: 'Start HW 3'
 };
+cs10.week5.lectW.classes = 'exam';
 
 // FEB 23 - 24
 cs10.week6 = {
@@ -349,6 +352,8 @@ cs10.week17 = {
 
     }
 };
+
+}; // End schedule Definition
 
 // ==================================================
 // ==========     OBJECT CREATION          ==========
@@ -761,3 +766,9 @@ cs10.renderTableHW = function(hw) {
     }
     return result;
 };
+
+// Load the calendar:
+$(document).ready(function() {
+    defineSchedule();
+    cs10.renderTableCalendar();
+});
