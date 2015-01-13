@@ -31,29 +31,38 @@ function getWeekOfDate(date) {
 
 cs10.newLabObject = function(title, url, rq, video) {
     // FIXME -- better handle the URL via config
-    // TODO  -- How does "Project Work" or no lab fit into this?
     var baseURL = '../labs/llab/html/topic.html?topic=';
-    var labObj = { type: 'Lab' };
-    labObj.title = title;
+    var lab = { type: 'Lab' };
+    lab.title = title;
 
     // Global Counter for lecture
     cs10.rqCounter = cs10.rqCounter || 0;
 
     if (!title) {
-        labObj.title = 'No Lab';
+        lab.title = 'No Lab';
     }
+
     if (url) {
-        labObj.url = baseURL + url;
+        lab.url = baseURL + url;
     }
 
     if (rq) {
         cs10.rqCounter += 1;
         rq = cs10.rqCounter;
     }
-    labObj.RQ = rq;
 
-    labObj.video = video;
-    return labObj;
+    if (title.indexOf('Project Work') !== -1) {
+        lab.classes = 'project';
+    }
+
+    if (title.indexOf('No Lab') !== -1 || title.indexOf('No Class') !== -1) {
+        lab.classes = 'noClass';
+    }
+
+    lab.RQ = rq;
+
+    lab.video = video;
+    return lab;
 };
 
 cs10.newReadingsObject = function(title, url, classes) {
@@ -73,42 +82,50 @@ cs10.newReadingsObject = function(title, url, classes) {
 };
 
 cs10.newLectureObject = function(title, videoURL, guest) {
-    var obj = { type: 'Lecture' };
+    var lect = { type: 'Lecture' };
 
+    lect.title = title;
     if (!title) {
-        obj.title = 'No Lecture';
-        return obj;
+        lect.title = 'No Lecture';
+        return lect;
     }
+
+    if (title.indexOf('No Lecture') !== -1 || title.indexOf('No Class') !== -1) {
+        lect.classes = 'noClass';
+    }
+
     // Global Counter for lecture
     cs10.lectureCounter = cs10.lectureCounter || 0;
     cs10.lectureCounter += 1;
     var count = cs10.lectureCounter;
-    var lectureURL = 'lectures/' + (count < 10 ? '0' : '' ) + count + ' ' + title + '/';
-    obj.title = title;
-    obj.url = lectureURL;
-    obj.guest = guest;
-    obj.video = videoURL;
-    return obj;
+    lect.url = 'lecture/' + (count < 10 ? '0' : '') + count + ' ' + title + '/';
+    lect.guest = guest;
+    lect.video = videoURL;
+    return lect;
 };
 
 cs10.newDiscussionObject = function(title, files) {
-    var obj = { 'type' : 'Discussion' };
+    var disc = { type: 'Discussion' };
+
+    disc.title = title;
     if (!title) {
-        obj.title = 'No Class';
-        return obj;
+        disc.title = 'No Discussion';
     }
-    // Global Counter for lecture
+
+    if (title.indexOf('No Discussion') !== -1 || title.indexOf('No Class') !== -1) {
+        disc.classes = 'noClass';
+    }
+
+    // Global Counter for discussions
     cs10.discussionCounter = cs10.discussionCounter || 0;
     cs10.discussionCounter += 1;
-    obj.title = title;
 
     if (files) {
         var count = cs10.discussionCounter;
-        var discussionURL = 'disc/' + (count < 10 ? '0' : '' ) + count + '/';
-        obj.url = dsicussionURL;
+        disc.url = 'discussion/' + (count < 10 ? '0' : '') + count + '/';
     }
 
-    return obj;
+    return disc;
 };
 cs10.newHomeworkObject = function(title, spec, bCoursesID, notes) {
     var obj = { type: 'Homework' };
@@ -334,7 +351,8 @@ cs10.week9 = {
 // Spring Break
 // MARCH 23 - 27
 cs10.week10 = {
-    special: 'Spring Break'
+    special: 'Spring Break',
+    hw: 'Get Some Rest!'
 };
 
 // MARCH 30 - APRIL 3
@@ -589,72 +607,146 @@ cs10.getWeekStartDate = function(week) {
 */
 
 cs10.renderTableCalendar = function() {
-    var result = $('');
-    var table = $('.calendar.table tbody');
+    var result = $('<tbody>');
+    var table = $('.calendar.table');
     for(var i = 1; i < 18; i += 1) {
-        result.apped(cs10.renderTableRow(i, cs10['week' + i]));
+        result.append(cs10.renderTableRow(i, cs10['week' + i]));
     }
     table.append(result);
 };
 
-cs10.renderTableRow = function(weekNum, data) {
+// This renders a single week in the large semester calendar.
+cs10.renderTableRow = function(week, data) {
     var result = $('<tr>').addClass('cal');
-    var dateStr, start, end, readings, lectM, labA, lectW, labB, disc, hw;
 
-    // Cell 1 Week Number
-    result.append($('<td>').html(weekNum));
+    // TODO: Special Case For data.special
+    // TODO: Handle Exams
 
-    // Cell 2 Dates, uses MomentJS
-    // TODO -- Make this string a function.
-    start = cs10.getWeekStartDate(weekNum);
-    end   = moment(start).add(5, 'd');
-    dateStr = (start.month() + 1) + '-' + start.date() + ' to ' + (end.month() +
-        1) + '-' + end.date();
-    result.append($('<td>').html(dateStr));
-
-    // TODO: Make a Function
-    readings = $('<td>');
-    if (!data.readings) {
-        readings.append('No Reading');
-    } else if (typeof data.readings === 'string') {
-        readings.append(data.readings);
-    } else {
-        for (var i = 0; i < data.readings.length; i += 1) {
-            var rd = data.readings[i];
-            var a = $('<a>').attr(
-                {'class': rd.classes, 'href': rd.url, 'target': '_blank'} );
-            readings.append(a);
-            readings.append('<br>');
-        }
-    }
-    result
-    .append(readings)     // Cell 3 -- Readings and Review Sessions
-    .append(cs10.renderTableLecture(data.lectM)) // Cell 4 -- Mon Lecture
-    .append(cs10.renderTableLab(data.labA)) // Cell 5 -- 1st Lab
-    .append(cs10.renderTableLecture(data.lectW)) // Cell 6 -- Wed Lecture
-    .append(cs10.renderTableLab(data.labB)) // Cell 7 -- 2nd Lab
-    .append(cs10.renderTableDiscussion(data.disc)) // Cell 9 -- Discussion
-    .append(cs10.renderTableHW(data.hw));
+    result.append($('<td>').html(week))                     // Week Number
+          .append($('<td>').html(cs10.getDateString(week))) // Dates
+          .append(cs10.renderTableReading(data.readings))   // Readings
+          .append(cs10.renderTableLecture(data.lectM))      // Mon Lecture
+          .append(cs10.renderTableLab(data.labA))           // 1st Lab
+          .append(cs10.renderTableLecture(data.lectW))      // Wed Lecture
+          .append(cs10.renderTableLab(data.labB))           // 2nd Lab
+          .append(cs10.renderTableDiscussion(data.disc))    // Discussion
+          .append(cs10.renderTableHW(data.hw));             // Assignments
 
     return result;
 };
 
-cs10.renderTableReading = function(readings) {
-
+cs10.getDateString = function(week) {
+    var start = cs10.getWeekStartDate(week);
+    var end   = moment(start).add(5, 'd');
+    return (start.month() + 1) + '-' + start.date() + ' to ' +
+            (end.month() + 1) + '-' + end.date();
 };
 
-cs10.renderTableLecture = function(lecture) {
+cs10.renderTableReading = function(readings) {
+    var result = $('<td>');
+    if (!readings) {
+        result.append('No Reading');
+    } else if (typeof readings === 'string') {
+        result.append(readings);
+    } else {
+        for (var i = 0; i < readings.length; i += 1) {
+            var rd = readings[i];
+            var a = $('<a>').html(rd.title).attr(
+                {'class': rd.classes, 'href': rd.url, 'target': '_blank'} );
+            result.append(a);
+            result.append('<br>');
+        }
+    }
+    return result;
+};
 
+cs10.renderTableLecture = function(lect) {
+    var result = $('<td>');
+    if (!lect) {
+        result.append('No Lecture');
+        result.attr({'class': 'noClass'});
+    } else if (typeof lect === 'string') {
+        result.append(lect);
+    } else {
+        if (lect.geust) {
+            result.append($('<strong>').html('Guest Lecturer: ' + lect.guest));
+            result.append($('<br>'));
+        }
+        var tag = lect.url ? '<a>' : '<span>';
+        var title = $(tag).attr({'href': lect.url}).html(lect.title);
+        result.append(title);
+        result.append('<br>');
+        if (lect.videoURL) {
+            result.append('<br>');
+            result.append($('<a>').attr(
+                {'href' : lect.videoURL, 'target' : '_blank'} ));
+        }
+        result.attr({ 'class' : lect.classes });
+    }
+    return result;
 };
 
 cs10.renderTableLab = function(lab) {
-
+    var result = $('<td>');
+    if (!lab) {
+        result.append('No Lecture');
+        result.attr({'class': 'noClass'});
+    } else if (typeof lab === 'string') {
+        result.append(lab);
+    } else {
+        var title = $('<a>').attr({'href': lab.url}).html(lab.title);
+        result.append(title);
+        result.append('<br>');
+        if (lab.RQ) {
+            result.append($('<br>'));
+            result.append($('<strong>').html('Reading Quiz ' + lab.RQ +' (in lab)'));
+        }
+        result.attr({ 'class' : lab.classes });
+        if (lab.video) {
+            result.append($('<br>'));
+            result.append($('<a>').html('(Video Review)').attr({
+                'href' : lab.video, 'target' : '_blank'
+            }));
+        }
+    }
+    return result;
 };
 
 cs10.renderTableDiscussion = function(disc) {
-
+    var result = $('<td>');
+    if (!disc) {
+        result.append('No Discussion');
+        result.attr({'class': 'noClass'});
+    } else if (typeof disc === 'string') {
+        result.append(disc);
+    } else {
+        result.append(disc.title);
+        result.append('<br>');
+        result.attr({ 'class' : disc.classes });
+        if (disc.url) {
+            result.append($('<br>'));
+            result.append($('<strong>').html(
+                $('<a>').html('(Resources)').attr({'href' : disc.url})
+            ));
+        }
+    }
+    return result;
 };
 
 cs10.renderTableHW = function(hw) {
-
+    var result = $('<td>');
+    if (!hw) {
+        result.append('No Homework');
+    } else if (typeof hw === 'string') {
+        result.append(hw);
+    } else {
+        result.append(hw.title);
+        result.append('<br>');
+        result.attr({ 'class' : hw.classes });
+        if (hw.url) {
+            result.append($('<br>'));
+            result.append($('<a>').html('(Spec)').attr({'href' : hw.url}));
+        }
+    }
+    return result;
 };
