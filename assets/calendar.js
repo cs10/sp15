@@ -659,12 +659,13 @@ cs10.renderTableLecture = function(lect) {
 cs10.renderTableLab = function(lab) {
     var result = $('<td>');
     if (!lab) {
-        result.append('No Lecture');
+        result.append('No Lab');
         result.attr({'class': 'noClass'});
     } else if (typeof lab === 'string') {
         result.append(lab);
     } else {
-        var title = $('<a>').attr({'href': lab.url}).html(lab.title);
+        var title = $('<a>').html(lab.title).attr({
+            'href': lab.url, 'target': '_blank'});
         result.append(title);
         result.append('<br>');
         if (lab.RQ) {
