@@ -35,7 +35,7 @@ cs10.week1 = {
     readings: 'No Readings',
     lectM: 'No Lecture Monday',
     labA: 'No Labs Monday, Tuesday, or Wednesday morning',
-    lectW: lect('Welcome and Abstraction', 'https://coursesharing.org/courses/6/lectures/7'),
+    lectW: lect('Welcome and Abstraction', '', 'https://coursesharing.org/courses/6/lectures/7'),
     labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
     disc: disc('Welcome to CS10!'),
     hw: hw('HW0')
@@ -110,7 +110,8 @@ cs10.week4 = {
                 'http://www.wired.com/magazine/2010/05/process_pixar/',
                 'optional')
     ],
-    lectM: lect('Algorithms'),
+    lectM: lect('Algorithms', '',
+                'https://coursesharing.org/courses/6/lectures/14'),
     labA: lab('Algorithms', 'berkeley_bjc/areas/algorithms.topic', true),
     lectW: lect('Algorithmic Complexity'),
     labB: lab('Algorithmic Complexity', "berkeley_bjc/areas/algorithm-complexity.topic"),
@@ -181,7 +182,7 @@ cs10.week7 = {
     ],
     lectM: lect('Recursion II'),
     labA: lab('Recursive Reporters I', 'berkeley_bjc/recur/recursive-reporters-part1.topic', true),
-    lectW: lect('Artificial Intelligence', '', 'A Guest'),
+    lectW: lect('Artificial Intelligence', '', '', 'A Guest'),
     labB: lab('Project Work'),
     disc: disc('Concurrency and Midterm Intro'),
     hw: hw('Start Midterm Project')
@@ -200,8 +201,8 @@ cs10.week8 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter6.pdf')
     ],
     lectM: lect('Social Implications I'),
-    labA: lab('Project Work and Lab Review', '', true),
-    lectW: lect('Social Implications II', '', 'Gerald Friedland'),
+    labA: lab('Project Work <br> Lab Review', '', true),
+    lectW: lect('Social Implications II', '', '', 'Gerald Friedland'),
     labB: lab('Project Work'),
     disc: disc('Midterm Review'),
     hw: 'Work on midterm Project'
@@ -214,7 +215,7 @@ cs10.week9 = {
 
     },
     readings: 'No Readings',
-    lectM: lect('Social Implications III', '', 'Brian Harvey'),
+    lectM: lect('Social Implications III', '', '', 'Brian Harvey'),
     labA: lab('Online <span class="snap">snap</span> Midterm'),
     lectW: lect('The Internet'),
     labB: lab('The Internet', 'berkeley_bjc/areas/internet.topic'),
@@ -240,11 +241,11 @@ cs10.week11 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter8.pdf',
                 'optional')
     ],
-    lectM: lect('HCI', '', 'Eric Paulos'),
+    lectM: lect('HCI', '', '', 'Eric Paulos'),
     labA: lab('Tic Tac Toe', 'berkeley_bjc/lists/tic-tac-toe.topic', true),
     lectW: lect('The Internet II'),
-    labB: lab('Project Work'),
-    disc: disc('The Intenet'),
+    labB: lab('Poject Work'),
+    disc: disc('The Internet'),
     hw: hw('Impact Writing Assignment')
 };
 
@@ -331,7 +332,7 @@ cs10.week15 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter9.pdf',
                 'optional')
     ],
-    lectM: lect('Saving the World with Computing', '', 'Kathy Yelick'),
+    lectM: lect('Saving the World with Computing', '', '', 'Kathy Yelick'),
     labA: lab('Project Work Lab', '', true),
     lectW: lect('Summary and Farewell'),
     labB: 'With-<span class="snap">snap</span> Exam',
@@ -431,7 +432,7 @@ cs10.newReadingsObject = function(title, url, classes) {
     return reading;
 };
 
-cs10.newLectureObject = function(title, videoURL, guest) {
+cs10.newLectureObject = function(title, path, videoURL, guest) {
     var lect = { type: 'Lecture' };
 
     lect.title = title;
@@ -443,12 +444,10 @@ cs10.newLectureObject = function(title, videoURL, guest) {
     if (title.indexOf('No Lecture') !== -1 || title.indexOf('No Class') !== -1) {
         lect.classes = 'noClass';
     }
+    if (path) {
+        lect.url = 'lecture/' + path + '/';
+    }
 
-    // Global Counter for lecture
-    cs10.lectureCounter = cs10.lectureCounter || 0;
-    cs10.lectureCounter += 1;
-    var count = cs10.lectureCounter;
-    lect.url = 'lecture/' + (count < 10 ? '0' : '') + count + ' ' + title + '/';
     lect.guest = guest;
     lect.video = videoURL;
     return lect;
@@ -487,7 +486,7 @@ cs10.newHomeworkObject = function(title, spec, bCoursesID, notes) {
     }
 
     obj.title = title;
-    obj.classes = 'assignmentDue';
+    obj.classes = 'due';
     if (spec) {
         obj.url = spec;
     }
@@ -576,55 +575,10 @@ cs10.getWeekStartDate = function(week) {
     return start.add((week - 1) * 7 + 1, 'd');
 }
 
-/*
-<tr class="cal">
-  <td>5</td>
-  <td>9-22 to 9-26</td>
-  <td>
-      <a class="reading required" href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter2.pdf">BtB Chapter 2</a>
-      <br>
-  </td>
-  <td>
-      <strong>Guest Lecturer: Jon Kotker</strong>
-      <br>
-      <a href="lecture/L06 - Algorithms I/">Algorithms</a>
-      <br>
-      <a target="_blank" href="https://coursesharing.org/courses/6/lectures/14">(Sp12 HD video with Qs)</a>
-  </td>
-  <td>
-      <a class="lablink" href="../labs/topic/topic.html?topic=berkeley_bjc/areas/algorithms.topic">Algorithms</a>
-      &amp;
-      Homework Help
-      <br>
-      <br>
-      <strong>Reading Quiz 4 (in-lab)</strong>
-  </td>
-  <td>
-      [Lecture...]
-  </td>
-  <td>
-      [Lab...]
-  </td>
-  <td>
-      Algorithmic Complexity &amp;
-      <br>
-      Quest Review
-      <br>
-      <strong>(<a href="disc/05/">Resources</a>)</strong>
-  </td>
-  <td class="due">
-      <a href="assign.html?https://docs.google.com/document/d/18RPHqtdohWA6rAEYGkLcthGVS32RK7GB7zL3OP_y--Q/pub">Homework 2</a>
-      <br>
-      <a href="assign.html?https://docs.google.com/document/d/17Bb1Pwp1407bBbqUOJ6VFOUDQSsgSG5lxtRoBUl793E/pub">(Rubric)</a>
-      <br>
-      <em>due 9/26 @ 11:59PM on bCourses</em>
-  </td>
-</tr>
-*/
-
 cs10.renderTableCalendar = function() {
     var result = $('<tbody>');
     var table = $('.calendar.table');
+    if (table.length === 0) { return; }
     for(var i = 1; i < 18; i += 1) {
         result.append(cs10.renderTableRow(i, cs10['week' + i]));
     }
@@ -692,10 +646,10 @@ cs10.renderTableLecture = function(lect) {
         var title = $(tag).attr({'href': lect.url}).html(lect.title);
         result.append(title);
         result.append('<br>');
-        if (lect.videoURL) {
+        if (lect.video) {
             result.append('<br>');
-            result.append($('<a>').attr(
-                {'href' : lect.videoURL, 'target' : '_blank'} ));
+            result.append($('<a>').html('(Sp12 HD video with Qs)').attr(
+                {'href' : lect.video, 'target' : '_blank'} ));
         }
         result.attr({ 'class' : lect.classes });
     }
