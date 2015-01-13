@@ -605,20 +605,20 @@ cs10.renderTableRow = function(weekNum, data) {
     result.append($('<td>').html(weekNum));
 
     // Cell 2 Dates, uses MomentJS
+    // TODO -- Make this string a function.
     start = cs10.getWeekStartDate(weekNum);
     end   = moment(start).add(5, 'd');
     dateStr = (start.month() + 1) + '-' + start.date() + ' to ' + (end.month() +
         1) + '-' + end.date();
     result.append($('<td>').html(dateStr));
 
-    // Cell 3 Readings -- Review Sessions
+    // TODO: Make a Function
     readings = $('<td>');
     if (!data.readings) {
         readings.append('No Reading');
     } else if (typeof data.readings === 'string') {
         readings.append(data.readings);
     } else {
-        console.log(data.readings);
         for (var i = 0; i < data.readings.length; i += 1) {
             var rd = data.readings[i];
             var a = $('<a>').attr(
@@ -627,7 +627,34 @@ cs10.renderTableRow = function(weekNum, data) {
             readings.append('<br>');
         }
     }
-    result.append(readings);
+    result
+    .append(readings)     // Cell 3 -- Readings and Review Sessions
+    .append(cs10.renderTableLecture(data.lectM)) // Cell 4 -- Mon Lecture
+    .append(cs10.renderTableLab(data.labA)) // Cell 5 -- 1st Lab
+    .append(cs10.renderTableLecture(data.lectW)) // Cell 6 -- Wed Lecture
+    .append(cs10.renderTableLab(data.labB)) // Cell 7 -- 2nd Lab
+    .append(cs10.renderTableDiscussion(data.disc)) // Cell 9 -- Discussion
+    .append(cs10.renderTableHW(data.hw));
 
     return result;
+};
+
+cs10.renderTableReading = function(readings) {
+
+};
+
+cs10.renderTableLecture = function(lecture) {
+
+};
+
+cs10.renderTableLab = function(lab) {
+
+};
+
+cs10.renderTableDiscussion = function(disc) {
+
+};
+
+cs10.renderTableHW = function(hw) {
+
 };
