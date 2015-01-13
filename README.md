@@ -7,7 +7,14 @@ The Spring 2015 site is built using [Jekyll](jekyllrb.com) and is hosted on Gith
 
 Currently, there isn't much fancy work being done with Jekyll -- just a few include statements and basic page layouts.
 
-## Dependencies
+## Jekyll
+This site is built with Jekyll. To build the site, you need Jekyll and Ruby installed. Github has some fairly straight forward instructions, here:
+https://help.github.com/articles/using-jekyll-with-pages/
+
+To preview the site you should run:
+`bundle exec jekyll serve`
+
+## Web Dependencies
 
 * Bootstrap
 * jQuery
