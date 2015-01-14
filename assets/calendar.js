@@ -34,7 +34,7 @@ var lab      = cs10.newLabObject,
 cs10.week1 = {
     readings: 'No Readings',
     lectM: lect('No Lecture Monday'),
-    labA: lect('No Labs Monday, Tuesday, or Wednesday morning'),
+    labA: lab('No Labs Monday, Tuesday, or Wednesday morning'),
     lectW: lect('Welcome and Abstraction', '', 'https://coursesharing.org/courses/6/lectures/7'),
     labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
     disc: disc('Welcome to CS10!'),
