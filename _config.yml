@@ -17,6 +17,15 @@ sass:
     style: :compressed
     sass_dir: assets/_sass
 
+# Custom Data
+bCourses: '1301472'
+labsCourse: 'cs10_sp15.html'
+piazzaURL: 'berkeley/spring2015/cs10spring2015'
+# Should be in MomentJS format
+startDate: '2015-01-18' # First Sunday
+endDate:   '2015-05-16' # Last Saturday
+
+
 # TODO: TA Collections
 # collections:
     # - tas:

@@ -46,17 +46,14 @@ layout: default
               <a class="snap" style="font:120%" href="http://snap.berkeley.edu/run/">Snap</a>
           </div>
           <div class="ql col-md-2">
-              <!-- UPDATE EACH SEMESTER -->
-              <a href="https://piazza.com/class/hwnwszyjn9f5eg">Piazza</a>
+              <a href="https://piazza.com/{{ site.piazzaURL }}">Piazza</a>
               <br />(Q&amp;A)
           </div>
           <div class="ql col-md-2">
-              <!-- UPDATE EACH SEMESTER -->
-              <a class="lablink" href="../labs/course/cs10_fa14.html?">Labs</a>
+              <a class="lablink" href="http://beautyjoy.github.io/bjc-r/course/{{ site.labsCourse }}">Labs</a>
           </div>
           <div class="ql col-md-2">
-              <!-- UPDATE EACH SEMESTER -->
-              <a href="https://bcourses.berkeley.edu/courses/1246916">bCourses</a>
+              <a href="https://bcourses.berkeley.edu/courses/{{ site.bCourses }}">bCourses</a>
               <br />(assignments)
           </div>
           <div class="ql col-md-2">
@@ -139,12 +136,11 @@ layout: default
 <link href="assets/cs10style.css" rel="stylesheet"/>
 
 <script src='assets/lib/jquery.min.js'></script>
-<!-- <script src="assets/cs10.js"></script> -->
 <!-- JS For the Weekly Schedule uses fullcalendar.io -->
 <script src='assets/lib/moment.min.js'></script>
 <script src='assets/lib/fullcalendar/fullcalendar.min.js'></script>
 <script src='assets/lib/fullcalendar/gcal.js'></script>
-
+<script src="assets/index-concat.js"></script>
 <script>
 // Review session dates, JS Dates: 0 == Jan!!
 var quest   = daysUntil(new Date(2014, 9, 1)),
@@ -194,5 +190,3 @@ $(document).ready(function() {
     });
 });
 </script>
-<script src='assets/staff.js'></script>
-<script src='assets/calendar.js'></script>
