@@ -2,6 +2,14 @@
 ---
 // Concatenation of all CS10 JS Files.
 
+{% include_relative lib/jquery.min.js %}
+
+{% include_relative lib/moment.min.js %}
+
+{% include_relative lib/fullcalendar/fullcalendar.min.js %}
+
+{% include_relative lib/fullcalendar/gcal.js %}
+
 {% include_relative cs10.js %}
 
 {% include_relative calendar.js %}
