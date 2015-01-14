@@ -31,17 +31,17 @@ cs10.week1 = {
 cs10.week2 = {
     readings: [
         reading('Prof. Harvey\'s Intro to Abstraction',
-                '../sp11/lec/01/2010-08-30-CS10-L01-BH-Abstraction.txt'),
+                'resources/readings/BH-Abstraction.txt'),
         reading('Why Software is Eating the World',
-                'https://bcourses.berkeley.edu/courses/1246916/files#CS10%3A%20The%20Beauty%20and%20Joy%20of%20Computing%2FReadings%2FMarc_Andreessen_on_Why_Software_Is_Eating_the_World__WSJ.com.pdf'),
+                'https://bcourses.berkeley.edu/courses/1301472/files/folder/Readings?preview=53889491'),
         reading('Learning to Code!',
                 'http://www.youtube.com/watch?v=dU1xS07N-FA',
                 'optional'),
         reading('Is Abstraction the Key to Computing?',
-                'http://doi.acm.org/10.1145/1232743.1232745',
+                'https://bcourses.berkeley.edu/courses/1301472/files/folder/Readings?preview=53889492',
                 'optional'),
         reading('Scratch: Programming for All',
-                'https://bcourses.berkeley.edu/courses/1246916/files#CS10%3A%20The%20Beauty%20and%20Joy%20of%20Computing%2FReadings',
+                'https://bcourses.berkeley.edu/courses/1301472/files/folder/Readings?preview=53889490',
                 'optional')
     ],
     lectM: lect('Functions'),
