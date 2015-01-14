@@ -140,13 +140,13 @@ layout: default
 <script>
 // TODO: Move these dates to configs and use Moments.
 // Review session dates, JS Dates: 0 == Jan!!
-var quest   = daysUntil(new Date(2014, 9, 1)),
-    midterm = daysUntil(new Date(2014, 9, 29)),
-    final   = daysUntil(new Date(2014, 11, 16));
+var quest   = daysUntil(moment('2015-01-10')),
+    midterm = daysUntil(moment('2015-01-10')),
+    final   = daysUntil(moment('2015-01-10'));
 
 function daysUntil(from, to) {
   var MS_DAY = 1000*60*60*24;
-  return Math.floor((from - (to || new Date())) / MS_DAY);
+  return Math.floor((from - (to || moment())) / MS_DAY);
 }
 
 function inRange(num) { return num >= -7 && num < 1; }
