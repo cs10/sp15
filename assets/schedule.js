@@ -217,6 +217,7 @@ cs10.week9.labA.classes = 'exam';
 // MARCH 23 - 27
 cs10.week10 = {
     special: 'Spring Break',
+    readings: [],
     hw: 'Get Some Rest!'
 };
 
@@ -336,7 +337,7 @@ cs10.week15.labB.classes = 'exam';
 // MAY 4 - 7
 cs10.week16 = {
     special: 'RRR Week -- No Class',
-    readings: ''
+    readings: []
 };
 
 // MAY 11 - 15
@@ -344,6 +345,7 @@ cs10.week17 = {
     exam: {
 
     },
+    readings: [],
     labA: lab('Final Exam<br>7 - 10pm')
 };
 cs10.week17.labA.classes = 'exam';
