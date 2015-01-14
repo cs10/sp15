@@ -9,56 +9,14 @@ cs10.gradingScheme = {
     'A+': 485,
     'A' : 470,
     'A-': 460,
-    'B+': 450
-};
-
-// Full Calendar Modifications
-// Notes: http://fullcalendar.io/docs/event_data/Event_Object/
-// TODO: Move this location
-// Addition to modify links for CS10 calendar.
-function getRoomURL(loc) {
-    if (!loc) { return ''; }
-
-    var base = "http://www.berkeley.edu/map/3dmap/3dmap.shtml?",
-        url  = { sd: 'sutardja',
-                 sdh: 'sutardja',
-                 lks: 'likashing',
-                 etch: 'etcheverry',
-                 soda: 'soda',
-                 vlsb: 'valleylifesciences' },
-        room = loc ? loc.split(' ')[1].toLowerCase() : '';
-
-    if (url[room]) {
-        room = url[room];
-    }
-
-    return base + room;
-}
-
-function editTitle(t) {
-    return t.replace(/CS10\s*/gi, '');
-}
-
-cs10.fullCalTransorm = function(event) {
-    event.url = getRoomURL(event.location);
-    event.title = editTitle(event.title);
-    return event;
-};
-
-cs10.fullCalRender = function(event, element, view) {
-    var content = '';
-
-    if (event.location) {
-        content += event.location;
-        element.attr({'target':'_blank'}); // open links in a new window
-    } else {
-        element.attr({'href': '#weekly'});
-    }
-    if (event.description) {
-        content += '<br>' + event.description;
-    }
-    element.append($('<div class="fc-content">').html(content));
-    return element;
+    'B+': 445,
+    'B' : 420,
+    'B-': 400,
+    'C+': ,
+    'C' : ,
+    'C-': 350,
+    'D' : 300,
+    'F' : '<= 299'
 };
 
 // ==================================================

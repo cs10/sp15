@@ -22,7 +22,7 @@ Some things:
 * lectures content should go in `lecture/## - Title/` and should not include the source files
 * discussion resources should go in `discussion/##/`
 
-#### TODO: A note about directory listings
+#### TODO: A note about directory listings  
 
 
 ## Web Dependencies
