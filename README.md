@@ -14,6 +14,17 @@ https://help.github.com/articles/using-jekyll-with-pages/
 To preview the site you should run:
 `bundle exec jekyll serve`
 
+## Updating the Website
+
+The most common file to edit will be `assets/schedule.js` which defines the main class calendar. There are 4 main functions (`reading`, `lab`, `lect`, `hw`) for each type of item on the calendar. Their inputs are listed at the top of the file.
+
+Some things:
+* lectures content should go in `lecture/## - Title/` and should not include the source files
+* discussion resources should go in `discussion/##/`
+
+#### TODO: A note about directory listings
+
+
 ## Web Dependencies
 
 * Bootstrap
@@ -21,4 +32,4 @@ To preview the site you should run:
 * FullCalendarJS -- for the Google Calendar schedule
 * MomentJS -- needed for FullCalendar and is a date API used in other places
 
-Note: The use of FullCalendar requires a Google Developer account, but these are free and there shouldn't be much configuration needed. Currently the key is supplied in the index file, but this will move.
+Note: The use of FullCalendar requires a Google Developer account, but these are free and there shouldn't be much configuration needed. The API key is supplied in the configuration file. You need a free Google Developer Console account to get a calendar API if the current one is broken.
