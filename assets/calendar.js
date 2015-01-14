@@ -87,7 +87,7 @@ function getWeekOfDate(date) {
 cs10.newLabObject = function(title, url, rq, video) {
     // FIXME -- better handle the URL via config
     var baseURL = 'http://beautyjoy.github.io/bjc-r/llab/html/topic.html?topic=';
-    var urlEnd  = '&novideo&noreading&noassingment&course=cs10_sp15.html';
+    var urlEnd  = '&novideo&noreading&noassingment&course={{ site.labsCourse }}';
     var lab = { type: 'Lab' };
     lab.title = title;
 
