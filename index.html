@@ -149,7 +149,16 @@ function daysUntil(from, to) {
   return Math.floor((from - (to || moment())) / MS_DAY);
 }
 
-function inRange(num) { return num >= -7 && num < 1; }
+function inRange(num) { return num <= 7 && num > -1; }
+
+function calendarStartDate() {
+  if (moment().isBefore(moment('{{ site.endDate}}')) &&
+      moment().isAfter(moment('{{ site.startDate }}'))) {
+        return moment();
+    }
+
+    return '{{ site.startDate }}';
+}
 
 $(document).ready(function() {
     // Show weekends when we are close to at least one review session.
@@ -163,6 +172,7 @@ $(document).ready(function() {
       defaultView: 'agendaWeek',
       minTime: "09:00:00",
       maxTime: "20:00:00",
+      defaultDate: calendarStartDate(),
       contentHeight: "auto",
       googleCalendarApiKey: '{{ site.gcalAPIKey }}',
       eventDataTransform: cs10.fullCalTransorm,
