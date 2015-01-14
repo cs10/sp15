@@ -18,16 +18,13 @@ cs10.gradingScheme = {
 // Addition to modify links for CS10 calendar.
 function getRoomURL(loc) {
     var base = "http://www.berkeley.edu/map/3dmap/3dmap.shtml?",
-        url  = { SD: 'sutardja',
-                 SDH: 'sutardja',
-                 LKS: 'likashing',
-                 Soda: 'soda',
-                 VLSB: 'valleylifesciences' },
-        room = loc ? loc.split(' ')[1] : '';
+        url  = { sd: 'sutardja',
+                 sdh: 'sutardja',
+                 lks: 'likashing',
+                 soda: 'soda',
+                 vlsb: 'valleylifesciences' },
+        room = loc ? loc.split(' ')[1].toLowerCase() : '';
 
-    console.log(loc);
-    console.log(room);
-    console.log(url[room]);
 
     if (url[room]) {
         room = url[room];
@@ -41,15 +38,21 @@ function editTitle(t) {
 }
 
 cs10.fullCalTransorm = function(event) {
-    console.log(event.title);
     event.url = getRoomURL(event.location);
     event.title = editTitle(event.title);
-    event.content = event.location + '\n' + event.description;
     return event;
 };
 
 cs10.fullCalRender = function(event, element, view) {
-    element.attr({'target':'_blank'});
+    var content = '';
+    if (event.location) {
+        content += event.location;
+    }
+    if (event.description) {
+        content += '<br>' + event.description;
+    }
+    element.attr({'target':'_blank'}); // open links in a new window
+    element.append($('<div class="fc-content">').html(content));
     return element;
 };
 

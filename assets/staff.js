@@ -171,7 +171,7 @@ function buildPerson(data, width) {
     var cls = 'col-md-' + (width === 5 ? '20' : Math.floor(12/width));
     elm = '<div class="'+ cls + '">';
     if (!!data.img) {
-        elm += '<a href="resources/images/' + data.img + '">';
+        elm += '<a href="{{ site.baseurl }}/resources/images/' + data.img + '">';
     }
 
     elm += '<img class="staff" align="center" ';
@@ -205,9 +205,9 @@ function buildGroup(group, w) {
     // Build a set of table rows, with W items per row
     // based on the people in the GROUP
     // Add them to the appropriate HTML table element
-    ppl = all[group];
-    doc = document.getElementById(group);
-    content = '';
+    var ppl = all[group];
+    var doc = document.getElementById(group);
+    var content = '';
     for (var i = 0; i < ppl.length; i += w) {
         content += '<div class="row staffimgrow">';
         for (var j = i; j < (i + w) && j < ppl.length; j += 1) {
