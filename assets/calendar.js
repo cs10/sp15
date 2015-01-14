@@ -664,7 +664,8 @@ cs10.renderTableLab = function(lab) {
     } else if (typeof lab === 'string') {
         result.append(lab);
     } else {
-        var title = $('<a>').html(lab.title).attr({
+        var tag = lab.url ? '<a>' : '<span>';
+        var title = $(tag).html(lab.title).attr({
             'href': lab.url, 'target': '_blank'});
         result.append(title);
         result.append('<br>');
