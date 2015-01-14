@@ -140,9 +140,9 @@ layout: default
 <script>
 // TODO: Move these dates to configs and use Moments.
 // Review session dates, JS Dates: 0 == Jan!!
-var quest   = daysUntil(moment('2015-01-10')),
-    midterm = daysUntil(moment('2015-01-10')),
-    final   = daysUntil(moment('2015-01-10'));
+var quest   = daysUntil(moment('{{ site.questDate }}')),
+    midterm = daysUntil(moment('{{ site.midtermDate }}')),
+    final   = daysUntil(moment('{{ site.finalDate }}'));
 
 function daysUntil(from, to) {
   var MS_DAY = 1000*60*60*24;
