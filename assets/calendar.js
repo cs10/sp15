@@ -25,6 +25,10 @@ function getRoomURL(loc) {
                  VLSB: 'valleylifesciences' },
         room = loc ? loc.split(' ')[1] : '';
 
+    console.log(loc);
+    console.log(room);
+    console.log(url[room]);
+
     if (url[room]) {
         room = url[room];
     }
@@ -38,11 +42,16 @@ function editTitle(t) {
 
 cs10.fullCalTransorm = function(event) {
     console.log(event.title);
-    event.url = getRoomURL(event.title);
+    event.url = getRoomURL(event.location);
     event.title = editTitle(event.title);
-    console.log(event);
+    event.content = event.location + '\n' + event.description;
     return event;
-}
+};
+
+cs10.fullCalRender = function(event, element, view) {
+    element.attr({'target':'_blank'});
+    return element;
+};
 
 // ==================================================
 // ==========     OBJECT CREATION          ==========

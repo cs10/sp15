@@ -166,6 +166,7 @@ $(document).ready(function() {
       contentHeight: "auto",
       googleCalendarApiKey: '{{ site.gcalAPIKey }}',
       eventDataTransform: cs10.fullCalTransorm,
+      eventRender: cs10.fullCalRender,
       eventSources: [
         { googleCalendarId: 'berkeley.edu_7qpoo4ph13p55e4ukmnpvqusdk@group.calendar.google.com',
           cache: true,
