@@ -119,6 +119,8 @@ cs10.week5 = {
     hw: 'Start HW 3'
 };
 cs10.week5.lectW.classes = 'exam';
+cs10.week5.labA.classes = ''; // Remove 'noClass'
+
 
 // FEB 23 - 24
 cs10.week6 = {
@@ -208,6 +210,8 @@ cs10.week9 = {
     disc: disc('Midterm Debrief'),
     hw: hw('Midterm Project')
 };
+cs10.week9.labA.classes = 'exam';
+
 
 // Spring Break
 // MARCH 23 - 27
@@ -325,20 +329,25 @@ cs10.week15 = {
     disc: disc('Summary and Farewell'),
     hw: hw('Final Project')
 };
+cs10.week15.labB.classes = 'exam';
 
 
 // DEAD WEEK
 // MAY 4 - 7
 cs10.week16 = {
-    special: 'RRR Week -- No Class'
+    special: 'RRR Week -- No Class',
+    readings: ''
 };
 
 // MAY 11 - 15
 cs10.week17 = {
     exam: {
 
-    }
+    },
+    labA: lab('Final Exam<br>7 - 10pm')
 };
+cs10.week17.labA.classes = 'exam';
+
 
 // Load the Calendar
 // Load the calendar:
