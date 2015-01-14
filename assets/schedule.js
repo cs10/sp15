@@ -5,6 +5,7 @@
  * Lab:     (title, 'topic file path', [boolean -- Reading Quiz?])
  * Disc:    (title, [boolean -- Resources available?])
  * HW:      (title, TBD...)
+ * NOTE: These links are currently relative to the home page.
  */
 var lab      = cs10.newLabObject,
     reading  = cs10.newReadingsObject,
