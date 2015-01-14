@@ -37,6 +37,10 @@ function editTitle(t) {
 }
 
 cs10.fullCalTransorm = function(event) {
+    console.log(event.title);
+    event.url = getRoomURL(event.title);
+    event.title = editTitle(event.title);
+    console.log(event);
     return event;
 }
 

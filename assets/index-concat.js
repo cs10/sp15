@@ -13,7 +13,7 @@
 
 {% include_relative lib/fullcalendar/fullcalendar.min.js %}
 
-{% include_relative lib/fullcalendar/gcal2.js %}
+{% include_relative lib/fullcalendar/gcal.js %}
 
 {% include_relative cs10.js %}
 
