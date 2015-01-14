@@ -155,7 +155,6 @@ $(document).ready(function() {
     var wkends = inRange(quest) || inRange(midterm) || inRange(final);
 
     // Google API KEY:
-    var gcalkey = 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs';
     $('#oh-cal').fullCalendar({
       allDaySlot: false,
       slotDuration: "1:00:00",
@@ -168,19 +167,19 @@ $(document).ready(function() {
       eventSources: [
         {   googleCalendarId: 'berkeley.edu_7qpoo4ph13p55e4ukmnpvqusdk@group.calendar.google.com',
             cache: true,
-            googleCalendarApiKey: gcalkey,
+            googleCalendarApiKey: '{{ site.gcalAPIKey }}',
             className: 'lecture' },
         {   googleCalendarId: 'berkeley.edu_d358eocqj23pak3atie23vk35o@group.calendar.google.com',
             cache: true,
-            googleCalendarApiKey: gcalkey,
+            googleCalendarApiKey: '{{ site.gcalAPIKey }}',
             className: 'lab' },
         {   googleCalendarId: 'berkeley.edu_k2g60q1sehd2u0ujd257jqm7h0@group.calendar.google.com',
             cache: true,
-            googleCalendarApiKey: gcalkey,
+            googleCalendarApiKey: '{{ site.gcalAPIKey }}',
             className: 'oh' },
         {   googleCalendarId: 'berkeley.edu_1g3duo9lb53vu09orjictriud4@group.calendar.google.com',
             cache: true,
-            googleCalendarApiKey: gcalkey,
+            googleCalendarApiKey: '{{ site.gcalAPIKey }}',
             className: 'disc' }
       ]
     });
