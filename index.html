@@ -138,6 +138,7 @@ layout: default
 
 <script src="assets/index-concat.js"></script>
 <script>
+// TODO: Move these dates to configs and use Moments.
 // Review session dates, JS Dates: 0 == Jan!!
 var quest   = daysUntil(new Date(2014, 9, 1)),
     midterm = daysUntil(new Date(2014, 9, 29)),
@@ -163,23 +164,21 @@ $(document).ready(function() {
       minTime: "09:00:00",
       maxTime: "20:00:00",
       contentHeight: "auto",
+      googleCalendarApiKey: '{{ site.gcalAPIKey }}',
+      eventDataTransform: cs10.fullCalTransorm,
       eventSources: [
-        {   googleCalendarId: 'berkeley.edu_7qpoo4ph13p55e4ukmnpvqusdk@group.calendar.google.com',
-            cache: true,
-            googleCalendarApiKey: '{{ site.gcalAPIKey }}',
-            className: 'lecture' },
-        {   googleCalendarId: 'berkeley.edu_d358eocqj23pak3atie23vk35o@group.calendar.google.com',
-            cache: true,
-            googleCalendarApiKey: '{{ site.gcalAPIKey }}',
-            className: 'lab' },
-        {   googleCalendarId: 'berkeley.edu_k2g60q1sehd2u0ujd257jqm7h0@group.calendar.google.com',
-            cache: true,
-            googleCalendarApiKey: '{{ site.gcalAPIKey }}',
-            className: 'oh' },
-        {   googleCalendarId: 'berkeley.edu_1g3duo9lb53vu09orjictriud4@group.calendar.google.com',
-            cache: true,
-            googleCalendarApiKey: '{{ site.gcalAPIKey }}',
-            className: 'disc' }
+        { googleCalendarId: 'berkeley.edu_7qpoo4ph13p55e4ukmnpvqusdk@group.calendar.google.com',
+          cache: true,
+          className: 'lecture' },
+        { googleCalendarId: 'berkeley.edu_d358eocqj23pak3atie23vk35o@group.calendar.google.com',
+          cache: true,
+          className: 'lab' },
+        { googleCalendarId: 'berkeley.edu_k2g60q1sehd2u0ujd257jqm7h0@group.calendar.google.com',
+          cache: true,
+          className: 'oh' },
+        { googleCalendarId: 'berkeley.edu_1g3duo9lb53vu09orjictriud4@group.calendar.google.com',
+          cache: true,
+          className: 'disc' }
       ]
     });
 });

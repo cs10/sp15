@@ -12,6 +12,34 @@ cs10.gradingScheme = {
     'B+': 450
 };
 
+// Full Calendar Modifications
+// Notes: http://fullcalendar.io/docs/event_data/Event_Object/
+// TODO: Move this location
+// Addition to modify links for CS10 calendar.
+function getRoomURL(loc) {
+    var base = "http://www.berkeley.edu/map/3dmap/3dmap.shtml?",
+        url  = { SD: 'sutardja',
+                 SDH: 'sutardja',
+                 LKS: 'likashing',
+                 Soda: 'soda',
+                 VLSB: 'valleylifesciences' },
+        room = loc ? loc.split(' ')[1] : '';
+
+    if (url[room]) {
+        room = url[room];
+    }
+
+    return base + room;
+}
+
+function editTitle(t) {
+    return t.replace(/CS10\s*/gi, '');
+}
+
+cs10.fullCalTransorm = function(event) {
+    return event;
+}
+
 // ==================================================
 // ==========     OBJECT CREATION          ==========
 // ==================================================

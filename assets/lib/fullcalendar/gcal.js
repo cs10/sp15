@@ -3,26 +3,6 @@
  * Docs & License: http://arshaw.com/fullcalendar/
  * (c) 2013 Adam Shaw
  */
- 
-// Addition to modify links for CS10 calendar.
-function getRoomURL(loc) {
-    var base = "http://www.berkeley.edu/map/3dmap/3dmap.shtml?",
-        url  = { SD: 'sutardja',
-                 LKS: 'likashing',
-                 Soda: 'soda',
-                 VLSB: 'valleylifesciences' },
-        room = loc.split(' ')[1];
-
-    if (url[room]) {
-        room = url[room];
-    }
-
-    return base + room;
-}
-
-function editTitle(t) {
-    return t.replace(/CS10\s*/gi, '');
-}
 
 /////////////////////
 (function(factory) {
@@ -145,7 +125,7 @@ function transformOptions(sourceOptions, start, end, timezone, calendar) {
 						end: entry.end.dateTime || entry.end.date, // same
 						url: getRoomURL(entry.htmlLink), // MY MOD
 						location: entry.location,
-						description: entry.description, // MY MOD}
+						description: entry.description, // MY MOD
                         content: (entry.location + '\n' + entry.description)
 					});
 				});
@@ -161,7 +141,7 @@ function transformOptions(sourceOptions, start, end, timezone, calendar) {
 			return events;
 		}
 	});
-	
+
 }
 
 
