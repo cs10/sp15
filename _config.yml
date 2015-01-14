@@ -1,6 +1,7 @@
 # Site settings
 title: CS10 | Spring 2015
 email: info@cs10.org
+# Note the weird ' > # ' syntax is for multiline stuff
 description: > # CS10, The Beauty and Joy of Computing, is an introductory
     computer science class designed for anyone and everyone. The Beauty and
     Joy of Computing is an AP Computer Science Principles class.
