@@ -5,6 +5,7 @@ cs10.startDate = '{{ site.startDate }}';
 cs10.endDate   = '{{ site.endDate }}';
 
 cs10.bCoursesID = '{{ site.bCourses }}';
+
 cs10.gradingScheme = {
     'A+': 485,
     'A' : 470,
@@ -139,7 +140,8 @@ cs10.newDiscussionObject = function(title, files) {
 
     return disc;
 };
-cs10.newHomeworkObject = function(title, spec, bCoursesID, notes) {
+
+cs10.newHomeworkObject = function(title, due, submission, spec, notes) {
     var obj = { type: 'Homework' };
 
     // TODO: Consider refactoring this....
@@ -149,12 +151,23 @@ cs10.newHomeworkObject = function(title, spec, bCoursesID, notes) {
     }
 
     obj.title = title;
-    obj.classes = 'due';
-    if (spec) {
-        obj.url = spec;
+
+    // TODO:
+    // Consider setting due date from bCourses data?
+    if (due) {
+        obj.classes = 'due';
+        obj.due = due;
     }
-    // Set Submission URL
-    // Set the due Date from bCourses
+
+    if (spec) {
+        obj.spec = spec;
+    }
+
+    if (submission) {
+        obj.url = 'https://bcourses.berkeley.edu/courses/' + cs10.bCoursesID +
+                  '/' + submission;
+    }
+
     return obj;
 };
 
@@ -379,8 +392,18 @@ cs10.renderTableHW = function(hw) {
         result.append('<br>');
         result.attr({ 'class' : hw.classes });
         if (hw.url) {
-            result.append($('<br>'));
-            result.append($('<a>').html('(Spec)').attr({'href' : hw.url}));
+            result.append($('<a>').html('Submit').attr({'href' : hw.url}));
+        }
+        if (hw.url && hw.spec) {
+            result.append(' | ');
+        }
+        if (hw.spec) {
+            result.append($('<a>').html('Spec').attr({'href' : hw.spec}));
+        }
+        if (hw.due) {
+            result.append('<br>');
+            result.append('<br>');
+            result.append($('<i>').html('due ' + hw.due + ' at 11:59pm'));
         }
     }
     return result;

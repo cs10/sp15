@@ -25,7 +25,7 @@ cs10.week1 = {
     lectW: lect('Welcome and Abstraction', '', 'https://coursesharing.org/courses/6/lectures/7'),
     labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
     disc: disc('Welcome to CS10!'),
-    hw: hw('HW0', 'quizzes/1869517')
+    hw: hw('HW0', '1/24', 'quizzes/1869517')
 };
 
 // JAN 26 - 30
@@ -50,7 +50,7 @@ cs10.week2 = {
     lectW: lect('Creativity and Abstraction'),
     labB: lab('Conditionals', 'berkeley_bjc/intro_new/3-conditionals.topic', true),
     disc: disc('Anatomy of a Computer and the Power of Binary'),
-    hw: hw('HW1')
+    hw: hw('HW1', '1/31')
 };
 
 // FEB 2 - 6
@@ -78,7 +78,7 @@ cs10.week3 = {
     lectW: lect('Programming Paradigms'),
     labB: lab('Lists I', 'berkeley_bjc/lists/lists-I.topic'),
     disc: disc('All about lists'),
-    hw: hw('HW2')
+    hw: hw('HW2', '2/7')
 };
 
 // FEB 9 - 13
@@ -338,7 +338,8 @@ cs10.week15.labB.classes = 'exam';
 // MAY 4 - 7
 cs10.week16 = {
     special: 'RRR Week -- No Class',
-    readings: []
+    readings: [],
+    hw: hw('Study for the Final')
 };
 
 // MAY 11 - 15
@@ -347,7 +348,8 @@ cs10.week17 = {
 
     },
     readings: [],
-    labA: lab('Final Exam<br>7 - 10pm')
+    labA: lab('Final Exam<br>7 - 10pm'),
+    hw: hw(' ')
 };
 cs10.week17.labA.classes = 'exam';
 
