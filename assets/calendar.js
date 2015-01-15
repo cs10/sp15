@@ -353,8 +353,7 @@ cs10.renderTableLab = function(lab) {
         if (lab.video) {
             result.append($('<br>'));
             result.append($('<a>').html('(Video Review)').attr({
-                'href' : lab.video, 'target' : '_blank'
-            }));
+                'href' : lab.video, 'target' : '_blank' }));
         }
     }
     return result;
@@ -392,7 +391,8 @@ cs10.renderTableHW = function(hw) {
         result.append('<br>');
         result.attr({ 'class' : hw.classes });
         if (hw.url) {
-            result.append($('<a>').html('Submit').attr({'href' : hw.url}));
+            result.append($('<a>').html('Submit').attr(
+                {'href' : hw.url, 'target' : '_blank' }));
         }
         if (hw.url && hw.spec) {
             result.append(' | ');
