@@ -1,28 +1,89 @@
-<!DOCTYPE html>
-<html>
-<head>
+---
+layout: default
+title: Directory Listing
+---
 
-  // jQuery
-  // Bootstrap JS
-  // '//cdnjs.cloudflare.com/ajax/libs/stupidtable/0.0.1/stupidtable.js'
-  // Bootstrap CSS
-  // Flatly
+  <link href="assets/cs10style.css" rel="stylesheet"/>
+
+  <script src="assets/directory-concat.js">
+  </script>
 
   <script type="text/javascript">
-      ignore_list = [ '.DAV', '.DS_Store', '.bzr', '.bzrignore', '.bzrtags', '.git', '.gitattributes', '.gitignore', '.gitmodules', '.hg', '.hgignore', '.hgtags', '.htaccess', '.htpasswd', '.jshintrc', '.npmignore', '.Spotlight-V100', '.svn', '__MACOSX', 'ehthumbs.db', 'robots.txt', 'Thumbs.db', 'thumbs.tps' ]
+  ignore_list = [ '.DAV', '.DS_Store', '.bzr', '.bzrignore', '.bzrtags', '.git', '.gitattributes', '.gitignore', '.gitmodules', '.hg', '.hgignore', '.hgtags', '.htaccess', '.htpasswd', '.jshintrc', '.npmignore', '.Spotlight-V100', '.svn', '__MACOSX', 'ehthumbs.db', 'robots.txt', 'Thumbs.db', 'thumbs.tps' ];
+
+
+    var breadcrumbs = location.pathname.split('/');
+    var parentDir = '/';
+    breadcrumbs.forEach(function(dir) {
+        if (dir) {
+            $('.breadcrumb').append("<li><a href=" + parentDir + dir + ">" + dir +
+                "</a></li>");
+            parentDir += '/' + dir;
+        }
+    });
+
+
+    function calculateSize(size) {
+        labels = ['YB', 'ZB', 'EB', 'PB', 'TB', 'GB', 'MB', 'KB', 'bytes'];
+        total = labels.length;
+        while(total-- && size > 1024) size /= 1024;
+
+        return Math.round(size, 2) + labels[total];
+    }
+
+
+    function buildTable(items, x, y) {
+      items.forEach(function(item) {
+        buildRow(item);
+      })
+    }
+
+    $.ajax({
+      url: 'https://api.github.com/repos/cs10/sp15/contents/',
+      cache: false,
+      success: buildTable
+    });
+
+    function buildRow(item) {
+      var row = $('<tr>');
+      var link = $('<td>');
+      var size = $('<td>');
+      var isDir = item.type === 'dir';
+      var glyph = 'file';
+      var url   = item.download_url;
+      var disp  = calculateSize(item.size);
+
+      if (isDir) {
+          url = '/sp15/' + item.path;
+          glyph = 'folder-close';
+          disp = '—';
+      }
+
+      link.attr({'data-sort-value': item.name.toLowerCase(), 'class': 'text-left'});
+      var span = $('<span>').attr({ 'class': 'glyphicon glyphicon-' + glyph });
+      var a = $('<a>').attr({'href': url, 'target':'_blank'}).html('<strong>').html(item.name);
+      span.html(a);
+
+
+      size.attr({'data-sort-value': item.size, 'class':'text-right' }).html(disp);
+
+      link.append(span);
+      row.append(link);
+      row.append(size);
+
+      $('#bs-table tbody').append(row)
+    }
 
 
 
     $("#bs-table").stupidtable();
   </script>
-</head>
-<body>
+
   <div class="container-responsive">
+    <ol class="breadcrumb">
+      <li><a href="{{ site.baseurl }}"><span class="glyphicon glyphicon-home"></span></a></li>
+    </ol>
     <div class="table-responsive">
-      <ol class="breadcrumb">
-        <li><a href="{{ site.baseurl }}"><span class="glyphicon glyphicon-home"></span></a></li>
-        
-      </ol>
       <table id="bs-table" class="table table-striped">
         <thead>
           <tr>
@@ -36,6 +97,3 @@
         </table>
     </div>
   </div>
-<!--END MODAL-->
-</body>
-</html>
