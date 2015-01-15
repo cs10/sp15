@@ -2,15 +2,12 @@
 layout: default
 title: Directory Listing
 ---
+  <link href="{{ site.baseurl }}/assets/cs10style.css" rel="stylesheet"/>
 
-  <link href="assets/cs10style.css" rel="stylesheet"/>
-
-  <script src="assets/directory-concat.js">
-  </script>
+  <script src="{{ site.baseurl }}/assets/directory-concat.js"></script>
 
   <script type="text/javascript">
-  ignore_list = [ '.DAV', '.DS_Store', '.bzr', '.bzrignore', '.bzrtags', '.git', '.gitattributes', '.gitignore', '.gitmodules', '.hg', '.hgignore', '.hgtags', '.htaccess', '.htpasswd', '.jshintrc', '.npmignore', '.Spotlight-V100', '.svn', '__MACOSX', 'ehthumbs.db', 'robots.txt', 'Thumbs.db', 'thumbs.tps' ];
-
+    ignore_list = [ '.DAV', '.DS_Store', '.bzr', '.bzrignore', '.bzrtags', '.git', '.gitattributes', '.gitignore', '.gitmodules', '.hg', '.hgignore', '.hgtags', '.htaccess', '.htpasswd', '.jshintrc', '.npmignore', '.Spotlight-V100', '.svn', '__MACOSX', 'ehthumbs.db', 'robots.txt', 'Thumbs.db', 'thumbs.tps' ];
 
     var breadcrumbs = location.pathname.split('/');
     var parentDir = '/';
@@ -22,7 +19,6 @@ title: Directory Listing
         }
     });
 
-
     function calculateSize(size) {
         labels = ['YB', 'ZB', 'EB', 'PB', 'TB', 'GB', 'MB', 'KB', 'bytes'];
         total = labels.length;
@@ -31,23 +27,20 @@ title: Directory Listing
         return Math.round(size, 2) + labels[total];
     }
 
-
-    function buildTable(items, x, y) {
+    function buildTable(items, xhr, y) {
+      console.log(xhr);
+      console.log(y);
+      var body = $('<tbody>');
       items.forEach(function(item) {
-        buildRow(item);
-      })
+        body.append(buildRow(item));
+      });
+      $('#bs-table').append(body);
     }
 
-    $.ajax({
-      url: 'https://api.github.com/repos/cs10/sp15/contents/',
-      cache: false,
-      success: buildTable
-    });
-
     function buildRow(item) {
-      var row = $('<tr>');
-      var link = $('<td>');
-      var size = $('<td>');
+      var row   = $('<tr>');
+      var link  = $('<td>');
+      var size  = $('<td>');
       var isDir = item.type === 'dir';
       var glyph = 'file';
       var url   = item.download_url;
@@ -61,9 +54,10 @@ title: Directory Listing
 
       link.attr({'data-sort-value': item.name.toLowerCase(), 'class': 'text-left'});
       var span = $('<span>').attr({ 'class': 'glyphicon glyphicon-' + glyph });
-      var a = $('<a>').attr({'href': url, 'target':'_blank'}).html('<strong>').html(item.name);
-      span.html(a);
+      var text = $('<strong>').html(item.name);
+      var a    = $('<a>').attr({'href': url, 'target':'_blank'}).html(text);
 
+      span.html(a);
 
       size.attr({'data-sort-value': item.size, 'class':'text-right' }).html(disp);
 
@@ -71,29 +65,36 @@ title: Directory Listing
       row.append(link);
       row.append(size);
 
-      $('#bs-table tbody').append(row)
+      return row;
     }
 
-
+    var GH_ORG = 'cs10';
+    var repo   = '/sp15/';
+    var GH_URL = 'https://api.github.com/repos/' + GH_ORG + repo + 'contents/';
+    console.log(GH_URL);
+    var full_url = GH_URL + location.pathname.split(repo)[1];
+    console.log(full_url);
+    $.ajax({
+      url: full_url,
+      cache: false,
+      success: buildTable
+    });
 
     $("#bs-table").stupidtable();
   </script>
 
   <div class="container-responsive">
     <ol class="breadcrumb">
-      <li><a href="{{ site.baseurl }}"><span class="glyphicon glyphicon-home"></span></a></li>
+      <li><a href="{{ site.baseurl }}/"><span class="glyphicon glyphicon-home"></span></a></li>
     </ol>
     <div class="table-responsive">
       <table id="bs-table" class="table table-striped">
         <thead>
           <tr>
-              <th class="col-lg-8 text-left" data-sort="string">Name</th>
-              <th class="col-lg-2 text-right" data-sort="int">Size</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!--TABLE BODY -->
-          </tbody>
-        </table>
+            <th class="col-lg-8 text-left" data-sort="string">Name</th>
+            <th class="col-lg-2 text-right" data-sort="int">Size</th>
+          </tr>
+        </thead>
+      </table>
     </div>
   </div>
