@@ -1,61 +1,8 @@
-<?php
-
-error_reporting(E_ERROR);
-
-/**
- *      Bootstrap Listr
- *
- *       Author:    Jan T. Sott
- *         Info:    http://github.com/idleberg/Bootstrap-Listr
- *      License:    Creative Commons Attribution-ShareAlike 3.0
- *
- *      Credits:    Greg Johnson - PHPDL lite (http://greg-j.com/phpdl/)
- *                  Na Wong - Listr (http://nadesign.net/listr/)
- *                  Joe McCullough - Stupid Table Plugin (http://joequery.github.io/Stupid-Table-Plugin/)
- */
-
-
+<?php 
 /*** SETTINGS ***/
 
-// Set Bootstrap version
-define('BOOTSTRAP_VERSION', '3.3.1');
-
-/* Table Styles (can be combined, e.g. 'table-hover table-striped')
- *     'table-hover' - enable a hover state on table rows (default)
- *   'table-striped' - add zebra-striping
- *  'table-bordered' - show borders on all sides of the table and cells
- * 'table-condensed' - make tables more compact by cutting cell padding in half
- */
-define('TABLE_STYLE', 'table-hover');
-
-/* Responsive Table
- * See http://getbootstrap.com/css/#tables-responsive for details
- */
-define('RESPONSIVE_TABLE', true);
-
-// Toggle column sorting
-define('ENABLE_SORT', true);
-
-// Toggle search box
-   define('ENABLE_SEARCH', false);
-define('ENABLE_AUTOFOCUS', false);
-
-// Toggle media viewer
-define('ENABLE_VIEWER', false);
-
-/* Size of modal used for media viewer (pixel widths refer to standard theme)
- * 'modal-sm' - 300px
- *         '' - 600px
- * 'modal-lg' - 900px (default)
- */
 define('MODAL_SIZE', 'modal-lg');
 
-/* Document Icons:
- *         'none' - No icons
- *   'glyphicons' - Bootstrap glyphicons (default)
- *  'fontawesome' - Font Awesome icons
- *     'fa-files' - Font Awesome file icons
- */
 define('DOC_ICONS', 'glyphicons');
 
 /* Bootstrap Themes:
@@ -121,11 +68,6 @@ define('IPHONE_ICON_RETINA', ''); // 114x114
            define('OG_TYPE', '');
           define('OG_IMAGE', '');
 
-// Display link to Bootstrap-Listr in footer
-define('GIVE_KUDOS', true);
-
-// Google Analytics ID
-define('ANALYTICS_ID', ''); // UA-XXXXX-Y or UA-XXXXX-YY
 
 // Configure optional table columns
 $table_options = array (
@@ -166,83 +108,19 @@ $ignore_list = array(
     'thumbs.tps'
 );
 
-// Hide file extension?
-define('HIDE_EXTENSION', false);
 
 /*** HTTP Header ***/
 header("Content-Type: text/html; charset=utf-8");
 header("Cache-Control: no-cache, must-revalidate");
 
 
-/*** DIRECTORY LOGIC ***/
-
-// Get this folder and files name.
-
-if (isset($_SERVER['HTTPS'])) {
-    $this_protocol = "https://";
-} else {
-    $this_protocol = "http://";
-}
-
-$this_script = basename(__FILE__);
-$this_folder = str_replace('/'.$this_script, '', $_SERVER['SCRIPT_NAME']);
-
-$this_domain = $_SERVER['HTTP_HOST'];
-$dir_name = explode("/", $this_folder);
 
 // Declare vars used beyond this point.
 $file_list = array();
 $folder_list = array();
 $total_size = 0;
 
-if (DOC_ICONS == "glyphicons") {
-    $icon_tag = 'span';
-} else if (DOC_ICONS == "fontawesome" || DOC_ICONS == "fa-files") {
-    $icon_tag = 'i';
-}
 
-if (DOC_ICONS == 'fontawesome') {
-    $filetype = array(
-        'archive'   => array('7z','ace','adf','air','apk','arj','bz2','bzip','cab','d64','dmg','git','hdf','ipf','iso','fdi','gz','jar','lha','lzh','lz','lzma','pak','phar','pkg','pimp','rar','safariextz','sfx','sit','sitx','sqx','sublime-package','swm','tar','tgz','wim','wsz','xar','zip'),
-        'apple'     => array('app','ipa','ipsw','saver'),
-        'audio'     => array('aac','ac3','aif','aiff','au','caf','flac','it','m4a','m4p','med','mid','mo3','mod','mp1','mp2','mp3','mpc','ned','ra','ram','oga','ogg','oma','opus','s3m','sid','umx','wav','webma','wv','xm'),
-        'calendar'  => array('icbu','ics'),
-        'config'    => array('cfg','conf','ini','htaccess','htpasswd','plist','sublime-settings','xpy'),
-        'contact'   => array('abbu','contact','oab','pab','vcard','vcf'),
-        'database'  => array('bde','crp','db','db2','db3','dbb','dbf','dbk','dbs','dbx','edb','fdb','frm','fw','fw2','fw3','gdb','itdb','mdb','ndb','nsf','rdb','sas7mdb','sql','sqlite','tdb','wdb'),
-        'doc'       => array('abw','doc','docm','docs','docx','dot','key','numbers','odb','odf','odg','odp','odt','ods','otg','otp','ots','ott','pages','pdf','pot','ppt','pptx','sdb','sdc','sdd','sdw','sxi','wp','wp4','wp5','wp6','wp7','wpd','xls','xlsx','xps'),
-        'downloads' => array('!bt','!qb','!ut','crdownload','download','opdownload','part'),
-        'ebook'     => array('aeh','azw','ceb','chm','epub','fb2','ibooks','kf8','lit','lrf','lrx','mobi','pdb','pdg','prc','xeb'),
-        'email'     => array('eml','emlx','mbox','msg','pst'),
-        'feed'      => array('atom','rss'),
-        'font'      => array('eot','fon','otf','pfm','ttf','woff'),
-        'image'     => array('ai','bmp','cdr','emf','eps','gif','icns','ico','jp2','jpe','jpeg','jpg','jpx','pcx','pict','png','psd','psp','svg','tga','tif','tiff','webp','wmf'),
-        'link'      => array('lnk','url','webloc'),
-        'linux'     => array('bin','deb','rpm'),
-        'palette'   => array('ase','clm','clr','gpl'),
-        'raw'       => array('3fr','ari','arw','bay','cap','cr2','crw','dcs','dcr','dnf','dng','eip','erf','fff','iiq','k25','kdc','mdc','mef','mof','mrw','nef','nrw','obm','orf','pef','ptx','pxn','r3d','raf','raw','rwl','rw2','rwz','sr2','srf','srw','x3f'),
-        'script'    => array('ahk','as','asp','aspx','bat','c','cfm','clj','cmd','cpp','css','el','erb','g','hml','java','js','json','jsp','less','nsh','nsi','php','php3','pl','py','rb','rhtml','sass','scala','scm','scpt','scptd','scss','sh','shtml','wsh','xml','yml'),
-        'text'      => array('ans','asc','ascii','csv','diz','latex','log','markdown','md','nfo','rst','rtf','tex','text','txt'),
-        'video'     => array('3g2','3gp','3gp2','3gpp','asf','avi','bik','bup','divx','flv','ifo','m4v','mkv','mkv','mov','mp4','mpeg','mpg','rm','rv','ogv','qt','smk','swf','vob','webm','wmv','xvid'),
-        'website'   => array('htm','html','mhtml','mht','xht','xhtml'),
-        'windows'   => array('dll','exe','msi','pif','ps1','scr','sys')
-    );
-    $home = "<i class=\"fa fa-home fa-lg fa-fw\"></i> ";
-} else if (DOC_ICONS == 'fa-files'){
-    $filetype = array(
-        'archive'    => array('7z','ace','adf','air','apk','arj','bz2','bzip','cab','d64','dmg','git','hdf','ipf','iso','fdi','gz','jar','lha','lzh','lz','lzma','pak','phar','pkg','pimp','rar','safariextz','sfx','sit','sitx','sqx','sublime-package','swm','tar','tgz','wim','wsz','xar','zip'),
-        'audio'      => array('aac','ac3','aif','aiff','au','caf','flac','it','m4a','m4p','med','mid','mo3','mod','mp1','mp2','mp3','mpc','ned','ra','ram','oga','ogg','oma','s3m','sid','umx','wav','webma','wv','xm'),
-        'excel'      => array('xls','xlsx','numbers'),
-        'image'      => array('ai','bmp','cdr','emf','eps','gif','icns','ico','jp2','jpe','jpeg','jpg','jpx','pcx','pict','png','psd','psp','svg','tga','tif','tiff','webp','wmf'),
-        'pdf'        => array('pdf'),
-        'powerpoint' => array('pot','ppt','pptx','key'),
-        'script'     => array('ahk','as','asp','aspx','bat','c','cfm','clj','cmd','cpp','css','el','erb','g','hml','java','js','json','jsp','less','nsh','nsi','php','php3','pl','py','rb','rhtml','sass','scala','scm','scpt','scptd','scss','sh','shtml','wsh','xml','yml'),
-        'text'       => array('ans','asc','ascii','csv','diz','latex','log','markdown','md','nfo','rst','rtf','tex','text','txt'),
-        'video'      => array('3g2','3gp','3gp2','3gpp','asf','avi','bik','bup','divx','flv','ifo','m4v','mkv','mkv','mov','mp4','mpeg','mpg','rm','rv','ogv','qt','smk','swf','vob','webm','wmv','xvid'),
-        'word'       => array('doc','docm','docs','docx','dot','pages'),
-    );
-    $home = "<i class=\"fa fa-home fa-lg fa-fw\"></i> ";
-} else {
     if (DOC_ICONS == 'glyphicons') {
         $home = "<span class=\"glyphicon glyphicon-home\"></span>";
     } else {
@@ -255,22 +133,6 @@ if (ENABLE_VIEWER) {
     $quicktime_files = array('3g2','3gp','3gp2','3gpp','mov','qt');
     $source_files    = array('applescript','bat','cmd','css','hml','jade','js','json','less','markdown','md','pl','py','rb','rst','sass','scss','sh','txt','xml','yml');
     $video_files     = array('mp4','m4v','ogv','webm');
-}
-
-if (CUSTOM_THEME) {
-    $bootstrap_cdn = CUSTOM_THEME;
-} else {
-    $cdn_pre = '//maxcdn.bootstrapcdn.com/bootswatch/'.BOOTSTRAP_VERSION.'/';
-    $cdn_post = '/bootstrap.min.css';
-    $bootswatch = array('cerulean','cosmo','cyborg','darkly','flatly','journal','lumen','paper','readable','sandstone','simplex','slate','spacelab','superhero','united','yeti');
-
-    if (in_array(BOOTSTRAP_THEME, $bootswatch)) {
-        $bootstrap_cdn = '//maxcdn.bootstrapcdn.com/bootswatch/'.BOOTSTRAP_VERSION.'/'.BOOTSTRAP_THEME.'/bootstrap.min.css';
-    } else if (BOOTSTRAP_THEME == "m8tro") {
-        $bootstrap_cdn = '//cdnjs.cloudflare.com/ajax/libs/m8tro-bootstrap/'.BOOTSTRAP_VERSION.'/m8tro.min.css';
-    } else {
-        $bootstrap_cdn = '//maxcdn.bootstrapcdn.com/bootstrap/'.BOOTSTRAP_VERSION.'/css/bootstrap.min.css';
-    }
 }
 
 // Count optional columns
@@ -656,7 +518,7 @@ if(($folder_list) || ($file_list) ) {
             }
             $table_body .= ">";
             if (DOC_ICONS == "glyphicons" || DOC_ICONS == "fontawesome" || DOC_ICONS == "fa-files") {
-                $table_body .= "<$icon_tag class=\"$folder_icon\"></$icon_tag>&nbsp;";
+                $table_body .= "<span class=\"$folder_icon\"></span>&nbsp;";
             }
             $table_body .= "<a href=\"" . htmlentities(rawurlencode($item['bname']), ENT_QUOTES, 'utf-8') . "/\"><strong>" . $item['bname'] . "</strong></a></td>" . PHP_EOL;
 
@@ -691,7 +553,7 @@ if(($folder_list) || ($file_list) ) {
             }
             $table_body .= ">";
             if (DOC_ICONS == "glyphicons" || DOC_ICONS == "fontawesome" || DOC_ICONS == "fa-files") {
-                $table_body .= "<$icon_tag class=\"" . $item['class'] . "\"></$icon_tag>&nbsp;";
+                $table_body .= "<span class=\"" . $item['class'] . "\"></span>&nbsp;";
             }
             if (HIDE_EXTENSION) {
                 $display_name = $item['name'];
@@ -744,70 +606,9 @@ if(($folder_list) || ($file_list) ) {
         $table_body .= "          <tr>" . PHP_EOL;
         $table_body .= "            <td colspan=\"$colspan\" style=\"font-style:italic\">";
         if (DOC_ICONS == "glyphicons" || DOC_ICONS == "fontawesome" || DOC_ICONS == "fa-files") {
-            $table_body .= "<$icon_tag class=\"" . $item['class'] . "\">&nbsp;</$icon_tag>";
+            $table_body .= "<span class=\"" . $item['class'] . "\">&nbsp;</span>";
         }
         $table_body .= "empty folder</td>" . PHP_EOL;
         $table_body .= "          </tr>" . PHP_EOL;
 }
 
-// Give kudos
-if (GIVE_KUDOS) {
-    $kudos = "<a class=\"pull-right small text-muted\" href=\"https://github.com/idleberg/Bootstrap-Listr\" title=\"Bootstrap Listr on GitHub\" target=\"_blank\">Fork me on GitHub</a>";
-}
-
-
-/*** HTML TEMPLATE ***/
-
-?>
-<!DOCTYPE html>
-<html>
-<head>
-<?php echo $header?>
-</head>
-<body>
-  <div class="container">
-    <ol class="breadcrumb">
-<?php echo $breadcrumbs?>
-    </ol>
-<?php echo $search?>
-<?php echo $responsive_open?>
-      <table id="bs-table" class="table <?php echo TABLE_STYLE?>">
-        <thead>
-          <tr>
-<?php echo $table_header?>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <td colspan="<?php echo $table_count+1?>">
-              <small class="pull-left text-muted"><?php echo $contained?></small>
-              <?php echo $kudos?>
-            </td>
-          </tr>
-        </tfoot>
-        <tbody>
-<?php echo $table_body?>
-        </tbody>
-      </table>
-<?php echo $responsive_close?>
-<?php if (ENABLE_VIEWER) { ?>
-    <div class="modal fade" id="viewer-modal" tabindex="-1" role="dialog" aria-labelledby="file-name" aria-hidden="true">
-      <div class="modal-dialog <?php echo MODAL_SIZE?>">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="file-name">&nbsp;</h4>
-          </div>
-          <div class="modal-body"></div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <a class="btn btn-primary fullview" role="button">View</a>
-          </div>
-        </div>
-      </div>
-    </div>
-<?php } ?>
-  </div>
-<?php echo $footer?>
-</body>
-</html>
