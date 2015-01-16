@@ -11,6 +11,8 @@ title: Directory Listing
 
     function headerPath() {
       var path = location.pathname.split('/');
+      document.title = 'CS10 Files in: ' + path[path.length - 2];
+      $('h1.title').html(document.title)
       var parentDir = '/sp15';
       path.forEach(function(dir) {
         if (dir && dir !== 'sp15') {
@@ -88,9 +90,9 @@ title: Directory Listing
   </script>
 
   <div class="container-responsive">
+    <h1 class="title"></h1>
     <ol class="breadcrumb">
       <li><a href="{{ site.baseurl }}/"><span class="glyphicon glyphicon-home"></span></a></li>
-
     </ol>
     <div class="table-responsive">
       <table id="bs-table" class="table table-striped">
