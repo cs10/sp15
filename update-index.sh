@@ -13,3 +13,10 @@ for DIR in $(find ./discussion -type d); do
     echo -e " \nlayout: directory\n---\n\n"
   ) > "${DIR}/index.html"
 done
+
+for DIR in $(find ./exams -type d); do
+  (
+    echo -e "---\ntitle: Directory Listing "
+    echo -e " \nlayout: directory\n---\n\n"
+  ) > "${DIR}/index.html"
+done
