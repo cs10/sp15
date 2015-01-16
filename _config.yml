@@ -35,3 +35,10 @@ gcalAPIKey: AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs
 # collections:
     # - tas:
         # output: true
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - includes
+  - update-index.sh
