@@ -15,7 +15,7 @@ michaelB = {
     img: 'Sp14/MichaelBallTake3.jpg',
     imgSrc: 'MichaelBall.jpg',
     web: 'http://michaelballphoto.com',
-    bio: 'MichaelBall.txt',
+    // bio: 'MichaelBall.txt',
     email: 'michael@cs10.org' };
 
 maxD = {
@@ -34,7 +34,7 @@ victoriaS = {
     name: 'TA Victoria Shi',
     img: 'Fa13/VictoriaShi.jpg',
     imgSrc: 'VictoriaShi.jpg',
-    bio: 'VictoriaBio.txt',
+    // bio: 'VictoriaBio.txt',
     email: 'victoria@cs10.org' };
 
 rachelH = {
@@ -54,7 +54,7 @@ jaclynB = {
     name: 'TA Jaclyn Burge',
     img: 'Fa13/JaclynBurge.jpg',
     imgSrc: 'JaclynBurge.jpg',
-    web: 'www.jacburge.me',
+    web: 'http://www.jacburge.me',
     email: 'jaclyn@cs10.org' };
 
 andyS   = {
@@ -80,7 +80,7 @@ AranyU = {
     name: 'TA Arany Uthayakumar',
     img: 'Sp14/AranyUthayakumar.jpg',
     imgSrc: 'AranyUthayakumar.jpg',
-    bio: 'AranyBio.txt',
+    // bio: 'AranyBio.txt',
     email: 'arany@cs10.org' };
 
 StevenT = {
@@ -94,16 +94,14 @@ carlosF = {
     name: 'TA Carlos Flores',
     img: 'Fa13/CarlosFlores.jpg',
     imgSrc: 'CarlosFlores.jpg',
-    email: 'carlos@cs10.org'
-};
+    email: 'carlos@cs10.org' };
 
 PeterS = {
     name: 'TA Peter Sujan',
     img: 'Fa12/PeterSujan.jpg',
     imgSrc: 'PeterSujan.jpg',
-    bio: 'PeterBio.txt',
-    email: 'peter@cs10.org'
-}
+    // bio: 'PeterBio.txt',
+    email: 'peter@cs10.org' };
 
 // Readers
 claireW = {
