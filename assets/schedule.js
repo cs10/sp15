@@ -32,7 +32,7 @@ cs10.week1 = {
 cs10.week2 = {
     readings: [
         reading('Prof. Harvey\'s Intro to Abstraction',
-                'resources/readings/BH-Abstraction.txt'),
+                '{{ site.baseurl }}/resources/readings/BH-Abstraction.txt'),
         reading('Why Software is Eating the World',
                 bcourses('53889491')),
         reading('Learning to Code!',
@@ -65,9 +65,9 @@ cs10.week3 = {
         reading('Video Games Lecture',
                 'https://coursesharing.org/courses/6/lectures/11'),
         reading('(Slides)',
-                'resources/readings/graphics'),
+                '{{ site.baseurl }}/resources/readings/graphics'),
         reading('More readings on video games',
-                'resources/readings/video-games/',
+                '{{ site.baseurl }}/resources/readings/video-games/',
                 'optional'),
         reading('Kinect\'s Future a Game Controller in Everything',
                 'http://www.msnbc.msn.com/id/40077373/ns/technology_and_science-games/',
