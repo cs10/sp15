@@ -81,11 +81,6 @@ layout: default
     {% include_relative includes/overview.html %}
   </div>
 
-  <!--
-  <h1>Assignment Calendar</h1>
-  <div class="page-secton" id="cal-bs"></div>
-  <div class="clearfix"></div> -->
-
   <h1>Assignment Calendar</h1>
   <div class="page-section" id="calendar">
     {% include_relative includes/calendar.html %}
@@ -96,7 +91,9 @@ layout: default
   <div class="page-section" id="weekly">
       <h4>This calendar displays the class schedule for the <em>current</em> week.
         Click on any event to see the building location on a map.</h4>
-      <div id="oh-cal" style="min-width:800px;"></div>
+      <div class="table-responsive">
+          <div id="oh-cal" style="min-width:800px;"></div>
+      </div>
   </div>
 
   <h1>Staff</h1>
@@ -133,10 +130,10 @@ layout: default
     </div>
 
 <!--END PAGE CONTENT -->
-<link href="assets/lib/fullcalendar/fullcalendar.min.css" rel="stylesheet"/>
-<link href="assets/cs10style.css" rel="stylesheet"/>
+<link href="{{ site.baseurl }}/assets/lib/fullcalendar/fullcalendar.min.css" rel="stylesheet"/>
+<link href="{{ site.baseurl }}/assets/css/cs10style.css" rel="stylesheet"/>
 
-<script src="assets/index-concat.js"></script>
+<script src="{{ site.baseurl }}/assets/index-concat.js"></script>
 <script>
   {% include_relative assets/weekly_schedule.js %}
 </script>

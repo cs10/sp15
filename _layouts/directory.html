@@ -2,10 +2,27 @@
 layout: default
 title: Directory Listing
 ---
-  <link href="{{ site.baseurl }}/assets/cs10style.css" rel="stylesheet"/>
+
+  <div class="container-responsive">
+    <ol class="breadcrumb">
+      <li><a href="{{ site.baseurl }}/"><span class="glyphicon glyphicon-home"></span></a></li>
+    </ol>
+    <h1 class="title"></h1>
+    <hr />
+    <div class="table-responsive">
+      <table id="bs-table" class="table table-striped">
+        <thead>
+          <tr>
+            <th class="col-lg-8 text-left" data-sort="string">Name</th>
+            <th class="col-lg-2 text-right" data-sort="int">Size</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+
 
   <script src="{{ site.baseurl }}/assets/directory-concat.js"></script>
-
   <script type="text/javascript">
   var ignore_list = [ 'index.html', 'index.php', '.gitattributes', '.gitignore',
                       '.gitmodules', '.htaccess', 'robots.txt', 'assets',
@@ -40,10 +57,9 @@ title: Directory Listing
       path.forEach(function(dir) {
         // Exclude the path to this folder unless it's a submodule
         // baseRepo is the same as REPO for a submodule
-        if (dir && (dir !== REPO || isSubmodule) && dir !== baseRepo ) {
+        if (dir && (dir !== REPO || isSubmodule) && dir !== baseRepo) {
           var a  = $('<a>').attr({'href': parentDir + '/' + dir }).html(dir);
-          var li = $('<li>').html(a)
-          $('.breadcrumb').append(li);
+          $('.breadcrumb').append($('<li>').html(a));
           parentDir += '/' + dir;
         }
       });
@@ -113,21 +129,3 @@ title: Directory Listing
       $("#bs-table").stupidsort();
     });
   </script>
-
-  <div class="container-responsive">
-    <ol class="breadcrumb">
-      <li><a href="{{ site.baseurl }}/"><span class="glyphicon glyphicon-home"></span></a></li>
-    </ol>
-    <h1 class="title"></h1>
-    <hr />
-    <div class="table-responsive">
-      <table id="bs-table" class="table table-striped">
-        <thead>
-          <tr>
-            <th class="col-lg-8 text-left" data-sort="string">Name</th>
-            <th class="col-lg-2 text-right" data-sort="int">Size</th>
-          </tr>
-        </thead>
-      </table>
-    </div>
-  </div>
