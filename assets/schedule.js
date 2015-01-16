@@ -158,7 +158,7 @@ cs10.week7 = {
         reading('What is IBM\'s Watson?',
                 'http://www.nytimes.com/2010/06/20/magazine/20Computer-t.html'),
         reading('Brian Harvey\'s AI notes',
-                'http://inst.eecs.berkeley.edu/~cs10/fa10/lec/21/ai.txt'),
+                '{{ site.baseurl }}/readings/BH-ai.txt'),
         reading('The First Church of Robotics',
                 'http://www.nytimes.com/2010/08/09/opinion/09lanier.html',
                 'optional'),
@@ -181,11 +181,11 @@ cs10.week7 = {
 cs10.week8 = {
     readings: [
         reading('BtB Chapter 5 Reading Segment 1',
-                '../sp12/readings/BtB5-pt1.pdf'),
+                '{{ site.baseurl }}/readings/btb/BtB5-pt1.pdf'),
         reading('BtB Chapter 5 Reading Segment 2',
-                '../sp12/readings/BtB5-pt2.pdf'),
+                '{{ site.baseurl }}/readings/btb/BtB5-pt2.pdf'),
         reading('BtB Chapter 5 Reading Segment 3',
-                '../sp12/readings/BtB5-pt3.pdf'),
+                '{{ site.baseurl }}/readings/btb/BtB5-pt3.pdf'),
         reading('BtB Chapter 6 (27-37)',
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter6.pdf')
     ],
@@ -228,7 +228,7 @@ cs10.week11 = {
         reading('BtB Chapter 7',
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter7.pdf'),
         reading('BtB Appendix',
-                '../fa13/readings/Btb_Appendix.pdf'),
+                '{{ site.baseurl }}/readings/btb/Btb_Appendix.pdf'),
         reading('BtB Chapter 8',
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter8.pdf',
                 'optional')
