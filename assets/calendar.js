@@ -23,7 +23,7 @@ cs10.gradingScheme = {
 
 bcourses = function(id) {
     var base = 'https://bcourses.berkeley.edu/courses/';
-    var reading = '/files/folder/Readings?preview=' 
+    var reading = '/files/folder/Readings?preview='
     return base + cs10.bCoursesID + reading + id;
 }
 // ==================================================
