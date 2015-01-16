@@ -20,6 +20,12 @@ cs10.gradingScheme = {
     'F' : '<= 299'
 };
 
+
+bcourses = function(id) {
+    var base = 'https://bcourses.berkeley.edu/courses/';
+    var reading = '/files/folder/Readings?preview=' 
+    return base + cs10.bCoursesID + reading + id;
+}
 // ==================================================
 // ==========     OBJECT CREATION          ==========
 // ==================================================
