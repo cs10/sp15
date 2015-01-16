@@ -100,6 +100,7 @@ PeterS = {
     name: 'TA Peter Sujan',
     img: 'Fa12/PeterSujan.jpg',
     imgSrc: 'PeterSujan.jpg',
+    web: 'http://ocf.berkeley.edu/~psujan',
     // bio: 'PeterBio.txt',
     email: 'peter@cs10.org' };
 
