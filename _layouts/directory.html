@@ -7,17 +7,20 @@ title: Directory Listing
   <script src="{{ site.baseurl }}/assets/directory-concat.js"></script>
 
   <script type="text/javascript">
-    ignore_list = [ '.DAV', '.DS_Store', '.bzr', '.bzrignore', '.bzrtags', '.git', '.gitattributes', '.gitignore', '.gitmodules', '.hg', '.hgignore', '.hgtags', '.htaccess', '.htpasswd', '.jshintrc', '.npmignore', '.Spotlight-V100', '.svn', '__MACOSX', 'ehthumbs.db', 'robots.txt', 'Thumbs.db', 'thumbs.tps' ];
+    var ignore_list = [ 'index.html', '.DAV', '.DS_Store', '.bzr', '.bzrignore', '.bzrtags', '.git', '.gitattributes', '.gitignore', '.gitmodules', '.hg', '.hgignore', '.hgtags', '.htaccess', '.htpasswd', '.jshintrc', '.npmignore', '.Spotlight-V100', '.svn', '__MACOSX', 'ehthumbs.db', 'robots.txt', 'Thumbs.db', 'thumbs.tps' ];
 
-    var breadcrumbs = location.pathname.split('/');
-    var parentDir = '/';
-    breadcrumbs.forEach(function(dir) {
-        if (dir) {
-            $('.breadcrumb').append("<li><a href=" + parentDir + dir + ">" + dir +
-                "</a></li>");
-            parentDir += '/' + dir;
+    function headerPath() {
+      var path = location.pathname.split('/');
+      var parentDir = '/sp15';
+      path.forEach(function(dir) {
+        if (dir && dir !== 'sp15') {
+          var a  = $('<a>').attr({'href': parentDir + '/' + dir }).html(dir);
+          var li = $('<li>').html(a)
+          $('.breadcrumb').append(li);
+          parentDir += '/' + dir;
         }
-    });
+      });
+    }
 
     function calculateSize(size) {
         labels = ['YB', 'ZB', 'EB', 'PB', 'TB', 'GB', 'MB', 'KB', 'bytes'];
@@ -27,12 +30,12 @@ title: Directory Listing
         return Math.round(size, 2) + labels[total];
     }
 
-    function buildTable(items, xhr, y) {
-      console.log(xhr);
-      console.log(y);
+    function buildTable(items) {
       var body = $('<tbody>');
-      items.forEach(function(item) {
-        body.append(buildRow(item));
+      items.data.forEach(function(item) {
+        if (ignore_list.indexOf(item.name) === -1) {
+          body.append(buildRow(item));
+        }
       });
       $('#bs-table').append(body);
     }
@@ -56,8 +59,8 @@ title: Directory Listing
       var span = $('<span>').attr({ 'class': 'glyphicon glyphicon-' + glyph });
       var text = $('<strong>').html(item.name);
       var a    = $('<a>').attr({'href': url, 'target':'_blank'}).html(text);
-
-      span.html(a);
+      span.append('   '); // hack until I fix CSS.
+      span.append(a);
 
       size.attr({'data-sort-value': item.size, 'class':'text-right' }).html(disp);
 
@@ -70,22 +73,24 @@ title: Directory Listing
 
     var GH_ORG = 'cs10';
     var repo   = '/sp15/';
-    var GH_URL = 'api.github.com/repos/' + GH_ORG + repo + 'contents/';
-    console.log(GH_URL);
-    var full_url = 'http://www.corsproxy.com/' + GH_URL + location.pathname.split(repo)[1];
-    console.log(full_url);
-    $.ajax({
-      url: full_url,
-      cache: false,
-      success: buildTable
-    });
+    var GH_URL = 'https://api.github.com/repos/' + GH_ORG + repo + 'contents/';
+    var full_url = GH_URL + location.pathname.split(repo)[1].slice(0, -1);
+        full_url += '?callback=buildTable';
 
-    $("#bs-table").stupidtable();
+    $(document).ready(function() {
+      headerPath();
+      $.ajax({
+        url: full_url,
+        cache: false
+      });
+      $("#bs-table").stupidsort();
+    });
   </script>
 
   <div class="container-responsive">
     <ol class="breadcrumb">
       <li><a href="{{ site.baseurl }}/"><span class="glyphicon glyphicon-home"></span></a></li>
+
     </ol>
     <div class="table-responsive">
       <table id="bs-table" class="table table-striped">
