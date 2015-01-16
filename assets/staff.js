@@ -180,7 +180,7 @@ function buildPerson(data, width) {
     }
     elm += '<br /><strong>';
     if (!!data.web) {
-        elm += '<a href="' + data.web + '">' + data.name + '</a>';
+        elm += '<a href="' + data.web + '" target="_blank">' + data.name + '</a>';
     } else {
         elm += data.name;
     }
