@@ -70,9 +70,9 @@ title: Directory Listing
 
     var GH_ORG = 'cs10';
     var repo   = '/sp15/';
-    var GH_URL = 'https://api.github.com/repos/' + GH_ORG + repo + 'contents/';
+    var GH_URL = 'api.github.com/repos/' + GH_ORG + repo + 'contents/';
     console.log(GH_URL);
-    var full_url = GH_URL + location.pathname.split(repo)[1];
+    var full_url = 'http://www.corsproxy.com/' + GH_URL + location.pathname.split(repo)[1];
     console.log(full_url);
     $.ajax({
       url: full_url,
