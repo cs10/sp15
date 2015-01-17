@@ -294,5 +294,11 @@ div.staffimgrow > div {
 }
 /* END .snap */
 
+body {
+  background-image: url({{ site.baseurl }}/resources/images/gobo_watermark.gif);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-attachment: fixed;
+}
 
 {% include header.css %}

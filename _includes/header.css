@@ -1,8 +1,4 @@
 body {
-  background-image: url({{ site.baseurl }}/resources/images/gobo_watermark.gif);
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-attachment: fixed;
   font-family: 'Helvetica'; /* override bootstrap */
   width: 95%;
   font-size: 11pt;
