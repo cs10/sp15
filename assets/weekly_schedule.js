@@ -54,7 +54,7 @@ var fullCalRender = function(event, element, view) {
         element.attr({'href': '#weekly'});
     }
     if (event.description) {
-        content += '<br>' + event.description;
+        content += ' &ndash; ' + event.description;
     }
     element.append($('<div class="fc-content">').html(content));
     return element;
