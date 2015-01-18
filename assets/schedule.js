@@ -144,6 +144,7 @@ cs10.week6 = {
     lectW: lect('Concurrency'),
     labB: lab('Concurrency', 'berkeley_bjc/areas/concurrency.topic'),
     disc: disc('<span style="font-size:150%">R<sup>e<sup>c<sup>u<sup>r<sup>s<sup>i<sup>o<sup>n</sup></sup></sup></sup></sup></sup></sup></sup></span>'),
+    // disc: disc('<span style="font-size:150%">Recursion</span>'),
     hw: hw('HW3')
 };
 
