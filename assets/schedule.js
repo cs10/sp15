@@ -218,7 +218,6 @@ cs10.week9.labA.classes = 'exam';
 // MARCH 23 - 27
 cs10.week10 = {
     special: 'Spring Break',
-    readings: [],
     hw: 'Get Some Rest!'
 };
 
@@ -236,7 +235,7 @@ cs10.week11 = {
     lectM: lect('HCI', '', '', 'Eric Paulos'),
     labA: lab('Tic Tac Toe', 'berkeley_bjc/lists/tic-tac-toe.topic', true),
     lectW: lect('The Internet II'),
-    labB: lab('Poject Work'),
+    labB: lab('Project Work'),
     disc: disc('The Internet'),
     hw: hw('Impact Writing Assignment')
 };
@@ -273,7 +272,7 @@ cs10.week13 = {
     readings: [
         reading('The Heartbleed Bug',
                 'http://blog.agilebits.com/2014/04/08/imagine-no-ssl-encryption-its-scary-if-you-try/'),
-        reading('What Servers Bleed',
+        reading('When Servers Bleed',
                 'https://medium.com/p/804cdf4b48c1',
                 'hard')
     ],
