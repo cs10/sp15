@@ -143,7 +143,7 @@ cs10.week6 = {
     labA: lab('Trees and Fractals using Recursion', 'berkeley_bjc/recur/recursion-trees-fractals.topic', true),
     lectW: lect('Concurrency'),
     labB: lab('Concurrency', 'berkeley_bjc/areas/concurrency.topic'),
-    disc: disc('<span style="font-size: 150%">R<sup>e<sup>c<sup>u<sup>r<sup>s<sup>i<sup>o<sup>n</sup></sup></sup></sup></sup></sup></sup></sup>'),
+    disc: disc('<span style="font-size:150%">R<sup>e<sup>c<sup>u<sup>r<sup>s<sup>i<sup>o<sup>n</sup></sup></sup></sup></sup></sup></sup></sup></span>'),
     hw: hw('HW3')
 };
 
@@ -162,10 +162,11 @@ cs10.week7 = {
         reading('The First Church of Robotics',
                 'http://www.nytimes.com/2010/08/09/opinion/09lanier.html',
                 'optional'),
-        reading('The Thinking Machine (Video)',
-                'http://www.youtube.com/watch?v=4gzpd0irP58',
-                'optional'),
+        // reading('The Thinking Machine (Video)',
+        //         'http://www.youtube.com/watch?v=4gzpd0irP58',
+        //         'optional'),
         reading('Spending Moore\'s dividend (CACM)',
+                // FIXME -- ACM LINK
                 'http://doi.acm.org/10.1145/1506409.1506425',
                 'optional')
     ],
