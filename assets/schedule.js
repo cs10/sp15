@@ -356,7 +356,6 @@ cs10.week17.labA.classes = 'exam';
 
 
 // Load the Calendar
-// Load the calendar:
 $(document).ready(function() {
     cs10.renderTableCalendar();
 });
