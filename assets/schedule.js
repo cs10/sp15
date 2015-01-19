@@ -50,7 +50,7 @@ cs10.week2 = {
     lectW: lect('Creativity and Abstraction'),
     labB: lab('Conditionals', 'berkeley_bjc/intro_new/3-conditionals.topic', true),
     disc: disc('Anatomy of a Computer and the Power of Binary'),
-    hw: hw('HW1', '1/31')
+    hw: hw('HW1', '2/1')
 };
 
 // FEB 2 - 6
