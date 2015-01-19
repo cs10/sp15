@@ -1,5 +1,6 @@
 ---
 ---
+
 /**********************************
  * FONTS
  *********************************/
@@ -26,7 +27,7 @@
 } */
 
 h1, h2, .vagrounded-light {
-  font-family: 'VAG Rounded Light';
+  font-family: 'VAG Rounded Light', 'Open Sans', sans-serif;
 }
 /**********************************
  * END FONTS
@@ -39,10 +40,6 @@ h2 { /* Used for Staff Headings */
 }
 
 .center, .ql { text-align: center; }
-
-.bold {
-    font-weight: bold;
-}
 
 .wp-caption {
     border: 1px solid #DDD;
@@ -94,15 +91,13 @@ table.top-table {
 }
 
 td {
-    border: none;
-    border-radius: 4px;
-    text-align: center;
+  border: none;
+  text-align: center;
 }
 th {
-    background-color: #B0B0B0;
-    text-align: center;
-    border: none;
-    border-radius: 4px;
+  background-color: #C0C0C0;
+  text-align: center;
+  border: none;
 }
 
 table.grading > tbody > tr:nth-child(even),
@@ -194,13 +189,26 @@ div.inner {
     padding: 2px;
 }
 
+.lecture {
+    background-color: #FA8072;
+}
+.lab {
+    background-color: #9CF;
+}
+.disc {
+    background-color: #9F6;
+}
+.oh {
+    background-color: #FC3;
+}
+
 /******************************************************************************/
 /* WEEKLY CALENDAR */
 /* THESE CLASSES ARE BASED ON THE FULLCALENDAR PLUGIN */
 /******************************************************************************/
 /* Increase the default cell height */
 .fc-slats td {
-  height: 3.4em;
+  height: 3.5em;
 }
 
 /* Make today be highlighted in gold. */
@@ -211,9 +219,23 @@ div.inner {
 .fc-content > .fc-time {
   display: none;
 }
+/* Slightly bigger title text */
+.fc-toolbar > h2 {
+  font-size: 2em;
+  margin-top: .4em;
+}
+/* bring toolbar slightly closer to calendar */
+.fc-toolbar {
+  margin-bottom: .75em;
+}
+/* Smaller Buttons */
+.fc-button {
+  height: 1.8em;
+  font-size: .8em;
+}
 /* Make the calendar events take up the whole column width */
 .fc-ltr .fc-time-grid .fc-event-container {
-  margin: 0 1% 0 1%;
+  margin: 0 1.5% 0 1.5%;
 }
 /* Set text settings for info in each event*/
 .fc-event, .fc-event:hover, .ui-widget .fc-event {
@@ -229,21 +251,19 @@ div.inner {
   opacity: 1;
   filter: alpha(opacity=100);
 }
-.lecture {
-    background-color: #FA8072;
+
+/* No BG color for upper-left corner */
+.fc-axis.fc-widget-header {
+  background: none;
 }
 
-.lab {
-    background-color: #9CF;
+.fc-axis { /*FIXME */
+  background-color: #C0C0C0;
+  text-align: center;
+  border: none;
+  font-weight: bold;
 }
 
-.disc {
-    background-color: #9F6;
-}
-
-.oh {
-    background-color: #FC3;
-}
 
 /******************************************************************************/
 /** STAFF PHOTOS **/
@@ -287,7 +307,6 @@ div.staffimgrow > div {
   text-transform: capitalize;
   font-variant: small-caps;
   font-style: normal;
-  font-family: 'Cardana', sans-serif;
 }
 
 .snap:after {

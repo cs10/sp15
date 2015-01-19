@@ -5,7 +5,6 @@
  * Google Calendar needs an API key which is defined in _config.yml
  * but shouldn't need to be changed unless it's own cant be contacted.
  * Docs: http://fullcalendar.io/docs/
- * FullCalendar.io
  */
 
 
