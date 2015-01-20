@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Lab Check-Off Questions
-permalink: labquestions/index.html
+title: Slip Day Checker
+permalink: slipdays/index.html
 ---
 
 <div class="header center coontainer-fluid">
@@ -43,50 +43,49 @@ permalink: labquestions/index.html
 
 {% include quicklinks.html %}
 
+<script src="{{ site.baseurl }}/assets/directory-concat.js"></script>
+
 <link href="{{ site.baseurl }}/assets/css/cs10style.css" rel="stylesheet"/>
 
 <script>
     {% include_relative assets/cs10.js %}
 </script>
 
-# Lab Check-Off Questions
+<h1> Check Your Slip Day Usage </h1>
 
-<div class="page-section" markdown="1">
-<br>
-
-## Lab 1: Welcome to <span class="snap">snap</span>
-No questions for this lab!
-
----
-
-## Lab 2: Build Your Own Blocks
-
-## Due: XX/XX/XXX
-
-* Question
-* Question
-    * Some notes
-* Question
-* Question
-    * Some notes
-* Question
-* Question
-    * Some notes
-
----
-
-## Lab 3: Conditionals
-
-## Due: XX/XX/XXX
-
-* Question
-* Question
-    * Some notes
-* Question
-* Question
-    * Some notes
-* Question
-* Question
-    * Some notes
-
+<div class="page-section">
+  <br>
+  <h2> Please enter your SID </h2>
+  <form class="form-inline" id='sid-form'>
+    <div class="form-group">
+      <label class="sr-only" for="exampleInputAmount">Your SID</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="sidInput" placeholder="12345678">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Check 'em, baby!</button>
+  </form>
 </div>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#sid-form').submit(function(evt) {
+    console.log('submitted?');
+
+    var sid = $('#sidInput').val();
+    var url = 'http://alonzo.herokuapp.com/slipdays/' + sid + '/json';
+    $.ajax({
+      url: url,
+      cache: true,
+      contentType: 'text/json',
+      success: function(a, b, c) {
+        console.log(a);
+      }
+    });
+
+    evt.preventDefault();
+  });
+});
+
+</script>
