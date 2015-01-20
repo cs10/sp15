@@ -50,7 +50,7 @@ cs10.week2 = {
     lectW: lect('Creativity and Abstraction'),
     labB: lab('Conditionals', 'berkeley_bjc/intro_new/3-conditionals.topic', true),
     disc: disc('Anatomy of a Computer and the Power of Binary'),
-    hw: hw('HW1', '2/1')
+    hw: hw('HW1', '2/1', 'assignments/5919083', 'assign.html?https://docs.google.com/document/d/1ybuatsrUMCI-tHHRPwxUpGoZoGxk_SEiGEArocQtIlI/pub')
 };
 
 // FEB 2 - 6
@@ -78,7 +78,7 @@ cs10.week3 = {
     lectW: lect('Programming Paradigms'),
     labB: lab('Lists I', 'berkeley_bjc/lists/lists-I.topic'),
     disc: disc('All about lists'),
-    hw: hw('HW2', '2/7')
+    hw: hw('Start on HW2')
 };
 
 // FEB 9 - 13
@@ -103,7 +103,7 @@ cs10.week4 = {
     lectW: lect('Algorithmic Complexity'),
     labB: lab('Algorithmic Complexity', "berkeley_bjc/areas/algorithm-complexity.topic"),
     disc: disc('Algorithmic Complexity and Quest Review'),
-    hw: hw('HW2')
+    hw: hw('HW2', '2/13', 'assignments/5919084', 'assign.html?https://docs.google.com/document/d/18RPHqtdohWA6rAEYGkLcthGVS32RK7GB7zL3OP_y--Q/pub')
 };
 
 // FEB 16 - 20
