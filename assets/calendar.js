@@ -58,12 +58,15 @@ cs10.newLabObject = function(title, url, rq, video) {
 
     // Global Counter for lecture
     cs10.rqCounter = cs10.rqCounter || 0;
+    cs10.labCounter = cs10.labCounter || 0;
 
     if (!title) {
         lab.title = 'No Lab';
     }
 
     if (url) {
+        cs10.labCounter += 1;
+        lab.title = cs10.labCounter + ': ' + lab.title;
         lab.url = baseURL + url + urlEnd;
     }
 
