@@ -130,17 +130,14 @@ var jobelV = {
 /** LIST DEFINITIONS **/
 /*****************************************************************************/
 
-instructors = [ DanGarcia ];
-
-tas = [ michaelB, LaurenMock, adamK, andyS, AranyU, carlosF, jaclynB, josephC,
+var tas = [ DanGarcia, michaelB, LaurenMock, adamK, andyS, AranyU, carlosF, jaclynB, josephC,
     jeffreyS, maxD, PeterS, rachelH, StevenT, victoriaS];
 
-readers = [ alexM, brandonC, claireW, jobelV ];
+var readers = [ alexM, brandonC, claireW, jobelV ];
 
 // If you need to add a new SECTION add it to this object.
 // Follow the same format.
-all = {
-    instructors: instructors,
+var all = {
     readers: readers,
     tas: tas
 };
@@ -237,6 +234,5 @@ function addLoadEvent(func) {
 
 /* more code to run on page load */
 // Parameters: a section (HTML 'id') and num of images per row.
-buildGroup('instructors', 1);
 buildGroup('tas', 5);
 buildGroup('readers', 5);
