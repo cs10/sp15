@@ -163,7 +163,8 @@ function buildPerson(data, width) {
         data = baseObj(data);
     }
 
-    // Create a table element with this person's data, setting a class for width
+    // Create a div with this person's data, setting a class for width
+    // Col-md- is based on standard bootstrap classes, md-20 is my own addition.
     var cls = 'col-md-' + (width === 5 ? '20' : Math.floor(12/width));
     elm = '<div class="'+ cls + '">';
     if (!!data.img) {
@@ -176,7 +177,7 @@ function buildPerson(data, width) {
     if (!!data.img) {
         elm += '</a>';
     }
-    elm += '<br /><strong>';
+    elm += '<br><strong>';
     if (!!data.web) {
         elm += '<a href="' + data.web + '" target="_blank">' + data.name + '</a>';
     } else {
@@ -184,23 +185,22 @@ function buildPerson(data, width) {
     }
     elm += '</strong> ';
     if (!!data.bio) {
-        elm += '(<a href="bios/' + data.bio + '">bio</a>)';
+        elm += '(<a href="{{ site.baseurl }}/bios/' + data.bio + '">bio</a>)';
     }
     if (!!data.email) {
-        elm += '<br /><a href="mailto:' + data.email +
+        elm += '<br><a href="mailto:' + data.email +
         '?subject=[CS10] SUBJECT"><code>' + data.email + '</code></a>';
     }
     if (!!data.office) {
-        elm +=  '<br />' + data.office;
+        elm +=  '<br>' + data.office;
     }
     elm += '</div>';
     return elm;
 }
 
 function buildGroup(group, w) {
-    // Build a set of table rows, with W items per row
-    // based on the people in the GROUP
-    // Add them to the appropriate HTML table element
+    // Create image elements for all photos in the group (HTML ID)
+    // with a WIDTH of w photos per row.
     var ppl = all[group];
     var doc = document.getElementById(group);
     var content = '';
