@@ -63,7 +63,7 @@ permalink: slipdays/index.html
         <input type="text" class="form-control" id="sidInput" placeholder="12345678">
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Check 'em, baby!</button>
+    <button type="submit" class="btn btn-primary">Check my days!</button>
   </form>
   <br />
   <br />
@@ -103,6 +103,7 @@ $(document).ready(function() {
       crossDomain: true,
       success: function(result, b, c) {
         var table = $('#table-contents');
+        table.html(); // clear the table
         if (result.constructor === Array) {
           result.forEach(function(item) {
             table.append($('<tr>').html($('<td>').html(item)));
