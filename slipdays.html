@@ -94,20 +94,26 @@ $(document).ready(function() {
     // }
 
     var sid = $('#sidInput').val();
-    var url = 'http://www.corsproxy.com/' + dom + '/slipdays/' + sid + '/json';
+    var url = 'http://' + dom + '/slipdays/' + sid + '/json';
     $.ajax({
       url: url,
       cache: false,
       contentType: 'text/json',
       success: function(a, b, c) {
         console.log('wtf');
-        console.log(a);
-      }
+        console.log('a', a);
+      },
       error: function(a, b, c) {
         console.log('error');
-        console.log(a);
-        console.log(b);
-        console.log(c);
+        console.log('a', a);
+        console.log('b', b);
+        console.log('c', c);
+      },
+      complete: function(a, b, c) {
+        console.log('complete');
+        console.log('a', a);
+        console.log('b', b);
+        console.log('c', c);
       }
     });
 
