@@ -23,6 +23,7 @@ title: Directory Listing
     </div>
   </div>
 
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/cs10style.css"/>
 
   <script src="{{ site.baseurl }}/assets/directory-concat.js"></script>
   <script type="text/javascript">
@@ -50,7 +51,7 @@ title: Directory Listing
 
     function headerPath() {
       var path = location.pathname.split('/');
-      document.title = 'CS10 Files in: ' + path[path.length - 2];
+      document.title = 'CS10 Files in: ' + decodeURIComponent(path[path.length - 2]);
       $('h1.title').html(document.title)
       var parentDir = '/' + REPO;
       if (isSubmodule) {
@@ -60,7 +61,7 @@ title: Directory Listing
         // Exclude the path to this folder unless it's a submodule
         // baseRepo is the same as REPO for a submodule
         if (dir && (dir !== REPO || isSubmodule) && dir !== baseRepo) {
-          var a  = $('<a>').attr({'href': parentDir + '/' + dir }).html(dir);
+          var a  = $('<a>').attr({'href': parentDir + '/' + dir }).html(decodeURIComponent(dir));
           $('.breadcrumb').append($('<li>').html(a));
           parentDir += '/' + dir;
         }
