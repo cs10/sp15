@@ -23,7 +23,7 @@ cs10.week1 = {
     lectM: lect('No Lecture Monday'),
     labA: lab('No Labs Monday, Tuesday, or Wednesday morning'),
     lectW: lect('Welcome and Abstraction', 'L01 - Abstraction', 'https://coursesharing.org/courses/6/lectures/7'),
-    labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_pair/1-introduction.topic"),
     disc: disc('Welcome to CS10!'),
     hw: hw('HW0', '1/24', 'quizzes/1869517')
 };
@@ -46,9 +46,9 @@ cs10.week2 = {
                 'optional')
     ],
     lectM: lect('Functions'),
-    labA: lab('Build Your Own Blocks', 'berkeley_bjc/intro_new/2-loops-variables.topic'),
+    labA: lab('Build Your Own Blocks', 'berkeley_bjc/intro_pair/2-loops-variables.topic'),
     lectW: lect('Creativity and Abstraction'),
-    labB: lab('Conditionals', 'berkeley_bjc/intro_new/3-conditionals.topic', true),
+    labB: lab('Conditionals', 'berkeley_bjc/intro_pair/3-conditionals.topic', true),
     disc: disc('Anatomy of a Computer and the Power of Binary'),
     hw: hw('HW1', '2/1', 'assignments/5919083', 'assign.html?https://docs.google.com/document/d/1ybuatsrUMCI-tHHRPwxUpGoZoGxk_SEiGEArocQtIlI/pub')
 };
