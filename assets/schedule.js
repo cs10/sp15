@@ -208,7 +208,7 @@ cs10.week9 = {
     readings: 'No Readings',
     lectM: lect('Social Implications III', '', '', 'Brian Harvey'),
     labA: lab('Online <span class="snap">snap</span> Midterm'),
-    lectW: lect('The Internet'),
+    lectW: lect('The Internet<div class="exam inner"><a href="exams/midterm.html">Midterm Exam</a><br><br><strong>3/18 8-10pm; Location: TBD</strong></div>'),
     labB: lab('The Internet', 'berkeley_bjc/areas/internet.topic'),
     disc: disc('Midterm Debrief'),
     hw: hw('Midterm Project')
