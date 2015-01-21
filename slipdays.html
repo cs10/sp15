@@ -88,12 +88,11 @@ permalink: slipdays/index.html
 <script type="text/javascript">
 $(document).ready(function() {
   $('#sid-form').submit(function(evt) {
-    console.log('submitted?');
     var dom = 'alonzo.herokuapp.com';
-    // Local hosts use a local Alonzo URL
-    // if (location.port === '4000') {
-    //   dom = 'localhost:8080';
-    // }
+    Local hosts use a local Alonzo URL
+    if (location.port === '4000') {
+      dom = 'localhost:8080';
+    }
 
     var sid = $('#sidInput').val();
     var url = 'http://' + dom + '/slipdays/' + sid + '/json';
@@ -101,9 +100,9 @@ $(document).ready(function() {
       url: url,
       cache: false,
       crossDomain: true,
-      success: function(result, b, c) {
+      success: function(result) {
         var table = $('#table-contents');
-        table.html(); // clear the table
+        table.html(''); // clear the table
         if (result.constructor === Array) {
           result.forEach(function(item) {
             table.append($('<tr>').html($('<td>').html(item)));
