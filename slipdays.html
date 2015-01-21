@@ -65,6 +65,21 @@ permalink: slipdays/index.html
     </div>
     <button type="submit" class="btn btn-primary">Check 'em, baby!</button>
   </form>
+  <br />
+  <br />
+  <div id="msg" class="alert alert-warning hidden">
+    You are at your slip day limit!
+  </div>
+  <br />
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      Slip Day Results
+    </div>
+    <div class="table-responsive">
+      <table border="0" id="results" class="table table-striped table-responsive">
+      </table>
+    </div>
+  </div>
 </div>
 
 
@@ -72,15 +87,27 @@ permalink: slipdays/index.html
 $(document).ready(function() {
   $('#sid-form').submit(function(evt) {
     console.log('submitted?');
+    var dom = 'alonzo.herokuapp.com';
+    // Local hosts use a local Alonzo URL
+    // if (location.port === '4000') {
+    //   dom = 'localhost:8080';
+    // }
 
     var sid = $('#sidInput').val();
-    var url = 'http://alonzo.herokuapp.com/slipdays/' + sid + '/json';
+    var url = 'http://www.corsproxy.com/' + dom + '/slipdays/' + sid + '/json';
     $.ajax({
       url: url,
-      cache: true,
+      cache: false,
       contentType: 'text/json',
       success: function(a, b, c) {
+        console.log('wtf');
         console.log(a);
+      }
+      error: function(a, b, c) {
+        console.log('error');
+        console.log(a);
+        console.log(b);
+        console.log(c);
       }
     });
 
