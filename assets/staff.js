@@ -167,31 +167,31 @@ function buildPerson(data, width) {
     // Col-md- is based on standard bootstrap classes, md-20 is my own addition.
     var cls = 'col-md-' + (width === 5 ? '20' : Math.floor(12/width));
     elm = '<div class="'+ cls + '">';
-    if (!!data.img) {
+    if (data.img) {
         elm += '<a href="{{ site.baseurl }}/resources/images/' + data.img + '">';
     }
 
     elm += '<img class="staff" align="center" ';
-    elm += 'alt="' + data.name + '" title="' + data.name + '" src="resources/images/small/';
+    elm += 'alt="' + data.name + '" title="' + data.name + '" src="{{ site.baseurl }}/resources/images/small/';
     elm += data.imgSrc + '" />';
-    if (!!data.img) {
+    if (data.img) {
         elm += '</a>';
     }
     elm += '<br><strong>';
-    if (!!data.web) {
+    if (data.web) {
         elm += '<a href="' + data.web + '" target="_blank">' + data.name + '</a>';
     } else {
         elm += data.name;
     }
     elm += '</strong> ';
-    if (!!data.bio) {
+    if (data.bio) {
         elm += '(<a href="{{ site.baseurl }}/bios/' + data.bio + '">bio</a>)';
     }
-    if (!!data.email) {
+    if (data.email) {
         elm += '<br><a href="mailto:' + data.email +
         '?subject=[CS10] SUBJECT"><code>' + data.email + '</code></a>';
     }
-    if (!!data.office) {
+    if (data.office) {
         elm +=  '<br>' + data.office;
     }
     elm += '</div>';
