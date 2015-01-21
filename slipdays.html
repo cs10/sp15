@@ -67,16 +67,18 @@ permalink: slipdays/index.html
   </form>
   <br />
   <br />
-  <div id="msg" class="alert alert-warning hidden">
+  <div id="msg" class="alert hidden" role="alert">
     You are at your slip day limit!
   </div>
   <br />
-  <div class="panel panel-primary">
+  <div id="panel" class="panel panel-primary">
     <div class="panel-heading">
       Slip Day Results
     </div>
     <div class="table-responsive">
       <table border="0" id="results" class="table table-striped table-responsive">
+        <tbody id="table-contents">
+        </tbody>
       </table>
     </div>
   </div>
@@ -98,22 +100,35 @@ $(document).ready(function() {
     $.ajax({
       url: url,
       cache: false,
-      contentType: 'text/json',
-      success: function(a, b, c) {
-        console.log('wtf');
-        console.log('a', a);
+      crossDomain: true,
+      success: function(result, b, c) {
+        var table = $('#table-contents');
+        if (result.constructor === Array) {
+          result.forEach(function(item) {
+            table.append($('<tr>').html($('<td>').html(item)));
+            if (item.indexOf('Total') === 0) {
+              var days = parseInt(item.split(' ')[1]);
+              $('#msg').removeClass('hidden');
+              if (days < 3) {
+                $('#panel').addClass('panel-success');
+                $('#msg').addClass('alert-success');
+                $('#msg').html('Good work! You\'ve got some breathing room!');
+              } else if (days === 3) {
+                $('#panel').addClass('panel-warning');
+                $('#msg').addClass('alert-warning');
+                $('#msg').html('You\'re at the limit of slip days! Be careful, or you\'ll lose points.');
+              } else {
+                $('#panel').addClass('panel-danger');
+                $('#msg').addClass('alert-danger');
+                $('#msg').html('Uh-oh! We\'ll need to dock some points.');
+              }
+            }
+          });
+        }
       },
       error: function(a, b, c) {
-        console.log('error');
-        console.log('a', a);
-        console.log('b', b);
-        console.log('c', c);
-      },
-      complete: function(a, b, c) {
-        console.log('complete');
-        console.log('a', a);
-        console.log('b', b);
-        console.log('c', c);
+        var table = $('#table-contents');
+        table.append($('<tr>').html($('<td>').html('Whoops, an error occured! Sorry!')));
       }
     });
 
