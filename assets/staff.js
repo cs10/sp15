@@ -87,6 +87,7 @@ var StevenT = {
     name: 'TA Steven Traversi',
     img: 'Sp14/StevenTraversi.jpg',
     imgSrc: 'StevenTraversi.jpg',
+    web: 'http://steven.education',
     email: 'steven@cs10.org'
 };
 
