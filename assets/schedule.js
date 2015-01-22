@@ -157,7 +157,7 @@ cs10.week7 = {
                 'http://www.gotw.ca/publications/concurrency-ddj.htm',
                 'hard'),
         reading('What is IBM\'s Watson?',
-                bcoursres('54271633')),
+                bcourses('54271633')),
         reading('Brian Harvey\'s AI notes',
                 '{{ site.baseurl }}/resources/readings/BH-ai.txt'),
         reading('The First Church of Robotics',
