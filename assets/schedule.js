@@ -157,7 +157,7 @@ cs10.week7 = {
                 'http://www.gotw.ca/publications/concurrency-ddj.htm',
                 'hard'),
         reading('What is IBM\'s Watson?',
-                'http://www.nytimes.com/2010/06/20/magazine/20Computer-t.html'),
+                bcoursres('54271633')),
         reading('Brian Harvey\'s AI notes',
                 '{{ site.baseurl }}/resources/readings/BH-ai.txt'),
         reading('The First Church of Robotics',
@@ -167,8 +167,7 @@ cs10.week7 = {
         //         'http://www.youtube.com/watch?v=4gzpd0irP58',
         //         'optional'),
         reading('Spending Moore\'s dividend (CACM)',
-                // FIXME -- ACM LINK
-                'http://doi.acm.org/10.1145/1506409.1506425',
+                bcourses('54271571'),
                 'optional')
     ],
     lectM: lect('Recursion II'),

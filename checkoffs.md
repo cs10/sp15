@@ -4,7 +4,7 @@ title: Lab Check-Off Questions
 permalink: labquestions/index.html
 ---
 
-{ % include nav.html %}
+{% include nav.html %}
 
 {% include quicklinks.html %}
 
@@ -17,12 +17,12 @@ permalink: labquestions/index.html
 <div class="page-section" markdown="1">
 <br>
 
-## Lab 1: Welcome to <span class="snap">snap</span> {#1}
+## Lab 1: Welcome to <span class="snap">snap</span>   {#lab1}
 No questions for this lab!
 
 ---
 
-## Lab 2: Build Your Own Blocks {#2}
+## Lab 2: Build Your Own Blocks {#lab2}
 
 ## Due: XX/XX/XXX
 
