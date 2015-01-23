@@ -1,0 +1,17 @@
+WHERE DID YOU GROW UP? WHAT WAS YOUR PATH TO CAL?
+
+I was born in and grew up in Davis, California, and graduated from Davis
+High before coming to Berkeley.
+
+HOW MUCH PROGRAMMING HAVE YOU DONE (& WHAT LANGUAGES)?
+
+I have basically only done programming for my classes and one internship.
+Scheme, Java, C, and Ruby are the languages that I have used.
+
+WHAT ARE YOUR HOBBIES?  WHAT ARE SOME OF YOUR TALENTS & SKILLS?
+
+I swing dance! I choreograph swing for [M]ovement, a student dance group at Cal.
+
+WHAT COMMITMENTS WILL BE CONSUMING YOUR CYCLES THIS SEMESTER?
+
+Reading for CS10, choreographing swing, and working on the TECH project.

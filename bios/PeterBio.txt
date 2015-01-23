@@ -1,0 +1,23 @@
+WHERE DID YOU GROW UP?  WHAT WAS YOUR ACADEMIC PATH?
+
+I grew up in the small town of Pacific Grove, CA., which is a couple hours south of Berkeley.
+
+HOW MUCH PROGRAMMING HAVE YOU DONE?  WHAT LANGUAGES?
+
+I have been programming for a couple years now. I've primarily used python, Scratch/BYOB and the statistical language R. I've also played around with scheme, BASIC, and Unix. I actually got my start programming in TI-BASIC on my TI-84 calculator. My first program estimated integrals using the trapezoid rule. I don't know if you could call it programming exactly, but I've also used HTML and LaTeX quite a bit.
+
+WHAT ARE YOUR HOBBIES?
+
+My main hobby is playing trombone. I also enjoy video games and playing tennis. Occasionally, I run when I'm not too lazy.
+
+WHAT ARE SOME OF YOUR TALENTS AND SKILLS?
+
+I like to think I'm an alright trombone player. Also, I've done some tutoring, so I have pretty good teaching skills.
+
+HAVE YOU EVER DONE ANYTHING REMARKABLE?
+
+I toured Japan three times with an honor jazz band.
+
+WHAT COMMITMENTS WILL BE CONSUMING YOUR CYCLES THIS TERM?
+
+Along with 5 classes, I'll be in both the University Wind Ensemble and the UCJazz big band this semester. In addition to being a reader for CS10, I'm helping out as a lab assistant for the web-based version of the course, CSw10.

@@ -1,0 +1,23 @@
+Where did you grow up? What was your path to Cal? 
+
+I grew up in Indonesia. I moved to US a year ago for being at Cal.. I'm a sophomore in L&S right now
+
+How much programming have you done (& what languages)?
+
+I took cs10 last spring, cs61a (python, scheme) over the summer, and currently taking cs61B (Java)
+
+What are your hobbies?
+
+My hobbies are tennis and ice skating 
+
+What are some of your talents & skills?
+
+I learn fast 
+
+Have you done anything remarkable? Has anything memorable happened to you?
+
+Hmm... designing marching manuvering for my high school marching brass 
+
+What commitments will be consuming your cycles this semester?
+
+I'll be taking at least 4 technical class. I'm also doing research in neurobiology lab and lab assisting for cs61a besides cs10
