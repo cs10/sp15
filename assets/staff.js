@@ -126,6 +126,20 @@ var jobelV = {
     img: 'Fa13/JobelVecino.jpg',
     imgSrc: 'JobelVecino.jpg' };
 
+var avaY = {
+    name: 'Reader Yuan Yuan',
+    img: 'Sp14/YuanYuan.jpg',
+    imgSrc: 'YuanYuan.jpg' };
+
+var erikD = {
+    name: 'Reader Erik Dalquist'
+};
+
+var amrutaY = {
+    name: 'Reader Amruta Yellamanchili',
+    img: 'Sp14/AmrutaYellamanchili.jpg',
+    imgSrc: 'AmrutaYellamanchili.jpg' };
+
 
 /*****************************************************************************/
 /** LIST DEFINITIONS **/
@@ -134,7 +148,7 @@ var jobelV = {
 var tas = [ DanGarcia, michaelB, LaurenMock, adamK, andyS, AranyU, carlosF, jaclynB, josephC,
     jeffreyS, maxD, PeterS, rachelH, StevenT, victoriaS];
 
-var readers = [ alexM, brandonC, claireW, jobelV ];
+var readers = [ alexM, amrutaY, brandonC, claireW, erikD, jobelV, avaY ];
 
 // If you need to add a new SECTION add it to this object.
 // Follow the same format.
@@ -236,4 +250,4 @@ function addLoadEvent(func) {
 /* more code to run on page load */
 // Parameters: a section (HTML 'id') and num of images per row.
 buildGroup('tas', 5);
-buildGroup('readers', 5);
+buildGroup('readers', 4);
