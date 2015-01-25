@@ -10,18 +10,6 @@
        url('fonts/vagrounded/VAGRoundedStd-Light-1.woff') format('woff')
 }
 
-/*@font-face {
-  font-family: 'VAG Rounded Bold';
-  src: url('fonts/vagrounded/VAGRoundedStd-Bold-2.eot');
-  src: url('fonts/vagrounded/VAGRoundedStd-Bold-2.eot?#iefix') format('embedded-opentype'),
-       url('fonts/vagrounded/VAGRoundedStd-Bold-2.woff') format('woff'),
-       url('fonts/vagrounded/VAGRoundedStd-Bold-2.ttf')  format('truetype'),
-       url('fonts/vagrounded/VAGRoundedStd-Bold-2.svg#00ad8a10ebd59fb2cc3fe9f97989bf60') format('svg');
-}
-
-.vagrounded,  {
-  font-family: 'VAG Rounded Bold';
-} */
 
 h1, h2, .vagrounded-light {
   font-family: 'VAG Rounded Light', 'Open Sans', sans-serif;
@@ -36,7 +24,7 @@ h2 { /* Used for Staff Headings */
     margin: .4em;
 }
 
-.center, .ql { text-align: center; }
+.center { text-align: center; }
 
 .wp-caption {
     border: 1px solid #DDD;
@@ -49,12 +37,12 @@ h2 { /* Used for Staff Headings */
 }
 
 .wp-caption-text {
-    font-size: 0.8em;
-    line-height: 13px;
-    align:right;
-    padding: 2px 4px 5px;
-    margin: 0;
-    color: #666;
+  font-size: 0.8em;
+  line-height: 13px;
+  align:right;
+  padding: 2px 4px 5px;
+  margin: 0;
+  color: #666;
 }
 
 .page-section {
@@ -64,28 +52,15 @@ h2 { /* Used for Staff Headings */
 
 /* For resources List */
 .lambda {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .lambda > li:before {
-    content: "\03BB"; /* Lambda Char Unicode */
-    padding: .5em;
-    font-weight: bold;
+  content: "\03BB"; /* Lambda Char Unicode */
+  padding: .5em;
+  font-weight: bold;
 }
 /*****************************************************************************/
-/* Used for the top table */
-td.center {
-  text-align: center;
-}
-td.left {
-  text-align: left;
-}
-td.right {
-  text-align: right;
-}
-table.top-table {
-  width: 100%;
-}
 
 td {
   border: none;
@@ -97,31 +72,32 @@ th {
   border: none;
 }
 
-table.grading > tbody > tr:nth-child(even),
+.grading > tbody > tr:nth-child(even),
 tr.cal:nth-child(even), .dark {
     background-color: #E0E0E0;
 }
-table.grading > tbody > tr:nth-child(odd),
+.grading > tbody > tr:nth-child(odd),
 tr.cal:nth-child(odd), .light {
     background-color: #F0F0F0;
 }
 
-table.grading {
+.grading {
     margin-left: auto;
     margin-right: auto;
     width: 480px;
     align: center;
     text-align: center;
 }
+
 /*****************************************************************************/
 /** CALENDAR CLASSES **/
 /*****************************************************************************/
 /* All Cells */
-.table tr.cal > td,
-.table tr.cal > th {
+tr.cal > td,
+tr.cal > th {
     vertical-align: middle;
     border: 2px solid white;
-    padding: 2px; /* FIXME */
+    padding: 2px;
     margin: 2px;
 }
 
@@ -212,11 +188,6 @@ div.staffimgrow > div {
   word-wrap: break-word;
 }
 
-.yt-vid {   /* 16:9 Aspect ratio */
-  max-height: 400px;
-  max-width: 711px;
-}
-
 /* .snap inserts the logo using the proper formatting.
 * Insert using "<span class="snap">snap</span>"
 */
@@ -235,6 +206,14 @@ div.staffimgrow > div {
   font-style: italic;
 }
 /* END .snap */
+
+@media screen (max-width: 1000px) {
+  div.lambda:before {
+      content: "\03BB"; /* Lambda Char Unicode */
+      padding: .5em;
+      font-weight: bold;
+  }
+}
 
 body {
   background-image: url({{ site.baseurl }}/resources/images/gobo_watermark.gif);
