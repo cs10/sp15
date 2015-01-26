@@ -88,6 +88,7 @@ var StevenT = {
     img: 'Sp14/StevenTraversi.jpg',
     imgSrc: 'StevenTraversi.jpg',
     web: 'http://steven.education',
+    bio: 'StevenBio.txt',
     email: 'steven@cs10.org'
 };
 
