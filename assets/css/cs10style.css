@@ -80,8 +80,13 @@ tr.cal:nth-child(odd), .light {
 /** CALENDAR CLASSES **/
 /*****************************************************************************/
 /* All Cells */
-tr.cal > td,
-tr.cal > th {
+
+.table>tbody>tr>td, /* This overrides bootstrap stupidity */
+.table>tbody>tr>th {
+  vertical-align: middle;
+}
+.cal > td,
+.cal > th {
     vertical-align: middle;
     border: 2px solid white;
     padding: 2px;
@@ -89,7 +94,7 @@ tr.cal > th {
 }
 
 /* This is the date column */
-tr.cal > td:nth-child(2) {
+.cal > td:nth-child(2) {
     font-family: monospace;
 }
 
