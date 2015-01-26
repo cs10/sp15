@@ -11,8 +11,6 @@ h2 { /* Used for Staff Headings */
     margin: .4em;
 }
 
-.center { text-align: center; }
-
 .wp-caption {
     border: 1px solid #DDD;
     text-align: center;

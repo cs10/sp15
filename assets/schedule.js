@@ -207,12 +207,13 @@ cs10.week9 = {
     readings: 'No Readings',
     lectM: lect('Social Implications III', '', '', 'Brian Harvey'),
     labA: lab('Online <span class="snap">snap</span> Midterm'),
-    lectW: lect('The Internet<br><div class="exam inner"><a href="exams/midterm.html">Midterm Exam</a><br><br><strong>3/18 8-10pm; Location: TBD</strong></div>'),
+    lectW: lect('The Internet'),
     labB: lab('The Internet', 'berkeley_bjc/areas/internet.topic'),
     disc: disc('Midterm Debrief'),
     hw: hw('Midterm Project')
 };
 cs10.week9.labA.classes = 'exam';
+cs10.week9.lectW.title += '<br><div class="exam inner"><a href="exams/midterm.html">Midterm Exam</a><br><br><strong>3/18 8-10pm; Location: TBD</strong></div>';
 
 
 // Spring Break
