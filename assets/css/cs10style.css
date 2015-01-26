@@ -211,7 +211,6 @@ div.staffimgrow > div {
   div.lambda:before {
       content: "\03BB"; /* Lambda Char Unicode */
       padding: .5em;
-      font-weight: bold;
   }
 }
 
