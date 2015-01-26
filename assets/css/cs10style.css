@@ -1,22 +1,9 @@
 ---
 ---
 
-/**********************************
- * FONTS
- *********************************/
-@font-face {
-  font-family: 'VAG Rounded Light';
-  src: url('fonts/vagrounded/VAGRoundedStd-Light-1.eot?#iefix') format('embedded-opentype'),
-       url('fonts/vagrounded/VAGRoundedStd-Light-1.woff') format('woff')
+h1, h2, .vagrounded-light, .logo {
+  font-family: 'VAG Rounded Light', 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
 }
-
-
-h1, h2, .vagrounded-light {
-  font-family: 'VAG Rounded Light', 'Open Sans', sans-serif;
-}
-/**********************************
- * END FONTS
- *********************************/
 
 h2 { /* Used for Staff Headings */
     font-size: 1.5em;
@@ -189,8 +176,8 @@ div.staffimgrow > div {
 }
 
 /* .snap inserts the logo using the proper formatting.
-* Insert using "<span class="snap">snap</span>"
-*/
+ * Insert using "<span class="snap">snap</span>"
+ */
 .snap:first-letter {
   font-variant: normal;
 }
@@ -209,8 +196,8 @@ div.staffimgrow > div {
 
 @media screen (max-width: 1000px) {
   div.lambda:before {
-      content: "\03BB"; /* Lambda Char Unicode */
-      padding: .5em;
+    content: "\03BB"; /* Lambda Char Unicode */
+    padding: .5em;
   }
 }
 
@@ -222,3 +209,14 @@ body {
 }
 
 {% include header.css %}
+
+/**********************************
+ * LOAD FONTS LAST
+ *********************************/
+@font-face {
+  font-family: 'VAG Rounded Light';
+  src: url('fonts/vagrounded/VAGRoundedStd-Light-1.eot?#iefix') format('embedded-opentype'),
+       url('fonts/vagrounded/VAGRoundedStd-Light-1.woff') format('woff')
+}
+
+/* TODO: Base64 encode these, then add Open-Sans then restric to retina displays*/
