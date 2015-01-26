@@ -146,8 +146,8 @@ var amrutaY = {
 /** LIST DEFINITIONS **/
 /*****************************************************************************/
 
-var tas = [ DanGarcia, michaelB, LaurenMock, adamK, andyS, AranyU, carlosF, jaclynB, josephC,
-    jeffreyS, maxD, PeterS, rachelH, StevenT, victoriaS];
+var tas = [ DanGarcia, michaelB, LaurenMock, adamK, andyS, AranyU, carlosF, jaclynB, jeffreyS, josephC, 
+    maxD, PeterS, rachelH, StevenT, victoriaS];
 
 var readers = [ alexM, amrutaY, brandonC, claireW, erikD, jobelV, avaY ];
 
