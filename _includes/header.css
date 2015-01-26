@@ -43,27 +43,10 @@ h1 {
 .left {
   width: 250px;
 }
-.header > .center {
-  min-width: 50px;
-  width: 60%;
-  max-width: 100%;
-}
+
 .right {
   text-align: right;
   min-width: 100px;
   width: 17%;
   max-width: 250px;
-}
-
-
-.vcenter {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.col-centered {
-  display: inline-block;
-  float: none;
-  text-align: center;
-  margin-right: -4px;
 }
