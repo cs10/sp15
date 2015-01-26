@@ -28,7 +28,7 @@ No questions for this lab!
 
 * Why should we make our own blocks?
 * How do you make a block?
-* How many different types of blocks are in Snap!? What do they do?
+* How many different types of blocks are in <span class="snap">snap</span>? What do they do?
 * Show us the Draw Flower block.
 * Make the bug dance!
 * Name 3 different ways you can make a block repeat.
@@ -40,9 +40,9 @@ No questions for this lab!
 ## Due: 02/06/15 at 10:59:59 AM
 
 * Why are booleans important? What are some of the booleans we have access to in Snap! and what do they do?
-* What is the difference between if and if-else blocks?
+* What is the difference between <code>if</code>  and <code>if-else</code>  blocks?
 * What is a script variable useful for? How do we initiate a script variable?
-* Show the code for the is _ between _ and _? block.
+* Show us the code for the <code> is _ between _ and _ ?</code> block.
 * For the Leap Year example, explain which code was easiest to read and which code was easiest to debug.
 
 </div>
