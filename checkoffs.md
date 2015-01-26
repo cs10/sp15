@@ -46,7 +46,7 @@ No questions for this lab!
 * What is the difference between <code>if</code>  and <code>if-else</code>  blocks?
 * What is the difference between reporter and predicate blocks? 
 * What is a script variable useful for? How do we initiate a script variable?
-* Show the code for the <code>letter grade _</code> block.
+* Show us the code for the <code>letter grade _</code> block.
 * Correctly answer the questions on the  “Self-test: Complex Booleans” page and show us.
 * Show us the code for the <code> is _ between _ and _ ?</code> block.
 * For the Leap Year example, explain which code was easiest to read and which code was easiest to debug.
