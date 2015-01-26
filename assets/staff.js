@@ -132,7 +132,7 @@ var avaY = {
     imgSrc: 'YuanYuan.jpg' };
 
 var erikD = {
-    name: 'Reader Erik Dalquist',
+    name: 'Reader Erik Dahlquist',
     imgSrc: '../NPY3D.jpg'
 };
 
