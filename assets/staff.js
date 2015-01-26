@@ -132,13 +132,14 @@ var avaY = {
     imgSrc: 'YuanYuan.jpg' };
 
 var erikD = {
-    name: 'Reader Erik Dalquist'
+    name: 'Reader Erik Dalquist',
+    imgSrc: '../NPY3D.jpg'
 };
 
 var amrutaY = {
-    name: 'Reader Amruta Yellamanchili',
-    img: 'Sp14/AmrutaYellamanchili.jpg',
-    imgSrc: 'AmrutaYellamanchili.jpg' };
+    name: 'Reader Amruta Yelamanchili',
+    img: 'Sp14/AmrutaYelamanchili.jpg',
+    imgSrc: 'AmrutaYelamanchili.jpg' };
 
 
 /*****************************************************************************/
