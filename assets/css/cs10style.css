@@ -49,14 +49,14 @@ h2 { /* Used for Staff Headings */
 }
 /*****************************************************************************/
 
-td {
+th, td {
+  margin: auto;
+  vertical-align: middle;
   border: none;
   text-align: center;
 }
 th {
   background-color: #C0C0C0;
-  text-align: center;
-  border: none;
 }
 
 .grading > tbody > tr:nth-child(even),
