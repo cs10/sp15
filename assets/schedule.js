@@ -121,6 +121,7 @@ cs10.week5 = {
 };
 cs10.week5.lectW.classes = 'exam';
 cs10.week5.labA.classes = ''; // Remove 'noClass'
+cs10.week5.readings.title += '<br>';
 
 
 // FEB 23 - 24

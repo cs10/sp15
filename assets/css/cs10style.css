@@ -92,9 +92,9 @@ tr.cal:nth-child(odd), .light {
 }
 
 /* This is the date column */
-.cal > td:nth-child(2) {
+/*.cal > td:nth-child(2) {
     font-family: monospace;
-}
+}*/
 
 /* READING ASSIGNMENTS CLASSES */
 /* Preface all readings links with this. */

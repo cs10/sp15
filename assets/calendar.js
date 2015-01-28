@@ -50,8 +50,7 @@ function getWeekOfDate(date) {
 
 
 cs10.newLabObject = function(title, url, rq, video) {
-    // FIXME -- better handle the URL via config
-    var baseURL = 'http://beautyjoy.github.io/bjc-r/llab/html/topic.html?topic=';
+    var baseURL = '{{ site.labsurl }}/llab/html/topic.html?topic=';
     var urlEnd  = '&novideo&noreading&noassingment&course={{ site.labsCourse }}';
     var lab = { type: 'Lab' };
     lab.title = title;
@@ -292,7 +291,7 @@ cs10.renderTableRow = function(week, data) {
 
 cs10.getDateString = function(week) {
     var start = cs10.getWeekStartDate(week);
-    var end   = moment(start).add(5, 'd');
+    var end   = moment(start).add(4, 'd');
     return (start.month() + 1) + '-' + start.date() + ' to ' +
             (end.month() + 1) + '-' + end.date();
 };

@@ -16,6 +16,12 @@ permalink: labquestions/index.html
 
 <div class="page-section" markdown="1">
 <br>
+## Background
+
+**All lab check-off deadlines are at 11:59PM.**
+(However, you need to get checked off by a TA or lab assistant, so you last chance to get checked off is during lab or office hours.)
+
+To get checked off, you should prepare answers to **all** of these questions for each lab, though you will only be quizzed on a subset of the questions.
 
 ## Lab 1: Welcome to <span class="snap">snap</span>   {#lab1}
 No questions for this lab!
@@ -24,7 +30,7 @@ No questions for this lab!
 
 ## Lab 2: Build Your Own Blocks {#lab2}
 
-## Due: 02/04/15 at 10:59:59 AM
+## Due: 02/04/15
 
 * Why should we make our own blocks?
 * How do you make a block?
@@ -40,11 +46,12 @@ No questions for this lab!
 
 ## Lab 3: Conditionals
 
-## Due: 02/06/15 at 10:59:59 AM
+## Due: 02/06/15
 
-* Why are booleans important? What are some of the booleans we have access to in Snap! and what do they do?
-* What is the difference between <code>if</code>  and <code>if-else</code>  blocks?
-* What is the difference between reporter and predicate blocks? 
+* Why are booleans important?
+    * What are some of the booleans we have access to in <span class="snap">snap</span> and what do they do?
+* What is the difference between <code>if</code> and <code>if-else</code>  blocks?
+* What is the difference between reporter and predicate blocks?
 * What is a script variable useful for? How do we initiate a script variable?
 * Show us the code for the <code>letter grade _</code> block.
 * Correctly answer the questions on the  “Self-test: Complex Booleans” page and show us.
