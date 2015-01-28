@@ -45,9 +45,9 @@ cs10.week2 = {
                 'https://bcourses.berkeley.edu/courses/1301472/files/folder/Readings?preview=53889490',
                 'optional')
     ],
-    lectM: lect('Functions'),
+    lectM: lect('Functions', 'L02 - Functions'),
     labA: lab('Build Your Own Blocks', 'berkeley_bjc/intro_pair/2-loops-variables.topic'),
-    lectW: lect('Creativity and Abstraction'),
+    lectW: lect('Creativity and Abstraction', 'L03 - Creativity and Abstraction'),
     labB: lab('Conditionals', 'berkeley_bjc/intro_pair/3-conditionals.topic', true),
     disc: disc('Anatomy of a Computer and the Power of Binary'),
     hw: hw('HW1', '2/1', 'assignments/5919083', 'assign.html?https://docs.google.com/document/d/1ybuatsrUMCI-tHHRPwxUpGoZoGxk_SEiGEArocQtIlI/pub')
