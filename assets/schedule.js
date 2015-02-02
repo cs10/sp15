@@ -49,7 +49,7 @@ cs10.week2 = {
     labA: lab('Build Your Own Blocks', 'berkeley_bjc/intro_pair/2-loops-variables.topic'),
     lectW: lect('Creativity and Abstraction', 'L03 - Abstraction II'),
     labB: lab('Conditionals', 'berkeley_bjc/intro_pair/3-conditionals.topic', true),
-    disc: disc('Anatomy of a Computer and the Power of Binary'),
+    disc: disc('Anatomy of a Computer and the Power of Binary', true),
     hw: hw('HW1', '2/1', 'assignments/5919083', 'assign.html?https://docs.google.com/document/d/1ybuatsrUMCI-tHHRPwxUpGoZoGxk_SEiGEArocQtIlI/pub')
 };
 
