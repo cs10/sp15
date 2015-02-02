@@ -74,7 +74,7 @@ cs10.week3 = {
                 'optional')
     ],
     lectM: lect('Creativity', 'L04 - Creativity'),
-    labA: lab('Functions', 'berkeley_bjc/intro_new/4-abstraction-testing.topic', true),
+    labA: lab('Functions', 'berkeley_bjc/intro_pair/4-abstraction-testing.topic', true),
     lectW: lect('Programming Paradigms'),
     labB: lab('Lists I', 'berkeley_bjc/lists/lists-I.topic'),
     disc: disc('All about lists'),
