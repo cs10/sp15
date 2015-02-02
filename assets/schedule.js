@@ -73,7 +73,7 @@ cs10.week3 = {
                 'http://www.msnbc.msn.com/id/40077373/ns/technology_and_science-games/',
                 'optional')
     ],
-    lectM: lect('3D Graphics'),
+    lectM: lect('Creativity', ''),
     labA: lab('Functions', 'berkeley_bjc/intro_new/4-abstraction-testing.topic', true),
     lectW: lect('Programming Paradigms'),
     labB: lab('Lists I', 'berkeley_bjc/lists/lists-I.topic'),
