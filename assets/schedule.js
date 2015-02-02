@@ -47,7 +47,7 @@ cs10.week2 = {
     ],
     lectM: lect('Functions', 'L02 - Functions'),
     labA: lab('Build Your Own Blocks', 'berkeley_bjc/intro_pair/2-loops-variables.topic'),
-    lectW: lect('Creativity and Abstraction', 'L03 - Creativity and Abstraction'),
+    lectW: lect('Creativity and Abstraction', 'L03 - Abstraction II'),
     labB: lab('Conditionals', 'berkeley_bjc/intro_pair/3-conditionals.topic', true),
     disc: disc('Anatomy of a Computer and the Power of Binary'),
     hw: hw('HW1', '2/1', 'assignments/5919083', 'assign.html?https://docs.google.com/document/d/1ybuatsrUMCI-tHHRPwxUpGoZoGxk_SEiGEArocQtIlI/pub')
@@ -73,7 +73,7 @@ cs10.week3 = {
                 'http://www.msnbc.msn.com/id/40077373/ns/technology_and_science-games/',
                 'optional')
     ],
-    lectM: lect('Creativity', ''),
+    lectM: lect('Creativity', 'L04 - Creativity'),
     labA: lab('Functions', 'berkeley_bjc/intro_new/4-abstraction-testing.topic', true),
     lectW: lect('Programming Paradigms'),
     labB: lab('Lists I', 'berkeley_bjc/lists/lists-I.topic'),
