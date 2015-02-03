@@ -17,7 +17,7 @@ cs10.gradingScheme = {
     'C' : 370,
     'C-': 350,
     'D' : 300,
-    'F' : '<= 299'
+    'F' : 299
 };
 
 
@@ -160,8 +160,6 @@ cs10.newHomeworkObject = function(title, due, submission, spec, notes) {
 
     obj.title = title;
 
-    // TODO:
-    // Consider setting due date from bCourses data?
     if (due) {
         obj.classes = 'due';
         obj.due = due;
@@ -398,15 +396,15 @@ cs10.renderTableHW = function(hw) {
         result.append(hw.title);
         result.append('<br>');
         result.attr({ 'class' : hw.classes });
-        if (hw.url) {
-            result.append($('<a>').html('Submit').attr(
-                {'href' : hw.url, 'target' : '_blank' }));
+        if (hw.spec) {
+            result.append($('<a>').html('Spec').attr({ 'href' : hw.spec }));
         }
         if (hw.url && hw.spec) {
             result.append(' | ');
         }
-        if (hw.spec) {
-            result.append($('<a>').html('Spec').attr({'href' : hw.spec}));
+        if (hw.url) {
+            result.append($('<a>').html('Submit').attr({
+                'href' : hw.url, 'target' : '_blank' }));
         }
         if (hw.due) {
             result.append('<br>');

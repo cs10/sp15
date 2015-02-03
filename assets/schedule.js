@@ -78,7 +78,7 @@ cs10.week3 = {
     lectW: lect('Programming Paradigms'),
     labB: lab('Lists I', 'berkeley_bjc/lists/lists-I.topic'),
     disc: disc('All about lists'),
-    hw: hw('Start on HW2')
+    hw: hw('Start on HW2: Snowman')
 };
 
 // FEB 9 - 13
@@ -103,7 +103,7 @@ cs10.week4 = {
     lectW: lect('Algorithmic Complexity'),
     labB: lab('Algorithmic Complexity', "berkeley_bjc/areas/algorithm-complexity.topic"),
     disc: disc('Algorithmic Complexity and Quest Review'),
-    hw: hw('HW2', '2/13', 'assignments/5919084', 'assign.html?https://docs.google.com/document/d/18RPHqtdohWA6rAEYGkLcthGVS32RK7GB7zL3OP_y--Q/pub')
+    hw: hw('HW2: Snowman', '2/13', 'assignments/5919084', 'assign.html?//docs.google.com/document/d/1iJDOxWMBnmE5lOzqmUi_-F-HoSyGuQrzn-COiGQd29Y/pub')
 };
 
 // FEB 16 - 20
@@ -117,7 +117,7 @@ cs10.week5 = {
     lectW: lect('Quest In Class'),
     labB: lab('Finch Robots', 'berkeley_bjc/robots/robots.topic'),
     disc: disc('Quest Debrief and HW3 Help'),
-    hw: 'Start HW 3'
+    hw: 'Start HW3: Abominable Snowman'
 };
 cs10.week5.lectW.classes = 'exam';
 cs10.week5.labA.classes = ''; // Remove 'noClass'
