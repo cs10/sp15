@@ -58,4 +58,20 @@ No questions for this lab!
 * Show us the code for the <code> is _ between _ and _ ?</code> block.
 * For the Leap Year example, explain which code was easiest to read and which code was easiest to debug.
 
+---
+
+## Lab 4: Functions
+
+## Due: 02/11/15
+
+* What was Mark’s problem with his <code> max </code> block?
+* Name a few of the input types. Why is it important that we specify input types?
+* Please show me your “sum of 2 smallest numbers” block or the “are any equal” block, and explain how you composed functions to write these blocks.
+* What is a script variable useful for? How do we initiate a script variable?
+* Please show some of your solutions to the buggy “sum the numbers between block.” Do they work now? What did you change?
+* Please show your simplified tic-tac-toe board. Why did you organize it the way you did?
+* Can i see your <code> valid-Date </code> block? How is what you did here similar to simplifying the tic-tac-toe board?
+* Why is the check block useful? And how does it work? Demonstrate please.
+* How are global variables different from script variables?
+
 </div>
