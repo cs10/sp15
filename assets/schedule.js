@@ -111,12 +111,12 @@ cs10.week5 = {
     exam: {
 
     },
-    readings: 'No Readings',
+    readings: 'No Readings<br><br><strong>Quest Review Session</strong><br>Monday, 2/16 1-3pm<br>306 Soda',
     lectM: lect('No Lecture (Holiday)'),
     labA: lab('No Labs Monday<br>Quest Help and Review'),
     lectW: lect('Quest In Class'),
     labB: lab('Finch Robots', 'berkeley_bjc/robots/robots.topic'),
-    disc: disc('Quest Debrief and HW3 Help'),
+    disc: disc('Quest Debrief and HW3 Intro'),
     hw: 'Start HW3: Abominable Snowman'
 };
 cs10.week5.lectW.classes = 'exam';
@@ -146,7 +146,7 @@ cs10.week6 = {
     labB: lab('Concurrency', 'berkeley_bjc/areas/concurrency.topic'),
     disc: disc('<span style="font-size:150%">R<sup>e<sup>c<sup>u<sup>r<sup>s<sup>i<sup>o<sup>n</sup></sup></sup></sup></sup></sup></sup></sup></span>'),
     // disc: disc('<span style="font-size:150%">Recursion</span>'),
-    hw: hw('HW3')
+    hw: hw('HW3', '2/27', 'assignments/5919085', 'assign.html?//docs.google.com/document/d/1JBK9QEub82fxr0fkbSQJY68kKS0QBSzqe4ufafZ0mqo/pub')
 };
 
 // MARCH 2 - 6 (Lauren, Dan, Michael out -- mostly)
@@ -176,7 +176,7 @@ cs10.week7 = {
     lectW: lect('Artificial Intelligence', '', '', 'A Guest'),
     labB: lab('Project Work'),
     disc: disc('Concurrency and Midterm Intro'),
-    hw: hw('Start Midterm Project')
+    hw: 'Start Midterm Project'
 };
 
 // MARCH 9 - 13 (Lauren, Dan, Michael partially out)
@@ -196,7 +196,7 @@ cs10.week8 = {
     lectW: lect('Social Implications II', '', '', 'Gerald Friedland'),
     labB: lab('Project Work'),
     disc: disc('Midterm Review'),
-    hw: 'Work on midterm Project'
+    hw: 'Midterm Project'
 };
 
 // MIDTERM WEEK
@@ -205,7 +205,7 @@ cs10.week9 = {
     exam: {
 
     },
-    readings: 'No Readings',
+    readings: 'No Readings<br><br><strong>Midterm Review Session</strong><br>Sun 3/15 2-5pm<br>2050 VLSB',
     lectM: lect('Social Implications III', '', '', 'Brian Harvey'),
     labA: lab('Online <span class="snap">snap</span> Midterm'),
     lectW: lect('The Internet'),
