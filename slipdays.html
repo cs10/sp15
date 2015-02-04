@@ -1,45 +1,10 @@
 ---
 layout: default
-title: Slip Day Checker
+title: Check Your Slip Days!
 permalink: slipdays/index.html
 ---
 
-<div class="header center coontainer-fluid">
-    <div class="row row-centered" style="width:100%">
-        <div class="col-md-3">
-            <div class="vcenter">
-                <img width="250" border="0" align="bottom" height="244" src="{{ site.baseurl }}/resources/images/snap_nav.gif" class="navbar" alt="Your Navigation Bar didn't load." title="Click me to navigate." usemap="#gobo">
-                <div style="position:absolute;top:60px;left:220px;z-index:40;">
-                    <img src="{{ site.baseurl }}/resources/images/blank.gif" name="speech" />
-                </div>
-                <map name="gobo">
-                    <area shape="rect" coords="0,70,110,97" alt="Overview" href="{{ site.baseurl }}/#overview" onmouseover="displaySpeech('speech', '{{ site.baseurl }}/resources/images/overview_jump.gif')" onmouseout="displaySpeech('speech', '{{ site.baseurl }}/resources/images/blank.gif')">
-                    <area shape="rect" coords="0,97,76,124" alt="News" href="{{ site.baseurl }}/#news" onmouseover="displaySpeech('speech', '{{ site.baseurl }}/resources/images/news_jump.gif')" onmouseout="displaySpeech('speech', '{{ site.baseurl }}/resources/images/blank.gif')">
-                    <area shape="rect" coords="0,124,105,151" alt="Calendar" href="{{ site.baseurl }}/#calendar" onmouseover="displaySpeech('speech', '{{ site.baseurl }}/resources/images/calendar_jump.gif')" onmouseout="displaySpeech('speech', '{{ site.baseurl }}/resources/images/blank.gif')">
-                    <area shape="rect" coords="0,151,72,178" alt="Staff" href="{{ site.baseurl }}/#staff" onmouseover="displaySpeech('speech', '{{ site.baseurl }}/resources/images/staff_jump.gif')" onmouseout="displaySpeech('speech', '{{ site.baseurl }}/resources/images/blank.gif')">
-                    <area shape="rect" coords="0,178,97,205" alt="Grades" href="{{ site.baseurl }}/#grading" onmouseover="displaySpeech('speech', '{{ site.baseurl }}/resources/images/grading_jump.gif')" onmouseout="displaySpeech('speech', '{{ site.baseurl }}/resources/images/blank.gif')">
-                    <area shape="rect" coords="0,205,117,232" alt="{{ site.baseurl }}/resources" href="{{ site.baseurl }}/#resources" onmouseover="displaySpeech('speech', '{{ site.baseurl }}/resources/images/resources_jump.gif')" onmouseout="displaySpeech('speech', '{{ site.baseurl }}/resources/images/blank.gif')">
-                </map>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="col-centered vcenter">
-                <br><br><br>
-                <h2 class="logo">CS10</h2>
-                <h2 class="logo">The Beauty &amp; Joy of Computing</h2>
-                <h2 class="logo">Spring 2015</h2>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="vcenter right">
-                <br><br>
-                <a href="http://bjc.berkeley.edu/">
-                    <img border="0" src="{{ site.baseurl }}/resources/images/bjc186.png" alt="BJC logo">
-                </a>
-            </div>
-        </div>
-    </div>
-  </div>
+{% include nav.html %}
 
 {% include quicklinks.html %}
 
@@ -68,7 +33,6 @@ permalink: slipdays/index.html
   <br />
   <br />
   <div id="msg" class="alert hidden" role="alert">
-    You are at your slip day limit!
   </div>
   <br />
   <div id="panel" class="panel panel-primary">
@@ -77,6 +41,14 @@ permalink: slipdays/index.html
     </div>
     <div class="table-responsive">
       <table border="0" id="results" class="table table-striped table-responsive">
+        <thead>
+          <tr>
+            <th width="60%">Assignment Name</th>
+            <th width="10%">Slip Days Used</th>
+            <th width="10%">View Assignment</th>
+            <th width="20%">Verified By Reader</th>
+          </tr> 
+        </thead>
         <tbody id="table-contents">
         </tbody>
       </table>
@@ -85,7 +57,54 @@ permalink: slipdays/index.html
 </div>
 
 
+<!--
+This makes a call to the slip day tracker
+The API format is entirely custom but pretty simple. View it here:
+https://github.com/cs10/Alonzo/blob/master/scripts/cs10-slipdays.js#L128-L175
+ -->
 <script type="text/javascript">
+var buildTable = function(result, xhr, other) {
+var table = $('#table-contents');
+var msg   = $('#msg');
+table.html(''); // clear the table
+msg.removeClass('hidden');
+
+if (result.errors) {
+  msg.addClass('alert-danger');
+  result.errors.forEach(function(error, idx) {
+    if (!idx) {
+      msg.append($('<strong>').html(error));
+      msg.append($('<ul>'));
+      msg = $('#msg>ul');
+    } else {
+      msg.append($('<li>').html(error));
+    }
+  });
+  return;
+}
+
+// Add any warning messages
+var days = result.totalDays;
+if (days < 3) {
+  $('#panel').addClass('panel-success');
+  msg.addClass('alert-success');
+  msg.html('Good work! You\'ve got some breathing room!');
+} else if (days === 3) {
+  $('#panel').addClass('panel-warning');
+  msg.addClass('alert-warning');
+  msg.html('You\'re at the limit of slip days! Be careful, or you\'ll lose points.');
+} else {
+  $('#panel').addClass('panel-danger');
+  msg.addClass('alert-danger');
+  msg.html('Uh-oh! We\'ll need to dock some points.');
+}
+
+
+result.assignments.forEach(function(item) {
+    table.append($('<tr>').html($('<td>').html(item)));
+  });
+};
+
 $(document).ready(function() {
   $('#sid-form').submit(function(evt) {
     var dom = 'alonzo.herokuapp.com';
@@ -95,37 +114,12 @@ $(document).ready(function() {
     }
 
     var sid = $('#sidInput').val();
-    var url = 'http://' + dom + '/slipdays/' + sid + '/json';
+    var url = 'http://' + dom + '/slipdays/' + sid;
     $.ajax({
       url: url,
       cache: false,
       crossDomain: true,
-      success: function(result) {
-        var table = $('#table-contents');
-        table.html(''); // clear the table
-        if (result.constructor === Array) {
-          result.forEach(function(item) {
-            table.append($('<tr>').html($('<td>').html(item)));
-            if (item.indexOf('Total') === 0) {
-              var days = parseInt(item.split(' ')[1]);
-              $('#msg').removeClass('hidden');
-              if (days < 3) {
-                $('#panel').addClass('panel-success');
-                $('#msg').addClass('alert-success');
-                $('#msg').html('Good work! You\'ve got some breathing room!');
-              } else if (days === 3) {
-                $('#panel').addClass('panel-warning');
-                $('#msg').addClass('alert-warning');
-                $('#msg').html('You\'re at the limit of slip days! Be careful, or you\'ll lose points.');
-              } else {
-                $('#panel').addClass('panel-danger');
-                $('#msg').addClass('alert-danger');
-                $('#msg').html('Uh-oh! We\'ll need to dock some points.');
-              }
-            }
-          });
-        }
-      },
+      success: buildTable,
       error: function(a, b, c) {
         var table = $('#table-contents');
         table.append($('<tr>').html($('<td>').html('Whoops, an error occured! Sorry!')));
