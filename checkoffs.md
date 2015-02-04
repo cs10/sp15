@@ -74,4 +74,18 @@ No questions for this lab!
 * Why is the check block useful? And how does it work? Demonstrate please.
 * How are global variables different from script variables?
 
+---
+
+## Lab 5: Lists
+
+## Due: 02/13/15
+
+* What are lists? How are they represented in Snap? What are some operations you can perform on lists?
+* How are lists different from variables? How are they similar? How do you create a temporary list for use in a block definition?
+* Which blocks allow you to use a function on an entire list “all at once”? What are the different effects that they have? What are their domains and ranges?
+* Demonstrate your <code>Acronym</code> (Initialism) block.
+* Demonstrate your <code>Exaggerate</code> block.
+* What is the difference between the <code>for</code> and <code>for each</code> blocks?
+* Lets look at <code>swap</code>. Why do we need a temp variable?
+* Why might global variable manipulation be useful in some situations? what drawbacks are there?
 </div>
