@@ -75,7 +75,7 @@ cs10.week3 = {
     ],
     lectM: lect('Creativity', 'L04 - Creativity'),
     labA: lab('Functions', 'berkeley_bjc/intro_pair/4-abstraction-testing.topic', true),
-    lectW: lect('Programming Paradigms'),
+    lectW: lect('Programming Paradigms', 'L05 - Programming Paradigms'),
     labB: lab('Lists I', 'berkeley_bjc/lists/lists-I.topic'),
     disc: disc('All about lists'),
     hw: hw('Start on HW2: Snowman')
