@@ -140,10 +140,10 @@ cs10.week6 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter3.pdf',
                 'optional')
     ],
-    lectM: lect('Recursion I'),
-    labA: lab('Trees and Fractals using Recursion', 'berkeley_bjc/recur/recursion-trees-fractals.topic', true),
-    lectW: lect('Concurrency'),
-    labB: lab('Concurrency', 'berkeley_bjc/areas/concurrency.topic'),
+    lectM: lect('Concurrency'),
+    labA: lab('Concurrency', 'berkeley_bjc/areas/concurrency.topic'),
+    lectW: lect('Recursion I'),
+    labB: lab('Trees and Fractals using Recursion', 'berkeley_bjc/recur/recursion-trees-fractals.topic', true),
     disc: disc('<span style="font-size:150%">R<sup>e<sup>c<sup>u<sup>r<sup>s<sup>i<sup>o<sup>n</sup></sup></sup></sup></sup></sup></sup></sup></span>'),
     // disc: disc('<span style="font-size:150%">Recursion</span>'),
     hw: hw('HW3', '2/27', 'assignments/5919085', 'assign.html?//docs.google.com/document/d/1JBK9QEub82fxr0fkbSQJY68kKS0QBSzqe4ufafZ0mqo/pub')
