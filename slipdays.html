@@ -49,6 +49,13 @@ permalink: slipdays/index.html
             <th width="20%">Verified By Reader</th>
           </tr> 
         </thead>
+        <tfoot>
+          <tr>
+            <td colspan="4">
+              Verified means a reader has checked the slip days and you can count on that number. Otherwise, the counter could change.
+            </td>
+          </tr>
+        </tfoot>
         <tbody id="table-contents">
         </tbody>
       </table>
@@ -64,79 +71,95 @@ https://github.com/cs10/Alonzo/blob/master/scripts/cs10-slipdays.js#L128-L175
  -->
 <script type="text/javascript">
 var buildTable = function(result, xhr, other) {
-var table = $('#table-contents');
-var msg   = $('#msg');
-table.html(''); // clear the table
-msg.html('');
-msg.removeClass('hidden');
+    var table = $('#table-contents');
+    var msg   = $('#msg');
+    table.html(''); // clear the table
+    msg.html('');
+    msg.removeClass('hidden');
+    // TODO: fix this, also for the panel
+    msg.removeClass('alert-danger');
+    msg.removeClass('alert-success');
+    msg.removeClass('alert-warning');
 
-if (result.errors) {
-  msg.addClass('alert-danger');
-  result.errors.forEach(function(error, idx) {
-    if (!idx) {
-      msg.append($('<strong>').html(error));
-      msg.append($('<ul>'));
-      msg = $('#msg>ul');
-    } else {
-      msg.append($('<li>').html(error));
+    if (result.errors) {
+      msg.addClass('alert-danger');
+      result.errors.forEach(function(error, idx) {
+        if (!idx) {
+          msg.append($('<strong>').html(error));
+          msg.append($('<ul>'));
+          msg = $('#msg>ul');
+        } else {
+          msg.append($('<li>').html(error));
+        }
+      });
+      return;
     }
-  });
-  return;
-}
 
-// Add any warning messages
-var days = result.daysRemaining;
-if (days > 0) {
-  $('#panel').addClass('panel-success');
-  msg.addClass('alert-success');
-  msg.html('Good work! You\'ve got some breathing room!');
-} else if (days === 0) {
-  $('#panel').addClass('panel-warning');
-  msg.addClass('alert-warning');
-  msg.html('You\'re at the limit of slip days! Be careful, or you\'ll lose points.');
-} else {
-  $('#panel').addClass('panel-danger');
-  msg.addClass('alert-danger');
-  msg.html('Uh-oh! We\'ll need to dock some points.');
-}
-msg.append('<br>');
-// TODO: improve this message!
-msg.append('You have used ' + result.totalDays + ' slip days and have ' + days +
-          ' slip days remaining.');
+    // Add any warning messages
+    var days = result.daysRemaining;
+    var notice = '', bsClass = '';
+    if (days > 0) {
+        bsClass = 'success';
+        notice = 'Good work! You\'ve got some breathing room!';
+    } else if (days === 0) {
+        bsClass = 'warning';
+        notice = 'You\'re at the limit of slip days! Be careful, or you\'ll lose points.';
+    } else {
+        bsClass = 'danger';
+        notice = 'Uh-oh! We\'ll need to dock some points.';
+    }
+    $('#panel').addClass('panel-' + bsClass);
+    msg.addClass('alert-' + bsClass);
+    msg.append($('<strong>').html(notice));
+    msg.append('<br>');
+    // TODO: improve this message!
+    msg.append('You have used ' + result.totalDays + ' slip days and have ' +
+              days + ' slip days remaining.');
  
-
-result.assignments.forEach(function(item) {
-    var row    = $('<tr>');
-    var cells  = '<td>' + item.title + '</td>';
-        cells += '<td>' + item.slipDays + '</td>';
-        cells += '<td>' + item.url + '</td>';
-        cells += '<td>' + item.verified + '</td>';
-    row.append(cells);
-    table.append(row);
-  });
+    result.assignments.forEach(function(item) {
+        var row  = $('<tr>');
+        var link = $('<a>').attr({ 
+          'href':item.url, 'target':'_blank' }).html('View Submission');
+        link = link[0].outerHTML;
+        // TODO: Add a Checkmark or an X for the verified column
+        var cells  = '<td>' + item.title + '</td>';
+            cells += '<td>' + item.slipDays + '</td>';
+            cells += '<td>' + link + '</td>';
+            cells += '<td>' + item.verified + '</td>';
+        row.append(cells);
+        table.append(row);
+      });
 };
 
-$(document).ready(function() {
-  $('#sid-form').submit(function(evt) {
-    var dom = 'alonzo.herokuapp.com';
-    // Local hosts use a local Alonzo URL
-    if (location.port === '4000') {
-      dom = 'localhost:8080';
+var makeSlipDaysCall = function(sid) {
+  var dom = 'alonzo.herokuapp.com';
+  // Local hosts use a local Alonzo URL
+  if (location.port === '4000') {
+    dom = 'localhost:8080';
+  }
+
+  var url = 'http://' + dom + '/slipdays/' + sid;
+  $.ajax({
+    url: url,
+    cache: false,
+    crossDomain: true,
+    success: buildTable,
+    error: function(a, b, c) {
+      var table = $('#table-contents');
+      table.append($('<tr>').html($('<td>').html('Whoops, an error occured! Sorry!')));
     }
+  });
+}
 
-    var sid = $('#sidInput').val();
-    var url = 'http://' + dom + '/slipdays/' + sid;
-    $.ajax({
-      url: url,
-      cache: false,
-      crossDomain: true,
-      success: buildTable,
-      error: function(a, b, c) {
-        var table = $('#table-contents');
-        table.append($('<tr>').html($('<td>').html('Whoops, an error occured! Sorry!')));
-      }
-    });
-
+$(document).ready(function() {
+  var search = location.search.split('?');
+  
+  if (search.length > 1 && search[1]) {
+    makeSlipDaysCall(search[1]);
+  }
+  
+  $('#sid-form').submit(function(evt) {
+    makeSlipDaysCall($('#sidInput').val());
     evt.preventDefault();
   });
 });
