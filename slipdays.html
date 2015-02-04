@@ -67,6 +67,7 @@ var buildTable = function(result, xhr, other) {
 var table = $('#table-contents');
 var msg   = $('#msg');
 table.html(''); // clear the table
+msg.html('');
 msg.removeClass('hidden');
 
 if (result.errors) {
@@ -84,12 +85,12 @@ if (result.errors) {
 }
 
 // Add any warning messages
-var days = result.totalDays;
-if (days < 3) {
+var days = result.daysRemaining;
+if (days > 0) {
   $('#panel').addClass('panel-success');
   msg.addClass('alert-success');
   msg.html('Good work! You\'ve got some breathing room!');
-} else if (days === 3) {
+} else if (days === 0) {
   $('#panel').addClass('panel-warning');
   msg.addClass('alert-warning');
   msg.html('You\'re at the limit of slip days! Be careful, or you\'ll lose points.');
@@ -98,10 +99,20 @@ if (days < 3) {
   msg.addClass('alert-danger');
   msg.html('Uh-oh! We\'ll need to dock some points.');
 }
-
+msg.append('<br>');
+// TODO: improve this message!
+msg.append('You have used ' + result.totalDays + ' slip days and have ' + days +
+          ' slip days remaining.');
+ 
 
 result.assignments.forEach(function(item) {
-    table.append($('<tr>').html($('<td>').html(item)));
+    var row    = $('<tr>');
+    var cells  = '<td>' + item.title + '</td>';
+        cells += '<td>' + item.slipDays + '</td>';
+        cells += '<td>' + item.url + '</td>';
+        cells += '<td>' + item.verified + '</td>';
+    row.append(cells);
+    table.append(row);
   });
 };
 
