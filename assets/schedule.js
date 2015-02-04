@@ -141,9 +141,9 @@ cs10.week6 = {
                 'optional')
     ],
     lectM: lect('Concurrency'),
-    labA: lab('Concurrency', 'berkeley_bjc/areas/concurrency.topic'),
+    labA: lab('Concurrency', 'berkeley_bjc/areas/concurrency.topic', true),
     lectW: lect('Recursion I'),
-    labB: lab('Trees and Fractals using Recursion', 'berkeley_bjc/recur/recursion-trees-fractals.topic', true),
+    labB: lab('Trees and Fractals using Recursion', 'berkeley_bjc/recur/recursion-trees-fractals.topic'),
     disc: disc('<span style="font-size:150%">R<sup>e<sup>c<sup>u<sup>r<sup>s<sup>i<sup>o<sup>n</sup></sup></sup></sup></sup></sup></sup></sup></span>'),
     // disc: disc('<span style="font-size:150%">Recursion</span>'),
     hw: hw('HW3', '2/27', 'assignments/5919085', 'assign.html?//docs.google.com/document/d/1JBK9QEub82fxr0fkbSQJY68kKS0QBSzqe4ufafZ0mqo/pub')
