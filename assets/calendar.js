@@ -377,10 +377,9 @@ cs10.renderTableDiscussion = function(disc) {
         result.append('<br>');
         result.attr({ 'class' : disc.classes });
         if (disc.url) {
+            var url = $('<a>').html('Resources').attr({'href' : disc.url});
             result.append($('<br>'));
-            result.append($('<strong>').html(
-                $('<a>').html('(Resources)').attr({'href' : disc.url})
-            ));
+            result.append($('<strong>').html('(' + url[0].outerHTML + ')'));
         }
     }
     return result;
