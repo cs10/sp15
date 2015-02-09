@@ -96,8 +96,8 @@ No questions for this lab!
 ## Due: 02/18/15
 
 * What is an algorithm? Can you give an example of an algorithm that you use in your daily life? What about from an earlier lab?
-* Show me your <code>find number in an unsorted list block</code>. Describe the algorithm that you used to solve this problem.
-* Show me your <code>find number in a sorted list block</code>. What algorithm are you using in this block and how does it work?
+* Show me your <code>find number in an unsorted list</code> block. Describe the algorithm that you used to solve this problem.
+* Show me your <code>find number in a sorted list</code> block. What algorithm are you using in this block and how does it work?
 * Why was the binary search technique so much faster than trying to find a number in an unsorted list? Is it actually faster when considering the time needed to sort the list initially?
 * If the number of inputs, N, doubles, how would that change the Worst Case Running Time for <code>find number in unsorted list</code>?
 * If the number of inputs, N, doubles, how would that change the Worst Case for <code>find number in sorted list</code>?
