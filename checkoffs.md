@@ -96,13 +96,13 @@ No questions for this lab!
 ## Due: 02/18/15
 
 * What is an algorithm? Can you give an example of an algorithm that you use in your daily life? What about from an earlier lab?
-* Show me your “find number in an unsorted list block.”  Describe the algorithm that you used to solve this problem.
-* Show me your “find number in a sorted list block.”  What algorithm are you using in this block and how does it work?
-* Why was the binary search technique so much faster than trying to find a number in an unsorted list?  Is it actually faster when considering the time needed to sort the list initially?
-* If the number of inputs, N, doubles, how would that change the Worst Case Running Time for “find number in unsorted list”.
-* If the number of inputs, N, doubles, how would that change the Worst Case for “find number in sorted list”
+* Show me your <code>find number in an unsorted list block</code>. Describe the algorithm that you used to solve this problem.
+* Show me your <code>find number in a sorted list block</code>. What algorithm are you using in this block and how does it work?
+* Why was the binary search technique so much faster than trying to find a number in an unsorted list? Is it actually faster when considering the time needed to sort the list initially?
+* If the number of inputs, N, doubles, how would that change the Worst Case Running Time for <code>find number in unsorted list</code>?
+* If the number of inputs, N, doubles, how would that change the Worst Case for <code>find number in sorted list</code>?
 * How can we objectively measure which algorithm, sorted or unsorted, is faster. What kind of extra work is required for the sorted algorithm? Are there cases where unsorted might be faster?
-* What is memoization? If you were able to implement it in the “find number in sorted list (memoized)” block, what makes memoization faster?
+* What is memoization? If you were able to implement it in the <code>find number in sorted list (memoized)</code> block, what makes memoization faster?
 
 ---
 
@@ -110,9 +110,9 @@ No questions for this lab!
 
 ## Due: 02/20/15
 
-* In your experimental “Number-guessing” game, which algorithm did you find to be faster?  Why? What type of search is “Higher/Lower” representing?
+* In your experimental <code>Number-guessing</code> game, which algorithm did you find to be faster? Why? What type of search is <code>Higher/Lower</code> representing?
 * What happened with the time it took for your computer to counter up the numbers between 1 and x when you started doubling the numbers? Tripling the numbers? What do you think would happen with the time I multiplied your top number by 8?
-* Please show me your Non-Gauss and Gauss “Add all numbers In”.  Which was faster? Why? 
-* Please show me your “Are the numbers of (LIST) distinct?” What is the difference between “Worst-Case” and “Best Case” in Terms of Runtime?
-* Of all the runtimes you have discovered thus far, can you rank them from “fastest” to “slowest”?  Why is runtime important for the programs that we  create?`
+* Please show me your Non-Gauss and Gauss <code>Add all numbers in</code>.  Which was faster? Why? 
+* Please show me your <code>Are the numbers of (LIST) distinct?</code> block. What is the difference between "Worst-Case" and "Best Case" in terms of Runtime?
+* Of all the runtimes you have discovered thus far, can you rank them from “fastest” to “slowest”? Why is runtime important for the programs that we create?`
 </div>
