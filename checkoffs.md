@@ -88,4 +88,31 @@ No questions for this lab!
 * What is the difference between the <code>for</code> and <code>for each</code> blocks?
 * Lets look at <code>swap</code>. Why do we need a temp variable?
 * Why might global variable manipulation be useful in some situations? what drawbacks are there?
+
+---
+
+## Lab 6: Algorithms
+
+## Due: 02/18/15
+
+* What is an algorithm? Can you give an example of an algorithm that you use in your daily life? What about from an earlier lab?
+* Show me your “find number in an unsorted list block.”  Describe the algorithm that you used to solve this problem.
+* Show me your “find number in a sorted list block.”  What algorithm are you using in this block and how does it work?
+* Why was the binary search technique so much faster than trying to find a number in an unsorted list?  Is it actually faster when considering the time needed to sort the list initially?
+* If the number of inputs, N, doubles, how would that change the Worst Case Running Time for “find number in unsorted list”.
+* If the number of inputs, N, doubles, how would that change the Worst Case for “find number in sorted list”
+* How can we objectively measure which algorithm, sorted or unsorted, is faster. What kind of extra work is required for the sorted algorithm? Are there cases where unsorted might be faster?
+* What is memoization? If you were able to implement it in the “find number in sorted list (memoized)” block, what makes memoization faster?
+
+---
+
+## Lab 7: Algorithmic Complexity
+
+## Due: 02/20/15
+
+* In your experimental “Number-guessing” game, which algorithm did you find to be faster?  Why? What type of search is “Higher/Lower” representing?
+* What happened with the time it took for your computer to counter up the numbers between 1 and x when you started doubling the numbers? Tripling the numbers? What do you think would happen with the time I multiplied your top number by 8?
+* Please show me your Non-Gauss and Gauss “Add all numbers In”.  Which was faster? Why? 
+* Please show me your “Are the numbers of (LIST) distinct?” What is the difference between “Worst-Case” and “Best Case” in Terms of Runtime?
+* Of all the runtimes you have discovered thus far, can you rank them from “fastest” to “slowest”?  Why is runtime important for the programs that we  create?`
 </div>
