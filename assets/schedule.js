@@ -214,7 +214,7 @@ cs10.week9 = {
     hw: hw('Midterm Project')
 };
 cs10.week9.labA.classes = 'exam';
-cs10.week9.lectW.title += '<br><div class="exam inner"><a href="exams/midterm.html">Midterm Exam</a><br><br><strong>3/18 8-10pm; Location: TBD</strong></div>';
+cs10.week9.lectW.title += '<br><div class="exam inner"><a href="exams/midterm.html">Midterm Exam</a><br><br><strong>Thursday 3/19 8-10pm; Location: TBD</strong></div>';
 
 
 // Spring Break
