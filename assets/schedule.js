@@ -1,7 +1,7 @@
 /* Shortcuts for creating schedule objects
  * Paramters:
  * Reading: (title, link, 'type [required is default]')
- * Lecture: (title, '[video URL]', '[Guest Name]')
+ * Lecture: (title, '[slides folder]', '[video URL]', '[Guest Name]')
  * Lab:     (title, 'topic file path', [boolean -- Reading Quiz?])
  * Disc:    (title, [boolean -- Resources available?])
  * HW:      (title, TBD...)
@@ -97,10 +97,10 @@ cs10.week4 = {
                 'http://www.wired.com/magazine/2010/05/process_pixar/',
                 'optional')
     ],
-    lectM: lect('Algorithms', '',
+    lectM: lect('Algorithms', 'L06 - Algorithms',
                 'https://coursesharing.org/courses/6/lectures/14'),
     labA: lab('Algorithms', 'berkeley_bjc/areas/algorithms.topic', true),
-    lectW: lect('Algorithmic Complexity'),
+    lectW: lect('Algorithmic Complexity', 'L07 - Algorithms II'),
     labB: lab('Algorithmic Complexity', "berkeley_bjc/areas/algorithm-complexity.topic"),
     disc: disc('Algorithmic Complexity and Quest Review'),
     hw: hw('HW2: Snowman', '2/13', 'assignments/5919084', 'assign.html?//docs.google.com/document/d/1iJDOxWMBnmE5lOzqmUi_-F-HoSyGuQrzn-COiGQd29Y/pub')
