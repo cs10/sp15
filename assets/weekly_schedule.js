@@ -85,7 +85,8 @@ function calendarStartDate() {
 
 $(document).ready(function() {
     // Show weekends when we are close to at least one review session.
-    var wkends = inRange(quest) || inRange(midterm) || inRange(final);
+    // exclude Quest from calendar during spring (review sesh is monday)
+    var wkends = inRange(midterm) || inRange(final);
 
     $('#oh-cal').fullCalendar({
       allDaySlot: false,
