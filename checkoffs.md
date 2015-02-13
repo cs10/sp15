@@ -122,6 +122,6 @@ No questions for this lab!
 
 ## Due: **02/20/15** (not the usual one-week delay)
 
-*Due to the hardware requirements of this lab, it will be worth extra credit and can only be completed during a lab section between 02/18 and 02/20. Make sure to attend one of those labs and take part in the section competition in order to receive extra credit.
+* Due to the hardware requirements of this lab, it will be worth extra credit and can only be completed during a lab section between 02/18 and 02/20. Make sure to attend one of those labs and take part in the section competition in order to receive extra credit.
 
 </div>
