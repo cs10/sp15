@@ -24,6 +24,8 @@ permalink: labquestions/index.html
 
 To get checked off, you should prepare answers to **all** of these questions for each lab, though you will only be quizzed on a subset of the questions.
 
+---
+
 ## Lab 1: Welcome to <span class="snap">snap</span>   {#lab1}
 No questions for this lab!
 
@@ -45,7 +47,7 @@ No questions for this lab!
 
 ---
 
-## Lab 3: Conditionals
+## Lab 3: Conditionals  {#lab3}
 
 ## Due: 02/06/15
 
@@ -61,7 +63,7 @@ No questions for this lab!
 
 ---
 
-## Lab 4: Functions
+## Lab 4: Functions  {#lab4}
 
 ## Due: 02/11/15
 
@@ -77,7 +79,7 @@ No questions for this lab!
 
 ---
 
-## Lab 5: Lists
+## Lab 5: Lists  {#lab5}
 
 ## Due: 02/13/15
 
@@ -92,7 +94,7 @@ No questions for this lab!
 
 ---
 
-## Lab 6: Algorithms
+## Lab 6: Algorithms  {#lab6}
 
 ## Due: 02/18/15
 
@@ -107,7 +109,7 @@ No questions for this lab!
 
 ---
 
-## Lab 7: Algorithmic Complexity
+## Lab 7: Algorithmic Complexity  {#lab7}
 
 ## Due: 02/20/15
 
@@ -119,7 +121,7 @@ No questions for this lab!
 
 ---
 
-## Lab 8: Finch Robots
+## Lab 8: Finch Robots  {#lab8}
 
 ## Due: 02/27/15
 
