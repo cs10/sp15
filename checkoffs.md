@@ -16,6 +16,7 @@ permalink: labquestions/index.html
 
 <div class="page-section" markdown="1">
 <br>
+
 ## Background
 
 **All lab check-off deadlines are at 11:59PM.**
@@ -112,7 +113,7 @@ No questions for this lab!
 
 * In your experimental <code>Number-guessing</code> game, which algorithm did you find to be faster? Why? What type of search is <code>Higher/Lower</code> representing?
 * What happened with the time it took for your computer to counter up the numbers between 1 and x when you started doubling the numbers? Tripling the numbers? What do you think would happen with the time I multiplied your top number by 8?
-* Please show me your Non-Gauss and Gauss <code>Add all numbers in</code>.  Which was faster? Why? 
+* Please show me your Non-Gauss and Gauss <code>Add all numbers in</code>.  Which was faster? Why?
 * Please show me your <code>Are the numbers of (LIST) distinct?</code> block. What is the difference between "Worst-Case" and "Best Case" in terms of Runtime?
 * Of all the runtimes you have discovered thus far, can you rank them from “fastest” to “slowest”? Why is runtime important for the programs that we create?`
 
