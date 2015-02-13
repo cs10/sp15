@@ -115,4 +115,13 @@ No questions for this lab!
 * Please show me your Non-Gauss and Gauss <code>Add all numbers in</code>.  Which was faster? Why? 
 * Please show me your <code>Are the numbers of (LIST) distinct?</code> block. What is the difference between "Worst-Case" and "Best Case" in terms of Runtime?
 * Of all the runtimes you have discovered thus far, can you rank them from “fastest” to “slowest”? Why is runtime important for the programs that we create?`
+
+---
+
+## Lab 8: Finch Robots
+
+## Due: 02/27/15
+
+Due to the hardware requirements of this lab, it will be worth extra credit and can only be completed during a lab section between 02/18 and 02/20. Make sure to attend one of those labs and take part in the section competition in order to receive credit.
+
 </div>
