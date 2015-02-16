@@ -97,7 +97,7 @@ cs10.week4 = {
                 'http://www.wired.com/magazine/2010/05/process_pixar/',
                 'optional')
     ],
-    lectM: lect('Algorithms', 'L06 - Algorithms',
+    lectM: lect('Algorithms', 'L06 - Algorithms I',
                 'https://coursesharing.org/courses/6/lectures/14'),
     labA: lab('Algorithms', 'berkeley_bjc/areas/algorithms.topic', true),
     lectW: lect('Algorithmic Complexity', 'L07 - Algorithms II'),
