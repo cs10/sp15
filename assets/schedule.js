@@ -109,12 +109,14 @@ cs10.week4 = {
 // FEB 16 - 20
 cs10.week5 = {
     exam: {
-
+        title: 'Quest',
+        date: '02-18-2015',
+        location: '105 Stanley'
     },
     readings: 'No Readings<br><br><strong>Quest Review Session</strong><br>Monday, 2/16 1-3pm<br>306 Soda',
     lectM: lect('No Lecture (Holiday)'),
     labA: lab('No Labs Monday<br>Quest Help and Review'),
-    lectW: lect('Quest In Class'),
+    lectW: lect('Quest In Class', '../exams/quest.html'),
     labB: lab('Finch Robots', 'berkeley_bjc/robots/robots.topic'),
     disc: disc('Quest Debrief and HW3 Intro'),
     hw: 'Start HW3: Abominable Snowman'
