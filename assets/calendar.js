@@ -117,7 +117,7 @@ cs10.newLectureObject = function(title, path, videoURL, guest) {
         lect.classes = 'noClass';
     }
     if (path) {
-        lect.url = 'lecture/' + path + '/';
+        lect.url = 'lecture/' + path;
     }
 
     lect.guest = guest;

@@ -17,7 +17,6 @@ var getRoomURL = function(loc) {
                  sdh: 'sutardja',
                  lks: 'likashing',
                  etch: 'etcheverry',
-                 soda: 'soda',
                  vlsb: 'valleylifesciences' },
         room = loc ? loc.split(' ')[1].toLowerCase() : '';
 
