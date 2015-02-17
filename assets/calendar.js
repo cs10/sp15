@@ -251,13 +251,13 @@ cs10.renderTableLecture = function(lect) {
         result.append(lect);
     } else {
         if (lect.guest) {
-            console.log('GUEST\t');
-            
             result.append($('<strong>').html('Guest Lecturer: ' + lect.guest));
             result.append($('<br>'));
         }
-        var tag = lect.url ? '<a>' : '<span>';
-        var title = $(tag).attr({'href': lect.url}).html(lect.title);
+        var title = lect.title;
+        if (lect.url) {
+            title = $('<a>').attr({'href': lect.url}).html(lect.title);
+        }
         result.append(title);
         result.append('<br>');
         if (lect.video) {
