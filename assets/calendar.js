@@ -250,7 +250,9 @@ cs10.renderTableLecture = function(lect) {
     } else if (typeof lect === 'string') {
         result.append(lect);
     } else {
-        if (lect.geust) {
+        if (lect.guest) {
+            console.log('GUEST\t');
+            
             result.append($('<strong>').html('Guest Lecturer: ' + lect.guest));
             result.append($('<br>'));
         }
