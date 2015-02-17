@@ -77,7 +77,7 @@ cs10.week3 = {
     labA: lab('Functions', 'berkeley_bjc/intro_pair/4-abstraction-testing.topic', true),
     lectW: lect('Programming Paradigms', 'L05 - Programming Paradigms'),
     labB: lab('Lists I', 'berkeley_bjc/lists/lists-I.topic'),
-    disc: disc('All about lists'),
+    disc: disc('All about lists', true),
     hw: hw('Start on HW2: Snowman')
 };
 
@@ -102,7 +102,7 @@ cs10.week4 = {
     labA: lab('Algorithms', 'berkeley_bjc/areas/algorithms.topic', true),
     lectW: lect('Algorithmic Complexity', 'L07 - Algorithms II'),
     labB: lab('Algorithmic Complexity', "berkeley_bjc/areas/algorithm-complexity.topic"),
-    disc: disc('Algorithmic Complexity and Quest Review'),
+    disc: disc('Algorithmic Complexity and Quest Review', true),
     hw: hw('HW2: Snowman', '2/13', 'assignments/5919084', 'assign.html?//docs.google.com/document/d/1iJDOxWMBnmE5lOzqmUi_-F-HoSyGuQrzn-COiGQd29Y/pub')
 };
 
