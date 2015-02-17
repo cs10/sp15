@@ -113,7 +113,7 @@ cs10.week5 = {
         date: '02-18-2015',
         location: '105 Stanley'
     },
-    readings: 'No Readings<br><br><strong>Quest Review Session</strong> (<a href=tinyurl.com/questsp15>Slides</a>)<br>Monday, 2/16 1-3pm<br>306 Soda',
+    readings: 'No Readings<br><br><strong>Quest Review Session</strong><br>(<a href=tinyurl.com/questsp15>Slides</a>)<br>Monday, 2/16 1-3pm<br>306 Soda',
     lectM: lect('No Lecture (Holiday)'),
     labA: lab('No Labs Monday<br>Quest Help and Review'),
     lectW: lect('Quest In Class', '../exams/quest.html'),
