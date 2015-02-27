@@ -127,4 +127,30 @@ No questions for this lab!
 
 * Due to the hardware requirements of this lab, it will be worth extra credit and can only be completed during a lab section between 02/18 and 02/20. Make sure to attend one of those labs and take part in the section competition in order to receive extra credit.
 
+---
+
+## Lab 9: Concurrency  {#lab9}
+
+## Due: 03/04/15
+
+* How can you make parallel programs in <span class="snap">snap</span>?
+* Why does adding more people in the card sorting example or more threads in a program sometimes slow the process down?
+* When you run parallel code, are the chunks of code really executing at the exact same time?
+* What are some issues that can occur in parallel programming?
+* What is the difference between determinism and nondeterminism?
+* In the <code>What are the possible values?</code> exercise, what were the possibles values of <code>finish</code> when you run the code nondeterministically? 
+
+---
+
+## Lab 10: Recursion With Trees and Fractals  {#lab10}
+
+## Due: 03/06/15
+
+* What is recursion? Why is it so powerful?
+* What do you think infinite recursion is? How do you prevent infinite recursion from happening?
+* What are some real-life examples of recursion?
+* What is the difference between the base case and the recursive case?
+* Please show me your <code>crazy-tree</code> block.
+* Please show me your <code>snowflake</code> or <code>c-curve</code> block.
+
 </div>
