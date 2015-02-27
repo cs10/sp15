@@ -142,9 +142,9 @@ cs10.week6 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter3.pdf',
                 'optional')
     ],
-    lectM: lect('Concurrency', '', '', 'Michael Ball'),
+    lectM: lect('Concurrency', 'L08 - Concurrency', '', 'Michael Ball'),
     labA: lab('Concurrency', 'berkeley_bjc/areas/concurrency.topic', true),
-    lectW: lect('Recursion I'),
+    lectW: lect('Recursion I', 'L09 - Recursion I'),
     labB: lab('Trees and Fractals using Recursion', 'berkeley_bjc/recur/recursion-trees-fractals.topic'),
     disc: disc('<span style="font-size:150%">R<sup>e<sup>c<sup>u<sup>r<sup>s<sup>i<sup>o<sup>n</sup></sup></sup></sup></sup></sup></sup></sup></span>'),
     // disc: disc('<span style="font-size:150%">Recursion</span>'),
