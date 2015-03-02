@@ -239,9 +239,9 @@ cs10.week11 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter8.pdf',
                 'optional')
     ],
-    lectM: lect('Social Implications III', '', ''),
+    lectM: lect('The Internet II'),
     labA: lab('The Internet', 'berkeley_bjc/areas/internet.topic', true),
-    lectW: lect('The Internet II'),
+    lectW: lect('Lambda and HOFs'),
     labB: lab('Project Work'),
     disc: disc('The Internet'),
     hw: hw('Impact Writing Assignment')
@@ -266,7 +266,7 @@ cs10.week12 = {
                 'http://www.cimt.plymouth.ac.uk/projects/mepres/stats/handlg_data_ch3.pdf',
                 'optional')
     ],
-    lectM: lect('Lambda and HOFs'),
+    lectM: lect('Social Implications III', '', ''),
     labA: lab('Practice with HOFs and Functions as Data', 'berkeley_bjc/hofs/hofs-practice.topic', true),
     lectW: lect('Besides Blocks I'), // THOUGHT: Move this up a weekx
     labB: lab('Besides Blocks: Welcome to Python', 'berkeley_bjc/python/besides-blocks-welcome.topic'),
