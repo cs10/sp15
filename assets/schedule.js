@@ -242,13 +242,30 @@ cs10.week11 = {
     lectM: lect('The Internet II'),
     labA: lab('The Internet', 'berkeley_bjc/areas/internet.topic', true),
     lectW: lect('Lambda and HOFs'),
-    labB: lab('Project Work'),
+    labB: lab('Practice with HOFs and Functions as Data', 'berkeley_bjc/hofs/hofs-practice.topic'),
     disc: disc('The Internet'),
     hw: hw('Impact Writing Assignment')
 };
 
 // APRIL 6 - 10
 cs10.week12 = {
+    readings: [
+        reading('The Heartbleed Bug',
+                'http://blog.agilebits.com/2014/04/08/imagine-no-ssl-encryption-its-scary-if-you-try/'),
+        reading('When Servers Bleed',
+                'https://medium.com/p/804cdf4b48c1',
+                'hard')
+    ],
+    lectM: lect('Besides Blocks I', '', ''),
+    labA: lab('Besides Blocks: Welcome to Pythonberkeley_bjc/python/besides-blocks-welcome.topic', '', true),
+    lectW: lect('Social Implications III'), // THOUGHT: Move this up a weekx
+    labB: lab('', ''), // FIXME EEEEE
+    disc: disc('Data and HOFs'),
+    hw: hw('Impact Post Comments')
+};
+
+// APRIL 13 - 17
+cs10.week13 = {
     readings: [
         reading('Data explosion creates revolution',
                 'http://www.sfgate.com/cgi-bin/article.cgi?f=/c/a/2011/10/19/BU5K1LJ4R3.DTL'),
@@ -266,30 +283,12 @@ cs10.week12 = {
                 'http://www.cimt.plymouth.ac.uk/projects/mepres/stats/handlg_data_ch3.pdf',
                 'optional')
     ],
-    lectM: lect('Social Implications III', '', ''),
-    labA: lab('Practice with HOFs and Functions as Data', 'berkeley_bjc/hofs/hofs-practice.topic', true),
-    lectW: lect('Besides Blocks I'), // THOUGHT: Move this up a weekx
-    labB: lab('Besides Blocks: Welcome to Python', 'berkeley_bjc/python/besides-blocks-welcome.topic'),
-    disc: disc('Data and HOFs'),
-    hw: hw('Impact Post Comments')
-};
-
-// APRIL 13 - 17
-cs10.week13 = {
-    readings: [
-        reading('The Heartbleed Bug',
-                'http://blog.agilebits.com/2014/04/08/imagine-no-ssl-encryption-its-scary-if-you-try/'),
-        reading('When Servers Bleed',
-                'https://medium.com/p/804cdf4b48c1',
-                'hard')
-    ],
     lectM: lect('Besides Blocks II'),
     labA: lab('Besides Blocks: Data Structures in Python', 'berkeley_bjc/python/besides-blocks-data-struct.topic', true),
     lectW: lect('Data'),
     labB: lab('Besides Blocks: Data in Python', 'berkeley_bjc/python/besides-blocks-data.topic'),
     disc: disc('Practical Privacy Implications'),
-    hw: [ hw('Data Project'),
-          hw('Final Project Proposal') ]
+    hw: hw('Final Project Proposal')
 };
 
 // APRIL 20 - 24
@@ -302,9 +301,9 @@ cs10.week14 = {
                 'optional')
     ],
     lectM: lect('Future of Computing'),
-    labA: lab('Project Work', '', true),
+    labA: lab('Project Work Session', '', true),
     lectW: lect('Limits of Computing'),
-    labB: lab('Project Work'),
+    labB: lab('Project Work Session'),
     disc: disc('CS @ Cal and Beyond'),
     hw: 'Start on the Final Project'
 };
