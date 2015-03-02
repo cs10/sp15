@@ -175,10 +175,10 @@ cs10.week7 = {
     ],
     lectM: lect('Recursion II'),
     labA: lab('Recursive Reporters I', 'berkeley_bjc/recur/recursive-reporters-part1.topic', true),
-    lectW: lect('Artificial Intelligence', '', '', 'Patrick Virtue'),
+    lectW: lect('Artificial Intelligence', '', '', 'A Guest'),
     labB: lab('Project Work'),
     disc: disc('Concurrency and Midterm Intro'),
-    hw: hw('Midterm Project <strong>Proposals</strong><br>(Spec Coming Soon!!)', '3/6')
+    hw: 'Start Midterm Project'
 };
 
 // MARCH 9 - 13 (Lauren, Dan, Michael partially out)
@@ -194,11 +194,11 @@ cs10.week8 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter6.pdf')
     ],
     lectM: lect('Social Implications I'),
-    labA: lab('Tic Tac Toe', 'berkeley_bjc/lists/tic-tac-toe.topic', true),
-    lectW: lect('HCI', '', '', 'Eric Paulos'),
-    labB: lab('Project Work Session'),
+    labA: lab('Project Work <br> Lab Review', '', true),
+    lectW: lect('Social Implications II', '', '', 'Gerald Friedland'),
+    labB: lab('Project Work'),
     disc: disc('Midterm Review'),
-    hw: hw('Midterm Project<strong>Milestone</strong><br>(Spec Coming Soon!!)', '3/20')
+    hw: 'Midterm Project'
 };
 
 // MIDTERM WEEK
@@ -208,14 +208,12 @@ cs10.week9 = {
 
     },
     readings: 'No Readings<br><br><strong>Midterm Review Session</strong><br>Sun 3/15 2-5pm<br>2050 VLSB',
-    lectM: lect('Social Implications III', ''),
+    lectM: lect('Social Implications III', '', '', 'Brian Harvey'),
     labA: lab('Online <span class="snap">snap</span> Midterm'),
     lectW: lect('The Internet'),
-    labB: lab('Project Work Session'),
+    labB: lab('The Internet', 'berkeley_bjc/areas/internet.topic'),
     disc: disc('Midterm Debrief'),
-    // FIXME -- GRR Arraya
-    // hw('Midterm Project Individual Report', '3/27')
-    hw: hw('Midterm Project<br>(Spec Coming Soon!)', '3/27')
+    hw: hw('Midterm Project')
 };
 cs10.week9.labA.classes = 'exam';
 cs10.week9.lectW.title += '<br><div class="exam inner"><a href="exams/midterm.html">Midterm Exam</a><br><br><strong>Thursday 3/19 8-10pm; Location: TBD</strong></div>';
@@ -239,33 +237,16 @@ cs10.week11 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter8.pdf',
                 'optional')
     ],
-    lectM: lect('The Internet II'),
-    labA: lab('The Internet', 'berkeley_bjc/areas/internet.topic', true),
-    lectW: lect('Lambda and HOFs'),
-    labB: lab('Practice with HOFs and Functions as Data', 'berkeley_bjc/hofs/hofs-practice.topic'),
+    lectM: lect('HCI', '', '', 'Eric Paulos'),
+    labA: lab('Tic Tac Toe', 'berkeley_bjc/lists/tic-tac-toe.topic', true),
+    lectW: lect('The Internet II'),
+    labB: lab('Project Work'),
     disc: disc('The Internet'),
     hw: hw('Impact Writing Assignment')
 };
 
 // APRIL 6 - 10
 cs10.week12 = {
-    readings: [
-        reading('The Heartbleed Bug',
-                'http://blog.agilebits.com/2014/04/08/imagine-no-ssl-encryption-its-scary-if-you-try/'),
-        reading('When Servers Bleed',
-                'https://medium.com/p/804cdf4b48c1',
-                'hard')
-    ],
-    lectM: lect('Besides Blocks I', '', ''),
-    labA: lab('Besides Blocks: Welcome to Pythonberkeley_bjc/python/besides-blocks-welcome.topic', '', true),
-    lectW: lect('Social Implications III'), // THOUGHT: Move this up a weekx
-    labB: lab('', ''), // FIXME EEEEE
-    disc: disc('Data and HOFs'),
-    hw: hw('Impact Post Comments')
-};
-
-// APRIL 13 - 17
-cs10.week13 = {
     readings: [
         reading('Data explosion creates revolution',
                 'http://www.sfgate.com/cgi-bin/article.cgi?f=/c/a/2011/10/19/BU5K1LJ4R3.DTL'),
@@ -282,6 +263,23 @@ cs10.week13 = {
         reading('Basic Statistics (Helpful for Project)',
                 'http://www.cimt.plymouth.ac.uk/projects/mepres/stats/handlg_data_ch3.pdf',
                 'optional')
+    ],
+    lectM: lect('Lambda and HOFs'),
+    labA: lab('Practice with HOFs and Functions as Data', 'berkeley_bjc/hofs/hofs-practice.topic', true),
+    lectW: lect('Besides Blocks I'), // THOUGHT: Move this up a weekx
+    labB: lab('Besides Blocks: Welcome to Python', 'berkeley_bjc/python/besides-blocks-welcome.topic'),
+    disc: disc('Data and HOFs'),
+    hw: hw('Impact Post Comments')
+};
+
+// APRIL 13 - 17
+cs10.week13 = {
+    readings: [
+        reading('The Heartbleed Bug',
+                'http://blog.agilebits.com/2014/04/08/imagine-no-ssl-encryption-its-scary-if-you-try/'),
+        reading('When Servers Bleed',
+                'https://medium.com/p/804cdf4b48c1',
+                'hard')
     ],
     lectM: lect('Besides Blocks II'),
     labA: lab('Besides Blocks: Data Structures in Python', 'berkeley_bjc/python/besides-blocks-data-struct.topic', true),
@@ -301,9 +299,9 @@ cs10.week14 = {
                 'optional')
     ],
     lectM: lect('Future of Computing'),
-    labA: lab('Project Work Session', '', true),
+    labA: lab('Project Work', '', true),
     lectW: lect('Limits of Computing'),
-    labB: lab('Project Work Session'),
+    labB: lab('Project Work'),
     disc: disc('CS @ Cal and Beyond'),
     hw: 'Start on the Final Project'
 };
