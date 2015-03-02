@@ -153,4 +153,19 @@ No questions for this lab!
 * Please show me your <code>crazy-tree</code> block.
 * Please show me your <code>snowflake</code> or <code>c-curve</code> block.
 
+---
+
+## Lab 11: Recursive Reporters  {#lab11}
+
+## Due: 03/11/15
+
+* Explain how the <code>plurals(words)</code> block works.
+* Show me your recursive <code>exaggerate</code> block. Do you like the iterative or recursive version better? (1 pt. for correct opinion)
+* Convince me that the recursive <code>pascal(row, column)</code> works (defend the base and recursive cases).
+* Why does <code>odd numbered items</code> need two base cases?
+* Show me your finished <code>merge</code> block.
+* Explain how the <code>subsets</code> block works.
+
 </div>
+
+
