@@ -159,7 +159,7 @@ No questions for this lab!
 
 ## Due: 03/11/15
 
-* Explain how the block <code>plurals(words)</code> works.
+* Explain how the <code>plurals(words)</code> block works.
 * Show me your recursive <code>exaggerate</code> block. Do you like the iterative or recursive version better? (1 pt. for correct opinion)
 * Convince me that the recursive <code>pascal(row, column)</code> works (defend the base and recursive cases).
 * Why does <code>odd numbered items</code> need two base cases?
