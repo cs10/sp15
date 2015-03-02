@@ -195,7 +195,7 @@ cs10.week8 = {
     ],
     lectM: lect('Social Implications I'),
     labA: lab('Tic Tac Toe', 'berkeley_bjc/lists/tic-tac-toe.topic', true),
-    lectW: lect('Social Implications II', '', '', 'Gerald Friedland'),
+    lectW: lect('HCI', '', '', 'Eric Paulos'),
     labB: lab('Project Work Session'),
     disc: disc('Midterm Review'),
     hw: hw('Midterm Project<strong>Milestone</strong><br>(Spec Coming Soon!!)', '3/20')
@@ -211,7 +211,7 @@ cs10.week9 = {
     lectM: lect('Social Implications III', ''),
     labA: lab('Online <span class="snap">snap</span> Midterm'),
     lectW: lect('The Internet'),
-    labB: lab('The Internet', 'berkeley_bjc/areas/internet.topic'),
+    labB: lab('Project Work Session'),
     disc: disc('Midterm Debrief'),
     // FIXME -- GRR Arraya
     // hw('Midterm Project Individual Report', '3/27')
@@ -239,8 +239,8 @@ cs10.week11 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter8.pdf',
                 'optional')
     ],
-    lectM: lect('HCI', '', '', 'Eric Paulos'),
-    labA: lab('', '', true),
+    lectM: lect('Social Implications III', '', ''),
+    labA: lab('The Internet', 'berkeley_bjc/areas/internet.topic', true),
     lectW: lect('The Internet II'),
     labB: lab('Project Work'),
     disc: disc('The Internet'),
