@@ -175,10 +175,10 @@ cs10.week7 = {
     ],
     lectM: lect('Recursion II'),
     labA: lab('Recursive Reporters I', 'berkeley_bjc/recur/recursive-reporters-part1.topic', true),
-    lectW: lect('Artificial Intelligence', '', '', 'A Guest'),
+    lectW: lect('Artificial Intelligence', '', '', 'Patrick Virtue'),
     labB: lab('Project Work'),
     disc: disc('Concurrency and Midterm Intro'),
-    hw: 'Start Midterm Project'
+    hw: hw('Midterm Project <strong>Proposals</strong><br>(Spec Coming Soon!!)', '3/6')
 };
 
 // MARCH 9 - 13 (Lauren, Dan, Michael partially out)
@@ -194,11 +194,11 @@ cs10.week8 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter6.pdf')
     ],
     lectM: lect('Social Implications I'),
-    labA: lab('Project Work <br> Lab Review', '', true),
+    labA: lab('Tic Tac Toe', 'berkeley_bjc/lists/tic-tac-toe.topic', true),
     lectW: lect('Social Implications II', '', '', 'Gerald Friedland'),
-    labB: lab('Project Work'),
+    labB: lab('Project Work Session'),
     disc: disc('Midterm Review'),
-    hw: 'Midterm Project'
+    hw: hw('Midterm Project<strong>Milestone</strong><br>(Spec Coming Soon!!)', '3/20')
 };
 
 // MIDTERM WEEK
@@ -208,12 +208,14 @@ cs10.week9 = {
 
     },
     readings: 'No Readings<br><br><strong>Midterm Review Session</strong><br>Sun 3/15 2-5pm<br>2050 VLSB',
-    lectM: lect('Social Implications III', '', '', 'Brian Harvey'),
+    lectM: lect('Social Implications III', ''),
     labA: lab('Online <span class="snap">snap</span> Midterm'),
     lectW: lect('The Internet'),
     labB: lab('The Internet', 'berkeley_bjc/areas/internet.topic'),
     disc: disc('Midterm Debrief'),
-    hw: hw('Midterm Project')
+    // FIXME -- GRR Arraya
+    // hw('Midterm Project Individual Report', '3/27')
+    hw: hw('Midterm Project<br>(Spec Coming Soon!)', '3/27')
 };
 cs10.week9.labA.classes = 'exam';
 cs10.week9.lectW.title += '<br><div class="exam inner"><a href="exams/midterm.html">Midterm Exam</a><br><br><strong>Thursday 3/19 8-10pm; Location: TBD</strong></div>';
@@ -238,7 +240,7 @@ cs10.week11 = {
                 'optional')
     ],
     lectM: lect('HCI', '', '', 'Eric Paulos'),
-    labA: lab('Tic Tac Toe', 'berkeley_bjc/lists/tic-tac-toe.topic', true),
+    labA: lab('', '', true),
     lectW: lect('The Internet II'),
     labB: lab('Project Work'),
     disc: disc('The Internet'),
