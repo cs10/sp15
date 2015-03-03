@@ -257,9 +257,9 @@ cs10.week12 = {
                 'hard')
     ],
     lectM: lect('Besides Blocks I', '', ''),
-    labA: lab('Besides Blocks: Welcome to Pythonberkeley_bjc/python/besides-blocks-welcome.topic', '', true),
+    labA: lab('Besides Blocks: Welcome to Python', 'berkeley_bjc/python/besides-blocks-welcome.topic', '', true),
     lectW: lect('Social Implications III'), // THOUGHT: Move this up a weekx
-    labB: lab('', ''), // FIXME EEEEE
+    labB: lab('Lab Coming Soon', ''), // FIXME EEEEE
     disc: disc('Data and HOFs'),
     hw: hw('Impact Post Comments')
 };
