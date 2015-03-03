@@ -173,10 +173,10 @@ cs10.week7 = {
                 bcourses('54271571'),
                 'optional')
     ],
-    lectM: lect('Recursion II'),
+    lectM: lect('Recursion II', 'L10 - Recursion II'),
     labA: lab('Recursive Reporters I', 'berkeley_bjc/recur/recursive-reporters-part1.topic', true),
     lectW: lect('Artificial Intelligence', '', '', 'Patrick Virtue'),
-    labB: lab('Project Work'),
+    labB: lab('Project Work Session'),
     disc: disc('Concurrency and Midterm Intro'),
     hw: hw('Midterm Project<br><strong>Proposals</strong><br>(Spec Coming Soon!!)', '3/6')
 };
