@@ -178,7 +178,7 @@ cs10.week7 = {
     lectW: lect('Artificial Intelligence', '', '', 'Patrick Virtue'),
     labB: lab('Project Work'),
     disc: disc('Concurrency and Midterm Intro'),
-    hw: hw('Midterm Project <strong>Proposals</strong><br>(Spec Coming Soon!!)', '3/6')
+    hw: hw('Midterm Project<br><strong>Proposals</strong><br>(Spec Coming Soon!!)', '3/6')
 };
 
 // MARCH 9 - 13 (Lauren, Dan, Michael partially out)
@@ -198,7 +198,7 @@ cs10.week8 = {
     lectW: lect('HCI', '', '', 'Eric Paulos'),
     labB: lab('Project Work Session'),
     disc: disc('Midterm Review'),
-    hw: hw('Midterm Project<strong>Milestone</strong><br>(Spec Coming Soon!!)', '3/20')
+    hw: hw('Midterm Project<br><strong>Milestone</strong><br>(Spec Coming Soon!!)', '3/20')
 };
 
 // MIDTERM WEEK
@@ -208,7 +208,7 @@ cs10.week9 = {
 
     },
     readings: 'No Readings<br><br><strong>Midterm Review Session</strong><br>Sun 3/15 2-5pm<br>2050 VLSB',
-    lectM: lect('Social Implications III', ''),
+    lectM: lect('Social Implications II', ''),
     labA: lab('Online <span class="snap">snap</span> Midterm'),
     lectW: lect('The Internet'),
     labB: lab('Project Work Session'),
