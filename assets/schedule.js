@@ -2,7 +2,7 @@
  * Paramters:
  * Reading: (title, link, 'type [required is default]')
  * Lecture: (title, '[slides folder]', '[video URL]', '[Guest Name]')
- * Lab:     (title, 'topic file path', [boolean -- Reading Quiz?])
+ * Lab:     (title, 'topic file path', [boolean -- Reading Quiz?], 'video link')
  * Disc:    (title, [boolean -- Resources available?])
  * HW:      (title, TBD...)
  * NOTE: These links are currently relative to the home page.
@@ -257,7 +257,7 @@ cs10.week12 = {
                 'hard')
     ],
     lectM: lect('Besides Blocks I', '', ''),
-    labA: lab('Besides Blocks: Welcome to Python', 'berkeley_bjc/python/besides-blocks-welcome.topic', '', true),
+    labA: lab('Besides Blocks: Welcome to Python', 'berkeley_bjc/python/besides-blocks-welcome.topic', true),
     lectW: lect('Social Implications III'), // THOUGHT: Move this up a weekx
     labB: lab('Lab Coming Soon', ''), // FIXME EEEEE
     disc: disc('Data and HOFs'),
