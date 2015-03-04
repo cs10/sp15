@@ -198,7 +198,7 @@ cs10.week8 = {
     lectW: lect('HCI', '', '', 'Eric Paulos'),
     labB: lab('Project Work Session'),
     disc: disc('Midterm Review'),
-    hw: hw('Midterm Project<br><strong>Milestone</strong><br>(Spec Coming Soon!!)', '3/20')
+    hw: hw('Midterm Project<br><strong>Milestone</strong><br>(Spec Coming Soon!!)', '3/13')
 };
 
 // MIDTERM WEEK
@@ -215,7 +215,7 @@ cs10.week9 = {
     disc: disc('Midterm Debrief'),
     // FIXME -- GRR Arraya
     // hw('Midterm Project Individual Report', '3/27')
-    hw: hw('Midterm Project<br>(Spec Coming Soon!)', '3/27')
+    hw: hw('Midterm Project<br>(Spec Coming Soon!)', '3/20')
 };
 cs10.week9.labA.classes = 'exam';
 cs10.week9.lectW.title += '<br><div class="exam inner"><a href="exams/midterm.html">Midterm Exam</a><br><br><strong>Thursday 3/19 8-10pm; Location: TBD</strong></div>';
