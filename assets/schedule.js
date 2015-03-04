@@ -178,7 +178,7 @@ cs10.week7 = {
     lectW: lect('Artificial Intelligence', '', '', 'Patrick Virtue'),
     labB: lab('Project Work Session'),
     disc: disc('Concurrency and Midterm Intro'),
-    hw: hw('Midterm Project<br><strong>Proposals</strong>', '3/6', 'quizzes/1869502', 'assign.html?//docs.google.com/document/d/1-uGB5qRYzM0bX5BjDTh527Zo-3GlZMGcLcyKHIViFiA/pub')
+    hw: hw('Midterm Project<br><strong>Proposals</strong>', '3/6')
 };
 
 // MARCH 9 - 13 (Lauren, Dan, Michael partially out)
