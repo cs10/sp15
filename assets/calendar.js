@@ -320,36 +320,36 @@ cs10.renderTableDiscussion = function(disc) {
 cs10.renderTableHW = function(hw) {
     var result = $('<td>');
     if (!hw) {
-        result.append('No Homework');
+        hw = [cs10.newHomeworkObject('No Homework')];
     } else if (typeof hw === 'string') {
-        result.append(hw);
-    } else { // HW is a list.
-        if (!(hw instanceof Array)) {
-            hw = [ hw ];
-        }
-        for (var i = 0; i < hw.length; i += 1) {
-            var assn = hw[i];
+        hw = [cs10.newHomeworkObject(hw)];
+    } else if (!(hw instanceof Array)) { // HW is a list.
+        hw = [ hw ];
+    }
+
+    for (var i = 0; i < hw.length; i += 1) {
+        var assn = hw[i];
             result.append(assn.title);
             result.append('<br>');
             result.attr({ 'class' : assn.classes });
             if (assn.spec) {
-                result.append($('<a>').html('Spec').attr({'href' : assn.spec}));
-            }
-            if (assn.url && assn.spec) {
-                result.append(' | ');
-            }
-            if (assn.url) {
-                result.append($('<a>').html('Submit').attr({
-                    'href' : assn.url, 'target' : '_blank' }));
-            }
-            if (assn.due) {
-                result.append('<br>');
-                result.append($('<i>').html('due ' + assn.due + ' at 11:59pm'));
-            }
-            if (i + 1 < hw.length) {
-                result.append('<hr>');
-            }
+            result.append($('<a>').html('Spec').attr({'href' : assn.spec}));
+        }
+        if (assn.url && assn.spec) {
+            result.append(' | ');
+        }
+        if (assn.url) {
+            result.append($('<a>').html('Submit').attr({
+                'href' : assn.url, 'target' : '_blank' }));
+        }
+        if (assn.due) {
+            result.append('<br>');
+            result.append($('<i>').html('due ' + assn.due + ' at 11:59pm'));
+        }
+        if (i + 1 < hw.length) {
+            result.append('<hr>');
         }
     }
+
     return result;
 };
