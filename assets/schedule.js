@@ -198,9 +198,10 @@ cs10.week8 = {
     lectW: lect('HCI', '', '', 'Eric Paulos'),
     labB: lab('Project Work Session'),
     disc: disc('Midterm Review'),
-    // FIXME -- GRR Arrays needed here...
-    // hw('Midterm Project<br><strong>Individual Milestone</strong>', '3/20', 'assignments/6120151')
-    hw: hw('Midterm Project<br><strong>Milestone</strong>', '3/13', 'assignments/6120100', 'assign.html?//docs.google.com/document/d/1-uGB5qRYzM0bX5BjDTh527Zo-3GlZMGcLcyKHIViFiA/pub')
+    hw: [
+        hw('Midterm Project<br><strong>Individual</strong> Milestone', '3/13', 'assignments/6120151'),
+        hw('Midterm Project<br><strong>Group</strong> Milestone', '3/13', 'assignments/6120100')
+    ]
 };
 
 // MIDTERM WEEK

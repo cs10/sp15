@@ -324,23 +324,31 @@ cs10.renderTableHW = function(hw) {
     } else if (typeof hw === 'string') {
         result.append(hw);
     } else { // HW is a list.
-        result.append(hw.title);
-        result.append('<br>');
-        result.attr({ 'class' : hw.classes });
-        if (hw.spec) {
-            result.append($('<a>').html('Spec').attr({ 'href' : hw.spec }));
+        if (!(hw instanceof Array)) {
+            hw = [ hw ];
         }
-        if (hw.url && hw.spec) {
-            result.append(' | ');
-        }
-        if (hw.url) {
-            result.append($('<a>').html('Submit').attr({
-                'href' : hw.url, 'target' : '_blank' }));
-        }
-        if (hw.due) {
+        for (var i = 0; i < hw.length; i += 1) {
+            var assn = hw[i];
+            result.append(assn.title);
             result.append('<br>');
-            result.append('<br>');
-            result.append($('<i>').html('due ' + hw.due + ' at 11:59pm'));
+            result.attr({ 'class' : assn.classes });
+            if (assn.spec) {
+                result.append($('<a>').html('Spec').attr({'href' : assn.spec}));
+            }
+            if (assn.url && assn.spec) {
+                result.append(' | ');
+            }
+            if (assn.url) {
+                result.append($('<a>').html('Submit').attr({
+                    'href' : assn.url, 'target' : '_blank' }));
+            }
+            if (assn.due) {
+                result.append('<br>');
+                result.append($('<i>').html('due ' + assn.due + ' at 11:59pm'));
+            }
+            if (i + 1 < hw.length) {
+                result.append('<hr>');
+            }
         }
     }
     return result;
