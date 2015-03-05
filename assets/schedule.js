@@ -178,7 +178,7 @@ cs10.week7 = {
     lectW: lect('Artificial Intelligence', '', '', 'Patrick Virtue'),
     labB: lab('Project Work Session'),
     disc: disc('Concurrency and Midterm Intro'),
-    hw: hw('Midterm Project<br><strong>Proposals</strong>', '3/6')
+    hw: hw('Midterm Project<br><strong>Proposals</strong>', '3/6', 'assignments/6119910', 'assign.html?//docs.google.com/document/d/1-uGB5qRYzM0bX5BjDTh527Zo-3GlZMGcLcyKHIViFiA/pub')
 };
 
 // MARCH 9 - 13 (Lauren, Dan, Michael partially out)
@@ -198,7 +198,9 @@ cs10.week8 = {
     lectW: lect('HCI', '', '', 'Eric Paulos'),
     labB: lab('Project Work Session'),
     disc: disc('Midterm Review'),
-    hw: hw('Midterm Project<br><strong>Milestone</strong>', '3/13')
+    // FIXME -- GRR Arrays needed here...
+    // hw('Midterm Project<br><strong>Individual Milestone</strong>', '3/20', 'assignments/6120151')
+    hw: hw('Midterm Project<br><strong>Milestone</strong>', '3/13', 'assignments/6120100', 'assign.html?//docs.google.com/document/d/1-uGB5qRYzM0bX5BjDTh527Zo-3GlZMGcLcyKHIViFiA/pub')
 };
 
 // MIDTERM WEEK
@@ -213,9 +215,7 @@ cs10.week9 = {
     lectW: lect('The Internet'),
     labB: lab('Project Work Session'),
     disc: disc('Midterm Debrief'),
-    // FIXME -- GRR Arraya
-    // hw('Midterm Project Individual Report', '3/27')
-    hw: hw('Midterm Project', '3/20')
+    hw: hw('Midterm Project', '3/20', 'assignments/5919087', 'assign.html?//docs.google.com/document/d/1-uGB5qRYzM0bX5BjDTh527Zo-3GlZMGcLcyKHIViFiA/pub')
 };
 cs10.week9.labA.classes = 'exam';
 cs10.week9.lectW.title += '<br><div class="exam inner"><a href="exams/midterm.html">Midterm Exam</a><br><br><strong>Thursday 3/19 8-10pm; Location: TBD</strong></div>';
