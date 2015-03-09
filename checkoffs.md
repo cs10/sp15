@@ -12,6 +12,25 @@ permalink: labquestions/index.html
     {% include_relative assets/cs10.js %}
 </script>
 
+<div class="page-section" markdown="1">
+# Lab Check-Off Quick Links
+
+* [Lab 1](#lab1)
+* [Lab 2](#lab2)
+* [Lab 3](#lab3)
+* [Lab 4](#lab4)
+* [Lab 5](#lab5)
+* [Lab 6](#lab6)
+* [Lab 7](#lab7)
+* [Lab 8](#lab8)
+* [Lab 9](#lab9)
+* [Lab 10](#lab10)
+* [Lab 11](#lab11)
+* [Lab 12](#lab12)
+* [Lab 13](#lab13)
+
+</div>
+
 # Lab Check-Off Questions
 
 <div class="page-section" markdown="1">
