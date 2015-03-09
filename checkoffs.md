@@ -12,8 +12,11 @@ permalink: labquestions/index.html
     {% include_relative assets/cs10.js %}
 </script>
 
+# Lab Check-Off Questions
+
 <div class="page-section" markdown="1">
-# Lab Check-Off Quick Links
+<br>
+## Lab Check-Off Quick Links
 
 * [Lab 1](#lab1)
 * [Lab 2](#lab2)
@@ -28,15 +31,17 @@ permalink: labquestions/index.html
 * [Lab 11](#lab11)
 * [Lab 12](#lab12)
 * [Lab 13](#lab13)
+* [Lab 14](#lab14)
+* [Lab 15](#lab15)
+* [Lab 16](#lab16)
+* [Lab 17](#lab17)
 
 </div>
-
-# Lab Check-Off Questions
-
+<hr>
 <div class="page-section" markdown="1">
 <br>
 
-## Background
+## Directions
 
 **All lab check-off deadlines are at 11:59PM.**
 (However, you need to get checked off by a TA or lab assistant, so you last chance to get checked off is during lab or office hours.)
@@ -157,7 +162,7 @@ No questions for this lab!
 * When you run parallel code, are the chunks of code really executing at the exact same time?
 * What are some issues that can occur in parallel programming?
 * What is the difference between determinism and nondeterminism?
-* In the <code>What are the possible values?</code> exercise, what were the possibles values of <code>finish</code> when you run the code nondeterministically? 
+* In the <code>What are the possible values?</code> exercise, what were the possibles values of <code>finish</code> when you run the code nondeterministically?
 
 ---
 
@@ -184,7 +189,7 @@ No questions for this lab!
 * Why does <code>odd numbered items</code> need two base cases?
 * Show me your finished <code>merge</code> block.
 * Explain how the <code>subsets</code> block works.
- 
+
 
 
 ---
@@ -193,13 +198,13 @@ No questions for this lab!
 
 ## Due: 03/18/15
 
-* How are lists used to implement the tic-tac-toe board? Why does this strategy work? Would this strategy work even with a larger board? 
+* How are lists used to implement the tic-tac-toe board? Why does this strategy work? Would this strategy work even with a larger board?
 * Show your <code>appearances</code> or <code>substitute triple</code> block, and explain your implementation (You could be asked either, so be prepared for both!).
-* What did you find to be the most pivotal block in your creation of the game? Show the code for this block, explain your implementation of it works, and explain how the game would have not worked without it. 
-* The lab mentioned a few core rules that are part of everyone's tic-tac-toe strategy (in the Program Structure and Strategy section), and thus encouraged them as part of your computer program. It went on to say “Humans don't always think alike about the in-between rules; we'll make suggestions later, after you finish the minimal assignment.” 
+* What did you find to be the most pivotal block in your creation of the game? Show the code for this block, explain your implementation of it works, and explain how the game would have not worked without it.
+* The lab mentioned a few core rules that are part of everyone's tic-tac-toe strategy (in the Program Structure and Strategy section), and thus encouraged them as part of your computer program. It went on to say “Humans don't always think alike about the in-between rules; we'll make suggestions later, after you finish the minimal assignment.”
 Why do humans not always think alike about the “in-between rules”? Can you give an example of how two people might think differently about an “in-between rule” and explain the difficulties in implementing that in a program?
 * Show your <code>winning-square</code> or full <code>ttt</code> block (Again, you could be asked either, so be ready for both!).
-* When was it best to report positions for some of the tic-tac-toe blocks, and when was it more ideal to report actual letters (‘X’ or ‘O’)? Relate your explanations back to domain and range. 
+* When was it best to report positions for some of the tic-tac-toe blocks, and when was it more ideal to report actual letters (‘X’ or ‘O’)? Relate your explanations back to domain and range.
 
 </div>
 
