@@ -195,7 +195,7 @@ cs10.week8 = {
     ],
     lectM: lect('Social Implications I'),
     labA: lab('Tic Tac Toe', 'berkeley_bjc/lists/tic-tac-toe.topic', true),
-    lectW: lect('HCI', '', '', 'Eric Paulos'),
+    lectW: lect('HCI', '', '', 'Björn Hartmann'),
     labB: lab('Project Work Session'),
     disc: disc('Midterm Review'),
     hw: [
@@ -355,7 +355,7 @@ cs10.week17 = {
     },
     readings: [],
     labA: lab('Final Exam<br>7 - 10pm'),
-    hw: hw(' ')
+    hw: ''
 };
 cs10.week17.labA.classes = 'exam';
 
