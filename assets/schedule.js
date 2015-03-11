@@ -193,7 +193,7 @@ cs10.week8 = {
         reading('BtB Chapter 6 (27-37)',
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter6.pdf')
     ],
-    lectM: lect('Social Implications I'),
+    lectM: lect('Social Implications I', 'L11 - Social Implications I'),
     labA: lab('Tic Tac Toe', 'berkeley_bjc/lists/tic-tac-toe.topic', true),
     lectW: lect('HCI', '', '', 'Björn Hartmann'),
     labB: lab('Project Work Session'),
