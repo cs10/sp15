@@ -25,7 +25,7 @@ var maxD = {
     email: 'max@cs10.org' };
 
 var jeffreyS = {
-    name: 'TA Jeffrey Snowiss',
+    name: 'TA Jeff Snowiss',
     img: 'Fa12/JeffreySnowiss.jpg',
     imgSrc: 'JeffreySnowiss.jpg',
     email: 'jeff@cs10.org' };
@@ -58,7 +58,7 @@ var jaclynB = {
     email: 'jaclyn@cs10.org' };
 
 var andyS = {
-    name: 'TA Andrew Schmitt',
+    name: 'TA Andy Schmitt',
     img: 'Sp14/AndrewSchmitt.jpg',
     imgSrc: 'AndrewSchmitt.jpg',
     email: 'andy@cs10.org'};
@@ -147,7 +147,7 @@ var amrutaY = {
 /** LIST DEFINITIONS **/
 /*****************************************************************************/
 
-var tas = [ DanGarcia, michaelB, LaurenMock, adamK, andyS, AranyU, carlosF, jaclynB, jeffreyS, josephC, 
+var tas = [ DanGarcia, michaelB, LaurenMock, adamK, andyS, AranyU, carlosF, jaclynB, jeffreyS, josephC,
     maxD, PeterS, rachelH, StevenT, victoriaS];
 
 var readers = [ alexM, amrutaY, brandonC, claireW, erikD, jobelV, avaY ];

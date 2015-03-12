@@ -219,7 +219,7 @@ cs10.week9 = {
     hw: hw('Midterm Project', '3/20', 'assignments/5919087', 'assign.html?//docs.google.com/document/d/1-uGB5qRYzM0bX5BjDTh527Zo-3GlZMGcLcyKHIViFiA/pub')
 };
 cs10.week9.labA.classes = 'exam';
-cs10.week9.lectW.title += '<br><div class="exam inner"><a href="exams/midterm.html">Midterm Exam</a><br><br><strong>Thursday 3/19 7-9pm; Location: 2050 VLSB</strong></div>';
+cs10.week9.lectW.title += '<br><div class="exam inner"><a href="exams/midterm.html">Midterm Exam</a><br><br><strong>Thursday 3/19<br>7-9pm; Location: 2050 VLSB</strong></div>';
 
 
 // Spring Break
