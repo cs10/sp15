@@ -146,7 +146,7 @@ No questions for this lab!
 
 ---
 
-## Lab 8: Finch Robots  {#lab8}
+## Lab 8: Finch Robots [Extra Credit Checkoff]  {#lab8}
 
 ## Due: **02/20/15** (not the usual one-week delay)
 
