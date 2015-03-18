@@ -47,7 +47,7 @@ permalink: labquestions/index.html
 **All lab check-off deadlines are at 11:59PM.**
 (However, you need to get checked off by a TA or lab assistant, so you last chance to get checked off is during lab or office hours.)
 
-To get checked off, you should prepare answers to **all** of these questions for each lab, though you will only be quizzed on a subset of the questions.
+To get checked off, you should prepare answers to **all** of these questions for each lab, though you will only be asked about the 2 or 3 questions which are marked as required. You shouldn't feel compelled to memorize every single detail of lab. The goal here to make sure you're on track with CS10 and you should be comfortable with the higher level concepts for each question. For each lab the first questions are the biggest ideas, and the later questions are for your own benefit and review.
 
 ---
 
@@ -207,7 +207,45 @@ Why do humans not always think alike about the “in-between rules”? Can you g
 * Show your <code>winning-square</code> or full <code>ttt</code> block (Again, you could be asked either, so be ready for both!).
 * When was it best to report positions for some of the tic-tac-toe blocks, and when was it more ideal to report actual letters (‘X’ or ‘O’)? Relate your explanations back to domain and range.
 
-</div>
+---
 
+## Lab 13: The Internet  {#lab13}
+
+## Due: 04/08/15
+
+### Required Questions
+1.
+2.
+3.
+### Self-Check Questions
+*
+*
+*
+*
+*
+*
+
+---
+
+## Lab 13: Lambdas and HOFs  {#lab13}
+
+## Due: 04/10/15
+
+### Required Questions
+1.
+2.
+3.
+### Self-Check Questions
+*
+*
+*
+*
+*
+*
+
+---
+
+
+</div>
 
 
