@@ -213,17 +213,20 @@ Why do humans not always think alike about the “in-between rules”? Can you g
 
 ## Due: 04/08/15
 
-### Required Questions
-1.
-2.
-3.
-### Self-Check Questions
-*
-*
-*
-*
-*
-*
+#### Required Questions
+
+1. Coming Soon
+2. Coming Soon
+3. Coming Soon
+
+#### Self-Check Questions
+
+* Coming Soon
+* Coming Soon
+* Coming Soon
+* Coming Soon
+* Coming Soon
+* Coming Soon
 
 ---
 
@@ -231,17 +234,20 @@ Why do humans not always think alike about the “in-between rules”? Can you g
 
 ## Due: 04/10/15
 
-### Required Questions
-1.
-2.
-3.
-### Self-Check Questions
-*
-*
-*
-*
-*
-*
+#### Required Questions
+
+1. Coming Soon
+2. Coming Soon
+3. Coming Soon
+
+#### Self-Check Questions
+
+* Coming Soon
+* Coming Soon
+* Coming Soon
+* Coming Soon
+* Coming Soon
+* Coming Soon
 
 ---
 
