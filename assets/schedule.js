@@ -292,7 +292,7 @@ cs10.week13 = {
     labA: lab('Besides Blocks: Data Structures in Python', 'berkeley_bjc/python/besides-blocks-data-struct.topic', true),
     lectW: lect('Data'),
     labB: lab('Besides Blocks: Data in Python', 'berkeley_bjc/python/besides-blocks-data.topic'),
-    disc: disc('Practical Privacy Implications'),
+    disc: disc('Practical Privacy Pointers'),
     hw: hw('Final Project Proposal')
 };
 
