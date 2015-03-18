@@ -210,13 +210,13 @@ cs10.week9 = {
     exam: {
 
     },
-    readings: 'No Readings<br><br><strong>Midterm Review Session</strong><br>Sun 3/15 2-5pm<br>2050 VLSB<br><a href="http://tinyurl.com/midtermsp15" target="_blank">Slides</a><br><a href="http://snap.berkeley.edu/snapsource/snap.html#present:Username=jasnowiss10&ProjectName=Midterm%20Review%20Solutions" target="_blank">Solutions</a>',
+    readings: 'No Readings<br><br><strong>Midterm Review Session</strong><br>Sun 3/15 2-5pm<br>2050 VLSB<br><a href="http://tinyurl.com/midtermsp15" target="_blank">Slides</a> | (<a href="http://snap.berkeley.edu/snapsource/snap.html#present:Username=jasnowiss10&ProjectName=Midterm%20Review%20Solutions" target="_blank">Solutions</a>)',
     lectM: lect('Social Implications II', ''),
     labA: lab('Online <span class="snap">snap</span> Midterm'),
     lectW: lect('The Internet'),
     labB: lab('Project Work Session'),
     disc: disc('Midterm Debrief'),
-    hw: hw('Midterm Project', '3/20', 'assignments/5919087', 'assign.html?//docs.google.com/document/d/1-uGB5qRYzM0bX5BjDTh527Zo-3GlZMGcLcyKHIViFiA/pub')
+    hw: hw('Midterm Project', '3/21', 'assignments/5919087', 'assign.html?//docs.google.com/document/d/1-uGB5qRYzM0bX5BjDTh527Zo-3GlZMGcLcyKHIViFiA/pub')
 };
 cs10.week9.labA.classes = 'exam';
 cs10.week9.lectW.title += '<br><div class="exam inner"><a href="exams/midterm.html">Midterm Exam</a><br><br><strong>Thursday 3/19<br>7-9pm; Location: 2050 VLSB</strong></div>';
@@ -238,6 +238,9 @@ cs10.week11 = {
                 '{{ site.baseurl }}/resources/readings/btb/Btb_Appendix.pdf'),
         reading('BtB Chapter 8',
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter8.pdf',
+                'optional'),
+        reading('TED: What is the Internet?',
+                'https://www.youtube.com/watch?v=XE_FPEFpHt4',
                 'optional')
     ],
     lectM: lect('The Internet II'),
@@ -245,12 +248,13 @@ cs10.week11 = {
     lectW: lect('Lambda and HOFs'),
     labB: lab('Practice with HOFs and Functions as Data', 'berkeley_bjc/hofs/hofs-practice.topic'),
     disc: disc('The Internet'),
-    hw: hw('Impact Writing Assignment')
+    hw: hw('Explore Writing Assignment', '4/3')
 };
 
 // APRIL 6 - 10
 cs10.week12 = {
     readings: [
+        // TODO: Replace these with Superfish?
         reading('The Heartbleed Bug',
                 'http://blog.agilebits.com/2014/04/08/imagine-no-ssl-encryption-its-scary-if-you-try/'),
         reading('When Servers Bleed',
@@ -259,16 +263,16 @@ cs10.week12 = {
     ],
     lectM: lect('Besides Blocks I', '', ''),
     labA: lab('Besides Blocks: Welcome to Python', 'berkeley_bjc/python/besides-blocks-welcome.topic', true),
-    lectW: lect('Social Implications III'), // THOUGHT: Move this up a weekx
+    lectW: lect('Social Implications III'), // THOUGHT: Move this up a week
     labB: lab('Lab Coming Soon', ''), // FIXME EEEEE
     disc: disc('Data and HOFs'),
-    hw: hw('Impact Post Comments')
+    hw: hw('Explore Peer Comments and Artifact', '4/10')
 };
 
 // APRIL 13 - 17
 cs10.week13 = {
     readings: [
-        reading('Data explosion creates revolution',
+        reading('Data Explosion Creates Revolution',
                 'http://www.sfgate.com/cgi-bin/article.cgi?f=/c/a/2011/10/19/BU5K1LJ4R3.DTL'),
         reading('Data Mining',
                 'http://webdocs.cs.ualberta.ca/~zaiane/courses/cmput690/notes/Chapter1/ch1.pdf'),
