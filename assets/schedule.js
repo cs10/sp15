@@ -249,7 +249,7 @@ cs10.week11 = {
     labB: lab('Practice with HOFs and Functions as Data', 'berkeley_bjc/hofs/hofs-practice.topic'),
     disc: disc('The Internet'),
     hw: [
-        hw('"Explore" Writing Assignment', '4/3',  'assign.html?//docs.google.com/document/d/13OqKNmhbN8PfuGhv5yZYLqvzHKHm08n1dV3n7Prxb5o/pub')
+        hw('"Explore" Writing Assignment', '4/3',  'assign.html?//docs.google.com/document/d/13OqKNmhbN8PfuGhv5yZYLqvzHKHm08n1dV3n7Prxb5o/pub'),
         hw('Midterm Regrade Requests<br>(Gradescope)', '4/4')
     ]
 };
