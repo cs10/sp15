@@ -136,7 +136,6 @@ var erikD = {
     name: 'Reader Erik Dahlquist',
     img: 'Sp15/ErikDahlquist.jpg',
     imgSrc: 'ErikDahlquist.jpg' };
-};
 
 var amrutaY = {
     name: 'Reader Amruta Yelamanchili',
