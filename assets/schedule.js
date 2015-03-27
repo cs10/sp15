@@ -266,7 +266,7 @@ cs10.week12 = {
     ],
     lectM: lect('Besides Blocks I', '', ''),
     labA: lab('Besides Blocks: Welcome to Python', 'berkeley_bjc/python/besides-blocks-welcome.topic', true),
-    lectW: lect('Social Implications III','', '', 'Gerald Friedland), // THOUGHT: Move this up a week
+    lectW: lect('Social Implications III','', '', 'Gerald Friedland'), // THOUGHT: Move this up a week
     labB: lab('Lab Catch Up Session'),
     disc: disc('Data and HOFs'),
     hw: hw('"Explore" Peer Comments and Artifact', '4/10', '', 'assign.html?//docs.google.com/document/d/13OqKNmhbN8PfuGhv5yZYLqvzHKHm08n1dV3n7Prxb5o/pub')
