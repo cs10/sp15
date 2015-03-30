@@ -211,7 +211,7 @@ cs10.week9 = {
 
     },
     readings: 'No Readings<br><br><strong>Midterm Review Session</strong><br>Sun 3/15 2-5pm<br>2050 VLSB<br><a href="http://tinyurl.com/midtermsp15" target="_blank">Slides</a> | (<a href="http://snap.berkeley.edu/snapsource/snap.html#present:Username=jasnowiss10&ProjectName=Midterm%20Review%20Solutions" target="_blank">Solutions</a>)',
-    lectM: lect('Social Implications II', ''),
+    lectM: lect('Social Implications II'),
     labA: lab('Online <span class="snap">snap</span> Midterm'),
     lectW: lect('The Internet'),
     labB: lab('Project Work Session'),
@@ -266,7 +266,7 @@ cs10.week12 = {
     ],
     lectM: lect('Besides Blocks I', '', ''),
     labA: lab('Besides Blocks: Welcome to Python', 'berkeley_bjc/python/besides-blocks-welcome.topic', true),
-    lectW: lect('Social Implications III'), // THOUGHT: Move this up a week
+    lectW: lect('Social Implications III','', '', 'Gerald Friedland'), // THOUGHT: Move this up a week
     labB: lab('Lab Catch Up Session'),
     disc: disc('Data and HOFs'),
     hw: hw('"Explore" Peer Comments and Artifact', '4/10', 'discussion_topics/3968074', 'assign.html?//docs.google.com/document/d/13OqKNmhbN8PfuGhv5yZYLqvzHKHm08n1dV3n7Prxb5o/pub')

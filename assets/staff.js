@@ -134,8 +134,8 @@ var avaY = {
 
 var erikD = {
     name: 'Reader Erik Dahlquist',
-    imgSrc: '../NPY3D.jpg'
-};
+    img: 'Sp15/ErikDahlquist.jpg',
+    imgSrc: 'ErikDahlquist.jpg' };
 
 var amrutaY = {
     name: 'Reader Amruta Yelamanchili',
