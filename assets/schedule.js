@@ -175,7 +175,7 @@ cs10.week7 = {
     ],
     lectM: lect('Recursion II', 'L10 - Recursion II'),
     labA: lab('Recursive Reporters I', 'berkeley_bjc/recur/recursive-reporters-part1.topic', true),
-    lectW: lect('Artificial Intelligence', '', '', 'Patrick Virtue'),
+    lectW: lect('Artificial Intelligence', 'L10.5 AI Pat Virtue', '', 'Patrick Virtue'),
     labB: lab('Project Work Session'),
     disc: disc('Concurrency and Midterm Intro'),
     hw: hw('Midterm Project<br><strong>Proposals</strong>', '3/6', 'assignments/6119910', 'assign.html?//docs.google.com/document/d/1-uGB5qRYzM0bX5BjDTh527Zo-3GlZMGcLcyKHIViFiA/pub')
@@ -211,9 +211,9 @@ cs10.week9 = {
 
     },
     readings: 'No Readings<br><br><strong>Midterm Review Session</strong><br>Sun 3/15 2-5pm<br>2050 VLSB<br><a href="http://tinyurl.com/midtermsp15" target="_blank">Slides</a> | (<a href="http://snap.berkeley.edu/snapsource/snap.html#present:Username=jasnowiss10&ProjectName=Midterm%20Review%20Solutions" target="_blank">Solutions</a>)',
-    lectM: lect('Social Implications II'),
+    lectM: lect('Social Implications II', 'L14 - Social Implications II'),
     labA: lab('Online <span class="snap">snap</span> Midterm'),
-    lectW: lect('The Internet'),
+    lectW: lect('The Internet', 'L15 - Internet I'),
     labB: lab('Project Work Session'),
     disc: disc('Midterm Debrief'),
     hw: hw('Midterm Project', '3/21', 'assignments/5919087', 'assign.html?//docs.google.com/document/d/1-uGB5qRYzM0bX5BjDTh527Zo-3GlZMGcLcyKHIViFiA/pub')
@@ -243,7 +243,7 @@ cs10.week11 = {
                 'https://www.youtube.com/watch?v=XE_FPEFpHt4',
                 'optional')
     ],
-    lectM: lect('The Internet II'),
+    lectM: lect('The Internet II', 'L16 - Internet II'),
     labA: lab('The Internet', 'berkeley_bjc/areas/internet.topic', true),
     lectW: lect('Lambda and HOFs'),
     labB: lab('Practice with HOFs and Functions as Data', 'berkeley_bjc/hofs/hofs-practice.topic'),
