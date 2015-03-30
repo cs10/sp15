@@ -215,18 +215,16 @@ Why do humans not always think alike about the “in-between rules”? Can you g
 
 #### Required Questions
 
-1. Coming Soon
-2. Coming Soon
-3. Coming Soon
+1. Of the shell commands traceroute, whois, and telnet, explain and demonstrate one of them. Why is the information they return useful?
+2. What is the difference between latency and throughput? What shell command can you use to measure latency?
+3. What is an information footprint, and what steps can you take to lessen your footprint in the future?
 
 #### Self-Check Questions
 
-* Coming Soon
-* Coming Soon
-* Coming Soon
-* Coming Soon
-* Coming Soon
-* Coming Soon
+* Pick a website of your choosing and get the page source. What language is the page source written in?
+* How do you start a shell and what is the shell useful for?
+* What is a Domain name?
+* Try pinging a website's url. What does ping measure?
 
 ---
 
