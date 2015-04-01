@@ -228,24 +228,19 @@ Why do humans not always think alike about the “in-between rules”? Can you g
 
 ---
 
-## Lab 13: Lambdas and HOFs  {#lab13}
+## Lab 14: Lambdas and HOFs  {#lab13}
 
 ## Due: 04/10/15
 
 #### Required Questions
 
-1. Coming Soon
-2. Coming Soon
-3. Coming Soon
+1. How can we use functions as data in Snap? What do the “call” and “run” blocks do, and what’s the difference between them? 
+2. Demonstrate your <code>list all factorions between __ and __ </code> block.
+3. Demonstrate your <code>is __ pandigital?</code> block.
 
 #### Self-Check Questions
 
-* Coming Soon
-* Coming Soon
-* Coming Soon
-* Coming Soon
-* Coming Soon
-* Coming Soon
+1. How does the <code>compose</code> block work?
 
 ---
 
