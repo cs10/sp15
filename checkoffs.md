@@ -228,7 +228,7 @@ Why do humans not always think alike about the “in-between rules”? Can you g
 
 ---
 
-## Lab 14: Lambdas and HOFs  {#lab13}
+## Lab 14: Lambdas and HOFs  {#lab14}
 
 ## Due: 04/10/15
 
@@ -244,6 +244,23 @@ Why do humans not always think alike about the “in-between rules”? Can you g
 
 ---
 
+## Lab 15: Besides Blocks: Welcome to Python!  {#lab15}
+
+## Due: 04/10/15
+
+#### Required Questions
+
+1. What is the difference between the syntax of one equals sign (=) vs. a double equals sign (==) in Python?
+2. What is 0-indexing, and why is it relevant to string manipulation in Python? Show how to create a substring from a string.
+3. Run the "python virus.py run_tests" command to check that all the exercises work.
+
+#### Self-Check Questions
+
+1. Show how to open the Python interpreter and run a script.
+2. What is a directory?
+3. How do you make a directory, enter a directory, and check what is inside your current directory?
+
+---
 
 </div>
 
