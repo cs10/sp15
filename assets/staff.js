@@ -179,9 +179,11 @@ function buildPerson(data, width) {
     if (data.constructor === String) {
         data = baseObj(data);
     }
-    
+    var imgPath = '{{ site.baseurl }}/resources/images/small/';
+    imgPath = imgPath + data.imgSrc;
+
     if (Date().substr(4, 6) == 'Apr 01') {
-        data.imgSrc = 'http://www.cs.berkeley.edu/~ddgarcia/i/DanGarciaUCBFaculty2004Eyebrow_320.jpg';
+        imgPath = 'http://www.cs.berkeley.edu/~ddgarcia/i/DanGarciaUCBFaculty2004Eyebrow_320.jpg';
     }
 
     // Create a div with this person's data, setting a class for width
@@ -193,8 +195,8 @@ function buildPerson(data, width) {
     }
 
     elm += '<img class="staff" align="center" ';
-    elm += 'alt="' + data.name + '" title="' + data.name + '" src="{{ site.baseurl }}/resources/images/small/';
-    elm += data.imgSrc + '" />';
+    elm += 'alt=" Staff Photo: ' + data.name + '" title="' + data.name + '" src="';
+    elm += imgPath + '" />';
     if (data.img) {
         elm += '</a>';
     }
