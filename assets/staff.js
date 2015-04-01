@@ -179,6 +179,10 @@ function buildPerson(data, width) {
     if (data.constructor === String) {
         data = baseObj(data);
     }
+    
+    if (Date().substr(4, 6) == 'Apr 01') {
+        data.imgSrc = 'http://www.cs.berkeley.edu/~ddgarcia/i/DanGarciaUCBFaculty2004Eyebrow_320.jpg';
+    }
 
     // Create a div with this person's data, setting a class for width
     // Col-md- is based on standard bootstrap classes, md-20 is my own addition.
