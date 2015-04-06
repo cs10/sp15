@@ -245,7 +245,7 @@ cs10.week11 = {
     ],
     lectM: lect('The Internet II', 'L16 - Internet II'),
     labA: lab('The Internet', 'berkeley_bjc/areas/internet.topic', true),
-    lectW: lect('Lambda and HOFs'),
+    lectW: lect('Lambda and HOFs', 'L17 - HOF'),
     labB: lab('Practice with HOFs and Functions as Data', 'berkeley_bjc/hofs/hofs-practice.topic'),
     disc: disc('The Internet'),
     hw: [
@@ -264,7 +264,7 @@ cs10.week12 = {
                 'https://medium.com/p/804cdf4b48c1',
                 'hard')
     ],
-    lectM: lect('Besides Blocks I', '', '', 'The TAs'),
+    lectM: lect('Besides Blocks I', 'L18 - Besides Blocks I', '', 'Michael Ball'),
     labA: lab('Besides Blocks: Welcome to Python', 'berkeley_bjc/python/besides-blocks-welcome.topic', true),
     lectW: lect('Social Implications III','', '', 'Gerald Friedland'), // THOUGHT: Move this up a week
     labB: lab('Lab Catch Up Session'),
