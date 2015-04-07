@@ -87,7 +87,8 @@ var StevenT = {
     name: 'TA Steven Traversi',
     img: 'Sp14/StevenTraversi.jpg',
     imgSrc: 'StevenTraversi.jpg',
-    web: 'http://steven.education',
+    imgCrazy: 'StevenTraversiCrazy.jpg',
+    web: 'http://steven.codes',
     bio: 'StevenBio.txt',
     email: 'steven@cs10.org'
 };
@@ -179,8 +180,8 @@ function buildPerson(data, width) {
     if (data.constructor === String) {
         data = baseObj(data);
     }
-    var imgPath = '{{ site.baseurl }}/resources/images/small/';
-    imgPath = imgPath + data.imgSrc;
+    var imgPathBase = '{{ site.baseurl }}/resources/images/small/';
+    var imgPath = imgPathBase + data.imgSrc;
 
     if (Date().substr(4, 6) == 'Apr 01') {
         imgPath = 'http://www.cs.berkeley.edu/~ddgarcia/i/DanGarciaUCBFaculty2004Eyebrow_320.jpg';
@@ -196,7 +197,12 @@ function buildPerson(data, width) {
 
     elm += '<img class="staff" align="center" ';
     elm += 'alt=" Staff Photo: ' + data.name + '" title="' + data.name + '" src="';
-    elm += imgPath + '" />';
+    elm += imgPath + '"';
+    if (data.imgCrazy) {
+        elm += ' onmouseenter="crazyImage(this, ' + " '" + imgPathBase + data.imgCrazy + "'" + ')"';
+        elm += ' onmouseleave="normalImage(this,' + " '" + imgPath + "'" + ')"';
+    }
+    elm += '/>';
     if (data.img) {
         elm += '</a>';
     }
@@ -253,6 +259,13 @@ function addLoadEvent(func) {
       func();
     };
   }
+}
+
+function crazyImage(image, crazyPath) {
+    image.src = crazyPath;
+}
+function normalImage(image, normalPath) {
+    image.src = normalPath;
 }
 
 /* more code to run on page load */
