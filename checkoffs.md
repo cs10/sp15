@@ -246,7 +246,7 @@ Why do humans not always think alike about the “in-between rules”? Can you g
 
 ## Lab 15: Besides Blocks: Welcome to Python!  {#lab15}
 
-## Due: 04/10/15
+## Due: 04/15/15
 
 #### Required Questions
 
@@ -256,12 +256,29 @@ Why do humans not always think alike about the “in-between rules”? Can you g
 
 #### Self-Check Questions
 
-1. Show how to open the Python interpreter and run a script.
-2. What is a directory?
-3. How do you make a directory, enter a directory, and check what is inside your current directory?
+* Show how to open the Python interpreter and run a script.
+* What is a directory?
+* How do you make a directory, enter a directory, and check what is inside your current directory?
 
 ---
 
+## Lab 16: Besides Blocks: Data Structures in Python  {#lab16}
+
+## Due: 04/22/15
+
+#### Required Questions
+
+1. Show that your PythonLab2.py file passes the tests for all 6 exercises.
+2. What are the similarities and differences between lists and dictionaries? What are 'keys' and 'values' and how do they compare to numerical indices in lists?
+3. How can you easily iterate through the items of a list? What about a dictionary?
+
+#### Self-Check Questions
+
+1. What similarities do you notice between Snap! and Python? Differences?
+2. What is an iterable and iterator?
+3. What do Higher Order Functions look like in Python?
+
+---
 </div>
 
 
