@@ -296,7 +296,7 @@ cs10.week13 = {
     lectW: lect('Data'),
     labB: lab('Besides Blocks: Data in Python', 'berkeley_bjc/python/besides-blocks-data.topic'),
     disc: disc('Practical Privacy Pointers'),
-    hw: hw('Final Project Proposal')
+    hw: hw('Final Project Proposal', '4/17', 'quizzes/1869514', 'assign.html?//docs.google.com/document/d/1InDacW4tmqeFfxgDxsSv0ebY8LiBTj_3A03uhY7-vIw/pub')
 };
 
 // APRIL 20 - 24
