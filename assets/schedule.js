@@ -342,7 +342,7 @@ cs10.week15 = {
     lectW: lect('Summary and Farewell'),
     labB: 'With-<span class="snap">snap</span> Exam',
     disc: disc('Summary and Farewell'),
-    hw: hw('Final Project')
+    hw: hw('Final Project', '5/1', 'assignments/5919088', 'assign.html?//docs.google.com/document/d/1InDacW4tmqeFfxgDxsSv0ebY8LiBTj_3A03uhY7-vIw/pub')
 };
 cs10.week15.labB.classes = 'exam';
 
