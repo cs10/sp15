@@ -274,11 +274,20 @@ Why do humans not always think alike about the “in-between rules”? Can you g
 
 #### Self-Check Questions
 
-1. What similarities do you notice between Snap! and Python? Differences?
-2. What is an iterable and iterator?
-3. What do Higher Order Functions look like in Python?
+* What similarities do you notice between Snap! and Python? Differences?
+* What is an iterable and iterator?
+* What do Higher Order Functions look like in Python?
 
 ---
+
+## Lab 17: Besides Blocks: Data in Python {#lab17}
+
+## Due: 04/24/15
+
+#### Required Questions
+
+1. What is a corpus and how can it be useful? What is a good place to start analyzing a large set of data like a corpus?
+2. What techniques are there to clean data and why is cleaning data important? Why is it expensive?
 </div>
 
 
