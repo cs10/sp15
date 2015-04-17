@@ -308,9 +308,9 @@ cs10.week14 = {
                 'http://introcs.cs.princeton.edu/java/76computability/halting-poem.html',
                 'optional')
     ],
-    lectM: lect('Future of Computing'),
+    lectM: lect('Limits of Computing'),
     labA: lab('Project Work Session', '', true),
-    lectW: lect('Limits of Computing'),
+    lectW: lect('Future of Computing'),
     labB: lab('Project Work Session'),
     disc: disc('CS @ Cal and Beyond'),
     hw: 'Start on the Final Project'
