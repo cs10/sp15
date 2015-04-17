@@ -104,7 +104,7 @@ cs10.newReadingsObject = function(title, url, classes) {
     return reading;
 };
 
-cs10.newLectureObject = function(title, path, videoURL, guest) {
+cs10.newLectureObject = function(title, path, guest) {
     var lect = { type: 'Lecture' };
 
     lect.title = title;
@@ -121,7 +121,6 @@ cs10.newLectureObject = function(title, path, videoURL, guest) {
     }
 
     lect.guest = guest;
-    lect.video = videoURL;
     return lect;
 };
 
@@ -260,11 +259,6 @@ cs10.renderTableLecture = function(lect) {
         }
         result.append(title);
         result.append('<br>');
-        if (lect.video) {
-            result.append('<br>');
-            result.append($('<a>').html('(Sp12 HD video with Qs)').attr(
-                {'href' : lect.video, 'target' : '_blank'} ));
-        }
         result.attr({ 'class' : lect.classes });
     }
     return result;
