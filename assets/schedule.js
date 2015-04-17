@@ -361,7 +361,7 @@ cs10.week17 = {
 
     },
     readings: [],
-    labA: lab('Final Exam<br>7 - 10pm'),
+    labA: lab('Final Exam<br>7 - 10pm<br>105 Stanley'),
     hw: ''
 };
 cs10.week17.labA.classes = 'exam';
