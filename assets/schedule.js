@@ -22,7 +22,7 @@ cs10.week1 = {
     readings: 'No Readings',
     lectM: lect('No Lecture Monday'),
     labA: lab('No Labs Monday, Tuesday, or Wednesday morning'),
-    lectW: lect('Welcome and Abstraction', 'L01 - Abstraction', 'https://coursesharing.org/courses/6/lectures/7'),
+    lectW: lect('Welcome and Abstraction', 'L01 - Abstraction'),
     labB: lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_pair/1-introduction.topic"),
     disc: disc('Welcome to CS10!'),
     hw: hw('HW0', '1/24', 'quizzes/1869517')
