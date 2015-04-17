@@ -142,7 +142,7 @@ cs10.week6 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter3.pdf',
                 'optional')
     ],
-    lectM: lect('Concurrency', 'L08 - Concurrency', '', 'Michael Ball'),
+    lectM: lect('Concurrency', 'L08 - Concurrency', 'Michael Ball'),
     labA: lab('Concurrency', 'berkeley_bjc/areas/concurrency.topic', true),
     lectW: lect('Recursion I', 'L09 - Recursion I'),
     labB: lab('Trees and Fractals using Recursion', 'berkeley_bjc/recur/recursion-trees-fractals.topic'),
@@ -175,7 +175,7 @@ cs10.week7 = {
     ],
     lectM: lect('Recursion II', 'L10 - Recursion II'),
     labA: lab('Recursive Reporters I', 'berkeley_bjc/recur/recursive-reporters-part1.topic', true),
-    lectW: lect('Artificial Intelligence', 'L10.5 AI Pat Virtue', '', 'Patrick Virtue'),
+    lectW: lect('Artificial Intelligence', 'L10.5 AI Pat Virtue', 'Patrick Virtue'),
     labB: lab('Project Work Session'),
     disc: disc('Concurrency and Midterm Intro'),
     hw: hw('Midterm Project<br><strong>Proposals</strong>', '3/6', 'assignments/6119910', 'assign.html?//docs.google.com/document/d/1-uGB5qRYzM0bX5BjDTh527Zo-3GlZMGcLcyKHIViFiA/pub')
@@ -195,7 +195,7 @@ cs10.week8 = {
     ],
     lectM: lect('Social Implications I', 'L11 - Social Implications I'),
     labA: lab('Tic Tac Toe', 'berkeley_bjc/lists/tic-tac-toe.topic', true),
-    lectW: lect('HCI', '', '', 'Björn Hartmann'),
+    lectW: lect('HCI', '', 'Björn Hartmann'),
     labB: lab('Project Work Session'),
     disc: disc('Midterm Review'),
     hw: [
@@ -264,9 +264,9 @@ cs10.week12 = {
                 'https://medium.com/p/804cdf4b48c1',
                 'hard')
     ],
-    lectM: lect('Besides Blocks I', 'L18 - Besides Blocks I', '', 'Michael Ball'),
+    lectM: lect('Besides Blocks I', 'L18 - Besides Blocks I', 'Michael Ball'),
     labA: lab('Besides Blocks: Welcome to Python', 'berkeley_bjc/python/besides-blocks-welcome.topic', true),
-    lectW: lect('Social Implications III','', '', 'Gerald Friedland'), // THOUGHT: Move this up a week
+    lectW: lect('Social Implications III','L19 - Social Implications III', 'Gerald Friedland'),
     labB: lab('Lab Catch Up Session'),
     disc: disc('Data and HOFs'),
     hw: hw('"Explore" Peer Comments and Artifact', '4/10', 'discussion_topics/3968074', 'assign.html?//docs.google.com/document/d/13OqKNmhbN8PfuGhv5yZYLqvzHKHm08n1dV3n7Prxb5o/pub')
