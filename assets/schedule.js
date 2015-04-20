@@ -294,9 +294,9 @@ cs10.week13 = {
                 'http://www.cimt.plymouth.ac.uk/projects/mepres/stats/handlg_data_ch3.pdf',
                 'optional')
     ],
-    lectM: lect('Besides Blocks II'),
+    lectM: lect('Besides Blocks II', 'L20 - Besides Blocks II'),
     labA: lab('Besides Blocks: Data Structures in Python', 'berkeley_bjc/python/besides-blocks-data-struct.topic', true),
-    lectW: lect('Data'),
+    lectW: lect('Data', 'L21 - Data'),
     labB: lab('Besides Blocks: Data in Python', 'berkeley_bjc/python/besides-blocks-data.topic'),
     disc: disc('Practical Privacy Pointers'),
     hw: hw('Final Project Proposal', '4/17', 'quizzes/1869514', final_spec)
@@ -311,7 +311,7 @@ cs10.week14 = {
                 'http://introcs.cs.princeton.edu/java/76computability/halting-poem.html',
                 'optional')
     ],
-    lectM: lect('Limits of Computing'),
+    lectM: lect('Limits of Computing', 'L22 - Limits of Computer'),
     labA: lab('Project Work Session', '', true),
     lectW: lect('Future of Computing'),
     labB: lab('Project Work Session'),
