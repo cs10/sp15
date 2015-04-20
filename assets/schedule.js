@@ -321,9 +321,6 @@ cs10.week14 = {
 
 // APRIL 27 - MAY 1
 cs10.week15 = {
-    exam: {
-
-    },
     readings: [
         reading('Why is Quantum Different?',
                 'http://www.scientificamerican.com/article.cfm?id=what-makes-a-quantum-comp'),
@@ -342,12 +339,13 @@ cs10.week15 = {
     ],
     lectM: lect('Saving the World with Computing', '', '', 'Kathy Yelick'),
     labA: lab('Project Work Lab', '', true),
-    lectW: lect('Summary and Farewell'),
-    labB: 'With-<span class="snap">snap</span> Exam',
+    lectW: lect('Summary and Farewell<br>In-Class Final Question'),
+    labB: lab('With-<span class="snap">snap</span> Exam'),
     disc: disc('Summary and Farewell'),
     hw: hw('Final Project', '5/1', 'assignments/5919088', final_spec)
 };
 cs10.week15.labB.classes = 'exam';
+cs10.week15.lectW.classes = 'exam';
 
 
 // DEAD WEEK
