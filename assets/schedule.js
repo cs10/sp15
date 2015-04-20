@@ -111,11 +111,6 @@ cs10.week4 = {
 
 // FEB 16 - 20
 cs10.week5 = {
-    exam: {
-        title: 'Quest',
-        date: '02-18-2015',
-        location: '105 Stanley'
-    },
     readings: 'No Readings<br><br><strong>Quest Review Session</strong><br>(<a href=http://tinyurl.com/questsp15 target="_blank">Slides</a>)<br>Monday, 2/16 1-3pm<br>306 Soda',
     lectM: lect('No Lecture (Holiday)'),
     labA: lab('No Labs Monday<br>Quest Help and Review'),
@@ -210,9 +205,6 @@ cs10.week8 = {
 // MIDTERM WEEK
 // MARCH 16 - 20
 cs10.week9 = {
-    exam: {
-
-    },
     readings: 'No Readings<br><br><strong>Midterm Review Session</strong><br>Sun 3/15 2-5pm<br>2050 VLSB<br><a href="http://tinyurl.com/midtermsp15" target="_blank">Slides</a> | (<a href="http://snap.berkeley.edu/snapsource/snap.html#present:Username=jasnowiss10&ProjectName=Midterm%20Review%20Solutions" target="_blank">Solutions</a>)',
     lectM: lect('Social Implications II', 'L14 - Social Implications II'),
     labA: lab('Online <span class="snap">snap</span> Midterm'),
@@ -359,10 +351,7 @@ cs10.week16 = {
 
 // MAY 11 - 15
 cs10.week17 = {
-    exam: {
-
-    },
-    readings: [],
+    readings: 'Final Review Session<br><strong>2050 VLSB; 2-5pm</strong>',
     labA: lab('Final Exam<br>7 - 10pm<br>105 Stanley'),
     hw: ''
 };
