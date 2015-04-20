@@ -13,6 +13,10 @@ var lab      = cs10.newLabObject,
     disc     = cs10.newDiscussionObject,
     hw       = cs10.newHomeworkObject;
 
+// CONSTANTS:
+var final_spec = 'assign.html?//docs.google.com/document/d/1InDacW4tmqeFfxgDxsSv0ebY8LiBTj_3A03uhY7-vIw/pub';
+
+
 // ==================================================
 // ==========     SCHEDULE ITEMS           ==========
 // ==================================================
@@ -295,7 +299,7 @@ cs10.week13 = {
     lectW: lect('Data'),
     labB: lab('Besides Blocks: Data in Python', 'berkeley_bjc/python/besides-blocks-data.topic'),
     disc: disc('Practical Privacy Pointers'),
-    hw: hw('Final Project Proposal', '4/17', 'quizzes/1869514', 'assign.html?//docs.google.com/document/d/1InDacW4tmqeFfxgDxsSv0ebY8LiBTj_3A03uhY7-vIw/pub')
+    hw: hw('Final Project Proposal', '4/17', 'quizzes/1869514', final_spec)
 };
 
 // APRIL 20 - 24
@@ -312,7 +316,7 @@ cs10.week14 = {
     lectW: lect('Future of Computing'),
     labB: lab('Project Work Session'),
     disc: disc('CS @ Cal and Beyond'),
-    hw: 'Start on the Final Project'
+    hw: hw('Final Project Milestone', '4/24', 'assignments/6209589', final_spec)
 };
 
 // APRIL 27 - MAY 1
@@ -341,7 +345,7 @@ cs10.week15 = {
     lectW: lect('Summary and Farewell'),
     labB: 'With-<span class="snap">snap</span> Exam',
     disc: disc('Summary and Farewell'),
-    hw: hw('Final Project', '5/1', 'assignments/5919088', 'assign.html?//docs.google.com/document/d/1InDacW4tmqeFfxgDxsSv0ebY8LiBTj_3A03uhY7-vIw/pub')
+    hw: hw('Final Project', '5/1', 'assignments/5919088', final_spec)
 };
 cs10.week15.labB.classes = 'exam';
 
@@ -351,6 +355,7 @@ cs10.week15.labB.classes = 'exam';
 cs10.week16 = {
     special: 'RRR Week -- No Class',
     readings: [],
+    lectW: lect('Optional: Python Review Session'),
     hw: hw('Study for the Final')
 };
 
