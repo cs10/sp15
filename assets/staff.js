@@ -1,8 +1,9 @@
 // Instructors
 var DanGarcia = {
-    name: 'Sr. Lecturer SOE Dan Garcia',
+    name: 'Teaching Professor Dan Garcia',
     img: 'DanGarciaUCBFaculty2004.jpg',
     imgSrc: 'DanGarcia.jpg',
+    imgCrazy: true,
     web: 'http://www.cs.berkeley.edu/~ddgarcia/',
     bio: 'DanBio.txt',
     email: 'dan@cs10.org',
@@ -165,10 +166,11 @@ var all = {
 /*****************************************************************************/
 
 // Build a basic object for a person from the current semester.
-function baseObj(name) {
-    src = name.replace(/ /g , '');
+function baseObj(name, baseDir) {
+    var src = name.replace(/ /g , '');
+    var baseDir = baseDir || 'Sp14/';
     return { name: name,
-             img: 'Sp14/' + src + '.jpg',
+             img: baseDir + src + '.jpg',
              imgSrc: src + '.jpg' };
 }
 
@@ -199,7 +201,8 @@ function buildPerson(data, width) {
     elm += 'alt=" Staff Photo: ' + data.name + '" title="' + data.name + '" src="';
     elm += imgPath + '"';
     if (data.imgCrazy) {
-        elm += ' onmouseenter="crazyImage(this, ' + " '" + imgPathBase + data.imgCrazy + "'" + ')"';
+        var crazyPath = imgPath.replace('.jpg', 'Crazy.jpg');
+        elm += ' onmouseenter="crazyImage(this, ' + " '" + crazyPath + "'" + ')"';
         elm += ' onmouseleave="normalImage(this,' + " '" + imgPath + "'" + ')"';
     }
     elm += '/>';
