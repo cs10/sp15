@@ -303,9 +303,9 @@ cs10.week14 = {
                 'http://introcs.cs.princeton.edu/java/76computability/halting-poem.html',
                 'optional')
     ],
-    lectM: lect('Limits of Computing', 'L22 - Limits of Computer'),
+    lectM: lect('Limits of Computing', 'L22 - Limits of Computing'),
     labA: lab('Project Work Session', '', true),
-    lectW: lect('Future of Computing'),
+    lectW: lect('Future of Computing', 'L23 - Future of Computing'),
     labB: lab('Project Work Session'),
     disc: disc('CS @ Cal and Beyond'),
     hw: hw('Final Project Milestone', '4/24', 'assignments/6209589', final_spec)
