@@ -329,9 +329,9 @@ cs10.week15 = {
                 'http://www.bitsbook.com/wp-content/uploads/2008/12/chapter9.pdf',
                 'optional')
     ],
-    lectM: lect('Saving the World with Computing', '', '', 'Kathy Yelick'),
+    lectM: lect('Saving the World with Computing', 'L24 - Saving the World with Computing', 'Kathy Yelick'),
     labA: lab('Project Work Lab', '', true),
-    lectW: lect('Summary and Farewell<br>In-Class Final Question'),
+    lectW: lect('Summary and Farewell<br>In-Class Final Question', 'L25 - Farewell'),
     labB: lab('With-<span class="snap">snap</span> Exam'),
     disc: disc('Summary and Farewell'),
     hw: hw('Final Project', '5/1', 'assignments/5919088', final_spec)
