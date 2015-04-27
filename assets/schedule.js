@@ -316,6 +316,10 @@ cs10.week15 = {
     readings: [
         reading('Why is Quantum Different?',
                 'http://www.scientificamerican.com/article.cfm?id=what-makes-a-quantum-comp'),
+        reading('Here is why we should be really excited about Quantum Computers',
+                'http://www.businessinsider.com/why-be-excited-about-quantum-computers-2015-4'),
+        reading('Man-made DNA can now Store Data for Millions of Years',
+                'https://gigaom.com/2015/02/17/man-made-dna-can-now-store-data-for-millions-of-years/'),
         reading('DNA Storage',
                 'http://radar.oreilly.com/2012/08/dna-storage.html',
                 'hard'),
