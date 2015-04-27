@@ -335,13 +335,15 @@ cs10.week15 = {
     ],
     lectM: lect('Saving the World with Computing', 'L24 - Saving the World with Computing', 'Kathy Yelick'),
     labA: lab('Project Work Lab', '', true),
-    lectW: lect('Summary and Farewell<br>In-Class Final Question', 'L25 - Farewell'),
+    lectW: lect('Summary and Farewell', 'L25 - Farewell'),
     labB: lab('With-<span class="snap">snap</span> Exam'),
     disc: disc('Summary and Farewell'),
     hw: hw('Final Project', '5/1', 'assignments/5919088', final_spec)
 };
 cs10.week15.labB.classes = 'exam';
 cs10.week15.lectW.classes = 'exam';
+// Add note after link is made.
+cs10.week15.lectW.title += '<br>In-Class Final Question';
 
 
 // DEAD WEEK
