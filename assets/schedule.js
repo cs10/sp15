@@ -351,7 +351,7 @@ cs10.week15.lectW.title += '<br>In-Class Final Question';
 cs10.week16 = {
     special: 'RRR Week -- No Class',
     readings: [],
-    lectW: lect('Optional: Python Review Session'),
+    lectW: lect('Optional: Python Review Session - 105 Stanley | 11-12 PM'),
     hw: hw('Study for the Final')
 };
 
